@@ -1,0 +1,124 @@
+using System;
+using UnityEngine;
+using UnityEngine.UIElements;
+
+public class PlayerController : MonoBehaviour
+{
+    public float velocidad = 10f;
+    public Animator animator;
+    public float fuerzaSalto = 5f;
+    public float fuerzaRebote = 5f;
+    public float longitudRaycast = 0.1f;
+    public LayerMask layerSuelo;
+    public int health = 5;
+
+
+    private bool enSuelo;
+    private Rigidbody2D rb;
+    private bool damage;
+    private bool attack;
+    public bool isDead;
+
+    void Start()    
+    {
+
+        rb = GetComponent<Rigidbody2D>();
+    }
+
+    void Update()
+    {
+        if (!isDead)
+        {
+            if (!damage)
+            {
+                Movement();
+                RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, longitudRaycast, layerSuelo);
+                enSuelo = hit.collider != null;
+
+                if (enSuelo && Input.GetKeyDown(KeyCode.Space) && !damage)
+                {
+                    rb.AddForce(new Vector2(0f, fuerzaSalto), ForceMode2D.Impulse);
+                }
+
+            }
+            if (Input.GetKeyDown(KeyCode.Z) && !damage)
+            {
+                Attack();
+            }
+        }
+        else
+        {
+            Movement();
+        }
+        
+        animator.SetBool("enSuelo", enSuelo);
+        animator.SetBool("damage", damage);
+        animator.SetBool("Attack", attack);
+        animator.SetBool("Die", isDead);
+    }
+    public void Movement()
+    {
+        float velocidadX = Input.GetAxis("Horizontal") * Time.deltaTime * velocidad;
+        animator.SetFloat("Movement", velocidadX * velocidad);
+        Vector3 posicion = transform.position;
+
+        if (velocidadX != 0)
+        {
+            transform.localScale = new Vector3(Mathf.Sign(velocidadX) * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+
+        }
+        if (!damage)
+        {
+            transform.position = new Vector3(velocidadX + posicion.x, posicion.y, posicion.z);
+        }
+
+        
+    }
+    public void TakeDamage(Vector2 direccion, int cantDamage)
+    {
+        if (!damage)
+        {
+            damage = true;
+            health -= cantDamage;
+            if (health <= 0)
+            {
+                isDead = true;
+
+            }
+            if (!isDead)
+            {
+                Vector2 rebote = new Vector2(transform.position.x - direccion.x, 0.5f).normalized;
+                rb.AddForce(rebote * fuerzaRebote, ForceMode2D.Impulse);
+                Invoke(nameof(StopDamage), 0.5f);
+            }
+            
+        }
+    }
+    public void StopDamage()
+    {
+        damage = false;
+        rb.linearVelocity = Vector2.zero;
+    }
+    public void Attack()
+    {
+        attack = true;
+        
+    }
+    public void StopAttack()
+    {
+        attack = false;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("attackEnemy"))
+        {
+            Vector2 directionDamage = new Vector2(collision.gameObject.transform.position.x, 0);
+            TakeDamage(directionDamage, 1);
+        }
+    }
+    void OnDrawGizmos()
+    {
+       Gizmos.color = Color.red;
+       Gizmos.DrawLine(transform.position, transform.position + Vector3.down * longitudRaycast);
+    }
+}

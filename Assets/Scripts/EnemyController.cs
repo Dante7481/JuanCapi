@@ -1,0 +1,152 @@
+using System.Collections;
+using UnityEngine;
+
+public class EnemyController : MonoBehaviour
+{
+    public Transform player;
+    public Animator animator;
+    public float detectionRadius = 5.0f;
+    public float speed = 2.0f;
+    public int health = 3;
+    public float fuerzaRebote = 5f;
+    public float duracionAtaque = 1.05f;
+    
+    private bool enMovement;
+    private bool damage;
+    private bool attack;
+    private bool isDead;
+    private bool playerLive;
+
+    private Rigidbody2D rb;
+    private Vector2 movement;
+    public float longitudRaycast = 0.1f;
+
+    void Start()
+    {
+        playerLive = true;
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+    }
+    void Update()
+    {
+        if (playerLive && !isDead)
+        {
+            Movement();
+        }
+
+
+        animator.SetBool("movement", enMovement);
+        animator.SetBool("takedamage", damage);
+        animator.SetBool("attack", attack);
+        animator.SetBool("Died", isDead);
+
+    }
+    public void Movement()
+    {
+        if (!damage && !isDead && playerLive)
+        {
+            float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+            if (distanceToPlayer <= detectionRadius)
+            {
+                Vector2 direction = (player.position - transform.position).normalized;
+                if (direction.x != 0)
+                {
+                    transform.localScale = new Vector3(Mathf.Sign(direction.x) * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+
+                }
+                movement = new Vector2(direction.x, 0);
+                enMovement = true;
+            }
+            else
+            {
+                movement = Vector2.zero;
+                enMovement = false;
+            }
+            if (!damage)
+            {
+                rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+            }
+        }
+    }
+    public void TakeDamage(Vector2 direccion, int cantDamage)
+    {
+        if (!damage)
+        {
+            damage = true;
+            health -= cantDamage;
+            if (health <= 0)
+            {
+                isDead = true;
+                enMovement = false;
+
+            }
+            if (!isDead)
+            {
+                Vector2 rebote = new Vector2(transform.position.x - direccion.x, 0.5f).normalized;
+                rb.AddForce(rebote * fuerzaRebote, ForceMode2D.Impulse);
+                StartCoroutine(StopDamage());
+            }
+            
+        }
+    }
+    IEnumerator StopDamage()
+    {
+        yield return new WaitForSeconds(0.5f);
+        damage = false;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
+            if (playerController != null)
+            {
+                if (!playerLive || isDead)
+                {
+                    return;
+                }
+
+                Attack();
+
+                Vector2 directionDamage = new Vector2(transform.position.x, 0);
+                playerController.TakeDamage(directionDamage, 1);
+                playerLive = !playerController.isDead;
+                if (!playerLive)
+                {
+                    enMovement = false;
+                }
+            }
+        }
+    }
+
+    private void Attack()
+    {
+        if (attack || isDead || !playerLive)
+        {
+            return;
+        }
+
+        attack = true;
+        StartCoroutine(StopAttack());
+    }
+
+    private IEnumerator StopAttack()
+    {
+        yield return new WaitForSeconds(duracionAtaque);
+        attack = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("weapon"))
+        {
+            Vector2 directionDamage = new Vector2(collision.gameObject.transform.position.x, 0);
+            TakeDamage(directionDamage, 1);
+        }
+    }
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawLine(transform.position, transform.position + Vector3.down * longitudRaycast);
+    }
+}
