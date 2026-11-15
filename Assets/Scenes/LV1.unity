@@ -7257,7 +7257,7 @@ MonoBehaviour:
   animator: {fileID: 2105390028}
   fuerzaSalto: 7
   fuerzaRebote: 3.5
-  longitudRaycast: 1.27
+  longitudRaycast: 0.25
   layerSuelo:
     serializedVersion: 2
     m_Bits: 8
@@ -7324,7 +7324,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.11025229, y: 0.15029573}
+  m_Offset: {x: 0, y: 1.2533415}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.572961, y: 0.4082346}
@@ -7405,7 +7405,7 @@ Transform:
   m_GameObject: {fileID: 2105390027}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.8495, y: -9.0017, z: -10}
+  m_LocalPosition: {x: -28.9184, y: -9.6714, z: -10}
   m_LocalScale: {x: 0.6252518, y: 0.6252518, z: 0.7725}
   m_ConstrainProportionsScale: 0
   m_Children:
