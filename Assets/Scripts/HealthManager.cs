@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class HealthManager : MonoBehaviour
 {
-    [SerializeField] private PlayerController jugador;
-    [SerializeField] private Transform contenedorCorazones;
-    [SerializeField] private Heart[] corazones;
+    public PlayerController jugador;
+    public Transform contenedorCorazones;
+    public Heart[] corazones;
 
     private CanvasGroup[] gruposCorazones;
     private int saludAnterior = int.MinValue;

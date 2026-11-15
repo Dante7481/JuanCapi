@@ -4,8 +4,8 @@ using System;
 
 public class Heart : MonoBehaviour
 {
-    [SerializeField] private Animator animator;
-    [SerializeField] private float duracionAnimacionDanio = 0.5f;
+    public Animator animator;
+    public float duracionAnimacionDanio = 0.5f;
 
     private Coroutine animacionDanio;
     private Action alTerminarAnimacion;

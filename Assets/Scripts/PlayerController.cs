@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     public float longitudRaycast = 0.1f;
     public LayerMask layerSuelo;
     public int health = 5;
+    public bool EnSuelo => enSuelo;
 
 
     private bool enSuelo;
@@ -108,6 +109,25 @@ public class PlayerController : MonoBehaviour
     {
         attack = false;
     }
+
+    public void RespawnAt(Vector3 posicion)
+    {
+        CancelInvoke(nameof(StopDamage));
+        health--;
+        damage = false;
+        attack = false;
+        rb.linearVelocity = Vector2.zero;
+
+        if (health <= 0)
+        {
+            isDead = true;
+            return;
+        }
+
+        isDead = false;
+        transform.position = posicion;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("attackEnemy"))
