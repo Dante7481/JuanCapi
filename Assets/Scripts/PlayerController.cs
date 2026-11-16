@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
@@ -18,6 +16,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private bool damage;
     private bool attack;
+    private float inputX;
     public bool isDead;
 
     void Start()    
@@ -28,52 +27,51 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        // Solo se lee la entrada aquí; el movimiento se aplica en FixedUpdate (física).
+        inputX = (isDead || damage) ? 0f : Input.GetAxisRaw("Horizontal");
+        Movement();
+
         if (!isDead)
         {
+            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, longitudRaycast, layerSuelo);
+            enSuelo = hit.collider != null;
+
             if (!damage)
             {
-                Movement();
-                RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, longitudRaycast, layerSuelo);
-                enSuelo = hit.collider != null;
-
-                if (enSuelo && Input.GetKeyDown(KeyCode.Space) && !damage)
+                if (enSuelo && Input.GetKeyDown(KeyCode.Space))
                 {
-                    rb.AddForce(new Vector2(0f, fuerzaSalto), ForceMode2D.Impulse);
+                    // Velocidad directa: un impulso se dividía entre la masa (3) y el salto salía diminuto.
+                    rb.linearVelocity = new Vector2(rb.linearVelocity.x, fuerzaSalto);
                 }
 
-            }
-            if (Input.GetKeyDown(KeyCode.Z) && !damage)
-            {
-                Attack();
+                if (Input.GetKeyDown(KeyCode.Z))
+                {
+                    Attack();
+                }
             }
         }
-        else
-        {
-            Movement();
-        }
-        
+
         animator.SetBool("enSuelo", enSuelo);
         animator.SetBool("damage", damage);
         animator.SetBool("Attack", attack);
         animator.SetBool("Die", isDead);
     }
+    void FixedUpdate()
+    {
+        // Durante el rebote por daño no se toca la velocidad para respetar el empujón.
+        if (damage) return;
+
+        rb.linearVelocity = new Vector2(inputX * velocidad, rb.linearVelocity.y);
+    }
+
     public void Movement()
     {
-        float velocidadX = Input.GetAxis("Horizontal") * Time.deltaTime * velocidad;
-        animator.SetFloat("Movement", velocidadX * velocidad);
-        Vector3 posicion = transform.position;
+        animator.SetFloat("Movement", inputX);
 
-        if (velocidadX != 0)
+        if (inputX != 0)
         {
-            transform.localScale = new Vector3(Mathf.Sign(velocidadX) * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-
+            transform.localScale = new Vector3(Mathf.Sign(inputX) * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
         }
-        if (!damage)
-        {
-            transform.position = new Vector3(velocidadX + posicion.x, posicion.y, posicion.z);
-        }
-
-        
     }
     public void TakeDamage(Vector2 direccion, int cantDamage)
     {

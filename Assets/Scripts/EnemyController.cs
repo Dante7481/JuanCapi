@@ -25,15 +25,23 @@ public class EnemyController : MonoBehaviour
     {
         playerLive = true;
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        if (animator == null) animator = GetComponent<Animator>();
+        if (player == null)
+        {
+            var jugador = FindFirstObjectByType<PlayerController>();
+            if (jugador != null) player = jugador.transform;
+        }
     }
-    void Update()
+    void FixedUpdate()
     {
-        if (playerLive && !isDead)
+        // La física se mueve en FixedUpdate: antes iba en Update y la velocidad dependía de los FPS.
+        if (player != null && playerLive && !isDead)
         {
             Movement();
         }
-
+    }
+    void Update()
+    {
 
         animator.SetBool("movement", enMovement);
         animator.SetBool("takedamage", damage);

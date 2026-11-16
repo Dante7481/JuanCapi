@@ -10,7 +10,7 @@ public class CameraFollow : MonoBehaviour
         if (target != null)
         {
             Vector3 PosicionDeseada = target.position + desplazamiento;
-            Vector3 PosicionSuavizada = Vector3.Lerp(transform.position, PosicionDeseada, CameraSpeed);
+            Vector3 PosicionSuavizada = Vector3.Lerp(transform.position, PosicionDeseada, CameraSpeed * Time.deltaTime);
             transform.position = PosicionSuavizada;
         }
     }   
