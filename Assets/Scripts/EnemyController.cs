@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using JuanCapi;
 
 public class EnemyController : MonoBehaviour
 {
@@ -19,10 +20,13 @@ public class EnemyController : MonoBehaviour
 
     private Rigidbody2D rb;
     private Vector2 movement;
+    private string persistentId;
     public float longitudRaycast = 0.1f;
 
     void Start()
     {
+        persistentId = WorldInteraction.StableId(gameObject);
+        if (GameRuntime.Instance?.Data?.defeated.Contains(persistentId) == true) { gameObject.SetActive(false); return; }
         playerLive = true;
         rb = GetComponent<Rigidbody2D>();
         if (animator == null) animator = GetComponent<Animator>();
@@ -78,7 +82,7 @@ public class EnemyController : MonoBehaviour
     }
     public void TakeDamage(Vector2 direccion, int cantDamage)
     {
-        if (!damage)
+        if (!damage && !isDead && GameRuntime.Instance?.CanPlay == true)
         {
             damage = true;
             health -= cantDamage;
@@ -86,6 +90,8 @@ public class EnemyController : MonoBehaviour
             {
                 isDead = true;
                 enMovement = false;
+                if (!GameRuntime.Instance.Data.defeated.Contains(persistentId)) GameRuntime.Instance.Data.defeated.Add(persistentId);
+                foreach (var collider in GetComponentsInChildren<Collider2D>()) collider.enabled = false;
 
             }
             if (!isDead)

@@ -1,142 +1,93 @@
+using JuanCapi;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float velocidad = 10f;
+    public float velocidad = 7f;
     public Animator animator;
-    public float fuerzaSalto = 5f;
+    public float fuerzaSalto = 7f;
     public float fuerzaRebote = 5f;
-    public float longitudRaycast = 0.1f;
+    public float longitudRaycast = .25f;
     public LayerMask layerSuelo;
-    public int health = 5;
+    // Health is measured in quarter hearts. CampaignData owns the persistent value.
+    public int health = 12;
+    public bool isDead;
     public bool EnSuelo => enSuelo;
-
-
+    public bool InDanger => damageUntil > Time.time || attackUntil > Time.time || dashUntil > Time.time;
     private bool enSuelo;
     private Rigidbody2D rb;
-    private bool damage;
-    private bool attack;
-    private float inputX;
-    public bool isDead;
-
-    void Start()    
+    private Collider2D[] weapons;
+    private float inputX, groundedUntil, jumpUntil, damageUntil, attackUntil, dashUntil, dashReady;
+    private float facing = 1;
+    private GameRuntime Game => GameRuntime.Instance;
+    private void Awake()
     {
-
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>(); if(animator==null)animator=GetComponent<Animator>();
+        var list=new System.Collections.Generic.List<Collider2D>();
+        foreach(var c in GetComponentsInChildren<Collider2D>(true)) if(c.CompareTag("weapon"))list.Add(c);
+        weapons=list.ToArray();
     }
-
-    void Update()
+    private void Start() { ApplyCampaign(); }
+    public void ApplyCampaign()
     {
-        // Solo se lee la entrada aquí; el movimiento se aplica en FixedUpdate (física).
-        inputX = (isDead || damage) ? 0f : Input.GetAxisRaw("Horizontal");
-        Movement();
-
-        if (!isDead)
+        if(Game?.Data==null)return;
+        health=Game.Data.healthQuarters;isDead=health<=0;
+    }
+    private void Update()
+    {
+        ApplyCampaign();
+        enSuelo=Physics2D.Raycast(transform.position,Vector2.down,longitudRaycast,layerSuelo).collider!=null;
+        if(enSuelo)groundedUntil=Time.time+.1f;
+        bool allowed=Game!=null&&Game.InputAllowed&&!isDead;
+        inputX=allowed&&Time.time>=damageUntil?(GameInput.Held("Derecha")?1:0)-(GameInput.Held("Izquierda")?1:0):0;
+        if(allowed)
         {
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, longitudRaycast, layerSuelo);
-            enSuelo = hit.collider != null;
-
-            if (!damage)
-            {
-                if (enSuelo && Input.GetKeyDown(KeyCode.Space))
-                {
-                    // Velocidad directa: un impulso se dividía entre la masa (3) y el salto salía diminuto.
-                    rb.linearVelocity = new Vector2(rb.linearVelocity.x, fuerzaSalto);
-                }
-
-                if (Input.GetKeyDown(KeyCode.Z))
-                {
-                    Attack();
-                }
-            }
+            if(enSuelo&&!InDanger)Game.CaptureSafePosition(transform.position);
+            if(GameInput.Down("Saltar"))jumpUntil=Time.time+.12f;
+            if(jumpUntil>Time.time&&groundedUntil>Time.time&&Time.time>=damageUntil)
+            {rb.linearVelocity=new Vector2(rb.linearVelocity.x,fuerzaSalto);jumpUntil=groundedUntil=0;enSuelo=false;}
+            if(GameInput.Down("Atacar")&&Game.Data.sword&&Game.Data.equippedWeapon=="sword")Attack();
+            if(GameInput.Down("Dash")&&Game.Data.dash&&enSuelo&&Time.time>=dashReady)
+            {dashUntil=Time.time+.18f;dashReady=Time.time+1.1f;}
         }
-
-        animator.SetBool("enSuelo", enSuelo);
-        animator.SetBool("damage", damage);
-        animator.SetBool("Attack", attack);
-        animator.SetBool("Die", isDead);
+        bool attacking=allowed&&Time.time<attackUntil;
+        foreach(var weapon in weapons)if(weapon!=null)weapon.enabled=attacking&&attackUntil-Time.time<.34f&&attackUntil-Time.time>.14f;
+        Movement();
+        if(animator!=null)
+        {animator.SetBool("enSuelo",enSuelo);animator.SetBool("damage",Time.time<damageUntil);animator.SetBool("Attack",attacking);animator.SetBool("Die",isDead);}
     }
-    void FixedUpdate()
+    private void FixedUpdate()
     {
-        // Durante el rebote por daño no se toca la velocidad para respetar el empujón.
-        if (damage) return;
-
-        rb.linearVelocity = new Vector2(inputX * velocidad, rb.linearVelocity.y);
+        if(Game==null||!Game.CanPlay||isDead)return;
+        if(Time.time<damageUntil)return;
+        rb.linearVelocity=new Vector2(Time.time<dashUntil?facing*15:inputX*velocidad,rb.linearVelocity.y);
     }
-
     public void Movement()
     {
-        animator.SetFloat("Movement", inputX);
-
-        if (inputX != 0)
-        {
-            transform.localScale = new Vector3(Mathf.Sign(inputX) * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-        }
+        if(animator!=null)animator.SetFloat("Movement",inputX);
+        if(inputX!=0){facing=Mathf.Sign(inputX);transform.localScale=new Vector3(facing*Mathf.Abs(transform.localScale.x),transform.localScale.y,transform.localScale.z);}
     }
-    public void TakeDamage(Vector2 direccion, int cantDamage)
+    public void TakeDamage(Vector2 direction,int amount) { DamageQuarters(direction,amount*2); }
+    public void DamageQuarters(Vector2 direction,int quarters)
     {
-        if (!damage)
-        {
-            damage = true;
-            health -= cantDamage;
-            if (health <= 0)
-            {
-                isDead = true;
-
-            }
-            if (!isDead)
-            {
-                Vector2 rebote = new Vector2(transform.position.x - direccion.x, 0.5f).normalized;
-                rb.AddForce(rebote * fuerzaRebote, ForceMode2D.Impulse);
-                Invoke(nameof(StopDamage), 0.5f);
-            }
-            
-        }
+        if(Game==null||!Game.CanPlay||quarters<=0||Time.time<damageUntil||Time.time<dashUntil-.06f)return;
+        Game.Data.healthQuarters=Mathf.Max(0,Game.Data.healthQuarters-quarters);damageUntil=Time.time+.7f;
+        rb.linearVelocity=Vector2.zero;
+        if(Game.Data.healthQuarters>0)rb.AddForce(new Vector2(transform.position.x-direction.x,.5f).normalized*fuerzaRebote,ForceMode2D.Impulse);
+        ApplyCampaign();Game.NotifyChanged();
     }
-    public void StopDamage()
+    public void StopDamage(){damageUntil=0;}
+    public void Attack(){if(Game?.Data?.sword==true&&Time.time>=attackUntil&&Time.time>=damageUntil)attackUntil=Time.time+.48f;}
+    public void StopAttack(){attackUntil=0;}
+    public void RespawnAt(Vector3 position)
     {
-        damage = false;
-        rb.linearVelocity = Vector2.zero;
+        if(Game?.Data==null||isDead)return;
+        Game.Data.healthQuarters=Mathf.Max(0,Game.Data.healthQuarters-2);ApplyCampaign();
+        damageUntil=Time.time+.7f;attackUntil=dashUntil=0;rb.linearVelocity=Vector2.zero;
+        if(!isDead)transform.position=position;
+        Game.NotifyChanged();
     }
-    public void Attack()
-    {
-        attack = true;
-        
-    }
-    public void StopAttack()
-    {
-        attack = false;
-    }
-
-    public void RespawnAt(Vector3 posicion)
-    {
-        CancelInvoke(nameof(StopDamage));
-        health--;
-        damage = false;
-        attack = false;
-        rb.linearVelocity = Vector2.zero;
-
-        if (health <= 0)
-        {
-            isDead = true;
-            return;
-        }
-
-        isDead = false;
-        transform.position = posicion;
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("attackEnemy"))
-        {
-            Vector2 directionDamage = new Vector2(collision.gameObject.transform.position.x, 0);
-            TakeDamage(directionDamage, 1);
-        }
-    }
-    void OnDrawGizmos()
-    {
-       Gizmos.color = Color.red;
-       Gizmos.DrawLine(transform.position, transform.position + Vector3.down * longitudRaycast);
-    }
+    {if(collision.CompareTag("attackEnemy"))TakeDamage(collision.transform.position,1);}
+    private void OnDrawGizmos(){Gizmos.color=Color.red;Gizmos.DrawLine(transform.position,transform.position+Vector3.down*longitudRaycast);}
 }
