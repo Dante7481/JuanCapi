@@ -5,7 +5,12 @@ public class PlayerController : MonoBehaviour
     public float velocidad = 10f;
     public Animator animator;
     public float fuerzaSalto = 5f;
+    public int saltosMaximos = 2;
     public float fuerzaRebote = 5f;
+    public KeyCode teclaDash = KeyCode.LeftShift;
+    public float velocidadDash = 18f;
+    public float duracionDash = 0.2f;
+    public float enfriamientoDash = 0.5f;
     public float longitudRaycast = 0.1f;
     public LayerMask layerSuelo;
     public int health = 5;
@@ -16,57 +21,111 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private bool damage;
     private bool attack;
+    private bool isDashing;
     private float inputX;
+    private float dashDirection;
+    private float dashTimer;
+    private float dashCooldownTimer;
+    private int saltosDisponibles;
     public bool isDead;
 
-    void Start()    
+    void Start()
     {
-
         rb = GetComponent<Rigidbody2D>();
+        if (animator == null) animator = GetComponent<Animator>();
+
+        rb.constraints |= RigidbodyConstraints2D.FreezeRotation;
+        saltosDisponibles = saltosMaximos;
+
+        foreach (Collider2D collider in GetComponents<Collider2D>())
+        {
+            PhysicsMaterial2D materialSinFriccion = new PhysicsMaterial2D("PlayerSinFriccion")
+            {
+                friction = 0f,
+                bounciness = 0f
+            };
+            collider.sharedMaterial = materialSinFriccion;
+        }
     }
 
     void Update()
     {
-        // Solo se lee la entrada aquí; el movimiento se aplica en FixedUpdate (física).
-        inputX = (isDead || damage) ? 0f : Input.GetAxisRaw("Horizontal");
+        inputX = (isDead || damage || isDashing) ? 0f : Input.GetAxisRaw("Horizontal");
         Movement();
+
+        if (dashCooldownTimer > 0f)
+        {
+            dashCooldownTimer -= Time.deltaTime;
+        }
+
+        if (isDashing)
+        {
+            dashTimer -= Time.deltaTime;
+            if (dashTimer <= 0f)
+            {
+                isDashing = false;
+            }
+        }
 
         if (!isDead)
         {
             RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, longitudRaycast, layerSuelo);
             enSuelo = hit.collider != null;
 
-            if (!damage)
+            if (enSuelo && rb.linearVelocity.y <= 0f)
             {
-                if (enSuelo && Input.GetKeyDown(KeyCode.Space))
+                saltosDisponibles = saltosMaximos;
+            }
+
+            if (!damage && !isDashing)
+            {
+                if (Input.GetKeyDown(teclaDash) && dashCooldownTimer <= 0f)
                 {
-                    // Velocidad directa: un impulso se dividía entre la masa (3) y el salto salía diminuto.
+                    StartDash();
+                }
+                else if (Input.GetKeyDown(KeyCode.Space) && saltosDisponibles > 0)
+                {
+                    saltosDisponibles--;
                     rb.linearVelocity = new Vector2(rb.linearVelocity.x, fuerzaSalto);
                 }
 
-                if (Input.GetKeyDown(KeyCode.Z))
+                if (Input.GetKeyDown(KeyCode.Z) && !isDashing)
                 {
                     Attack();
                 }
             }
         }
 
-        animator.SetBool("enSuelo", enSuelo);
-        animator.SetBool("damage", damage);
-        animator.SetBool("Attack", attack);
-        animator.SetBool("Die", isDead);
+        if (animator != null)
+        {
+            animator.SetBool("enSuelo", enSuelo);
+            animator.SetBool("damage", damage);
+            animator.SetBool("Attack", attack);
+            animator.SetBool("Die", isDead);
+            animator.SetBool("IsDash", isDashing);
+        }
     }
     void FixedUpdate()
     {
-        // Durante el rebote por daño no se toca la velocidad para respetar el empujón.
+        if (rb == null) return;
+
         if (damage) return;
+
+        if (isDashing)
+        {
+            rb.linearVelocity = new Vector2(dashDirection * velocidadDash, 0f);
+            return;
+        }
 
         rb.linearVelocity = new Vector2(inputX * velocidad, rb.linearVelocity.y);
     }
 
     public void Movement()
     {
-        animator.SetFloat("Movement", inputX);
+        if (animator != null)
+        {
+            animator.SetFloat("Movement", inputX);
+        }
 
         if (inputX != 0)
         {
@@ -77,6 +136,8 @@ public class PlayerController : MonoBehaviour
     {
         if (!damage)
         {
+            isDashing = false;
+            dashTimer = 0f;
             damage = true;
             health -= cantDamage;
             if (health <= 0)
@@ -114,6 +175,10 @@ public class PlayerController : MonoBehaviour
         health--;
         damage = false;
         attack = false;
+        isDashing = false;
+        dashTimer = 0f;
+        dashCooldownTimer = 0f;
+        saltosDisponibles = saltosMaximos;
         rb.linearVelocity = Vector2.zero;
 
         if (health <= 0)
@@ -124,6 +189,24 @@ public class PlayerController : MonoBehaviour
 
         isDead = false;
         transform.position = posicion;
+    }
+
+    private void StartDash()
+    {
+        dashDirection = inputX != 0f ? Mathf.Sign(inputX) : Mathf.Sign(transform.localScale.x);
+        if (dashDirection == 0f)
+        {
+            dashDirection = 1f;
+        }
+
+        isDashing = true;
+        dashTimer = duracionDash;
+        dashCooldownTimer = duracionDash + enfriamientoDash;
+        rb.linearVelocity = new Vector2(dashDirection * velocidadDash, 0f);
+        transform.localScale = new Vector3(
+            dashDirection * Mathf.Abs(transform.localScale.x),
+            transform.localScale.y,
+            transform.localScale.z);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

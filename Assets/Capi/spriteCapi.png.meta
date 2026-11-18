@@ -234,28 +234,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spriteCapi_25
-      rect:
-        serializedVersion: 2
-        x: 2040
-        y: 207
-        width: 6
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9c2633dcd08c26e10800000000000000
-      internalID: 2189532330458309321
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: spriteCapi_26
       rect:
         serializedVersion: 2
@@ -308,7 +286,7 @@ TextureImporter:
         width: 205
         height: 252
       alignment: 9
-      pivot: {x: 0.492683, y: 0.0}
+      pivot: {x: 0.492683, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1364,7 +1342,7 @@ TextureImporter:
         width: 247
         height: 262
       alignment: 9
-      pivot: {x: 0.532389, y: 0.0}
+      pivot: {x: 0.532389, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1538,7 +1516,7 @@ TextureImporter:
         x: 768
         y: 0
         width: 241
-        height: 189
+        height: 184
       alignment: 9
       pivot: {x: 0.529046, y: 0.174603}
       border: {x: 0, y: 0, z: 0, w: 0}
