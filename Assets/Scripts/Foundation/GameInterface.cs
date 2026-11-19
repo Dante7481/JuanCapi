@@ -119,6 +119,7 @@ namespace JuanCapi
         { foreach(var e in FindObjectsByType<EventSystem>(FindObjectsSortMode.None)) if(e!=events) e.enabled=false; }
         public void Play()
         {
+            if(Game.Cinematic){ResumeCinematic();return;}
             screen="game"; back=null; if(page!=null) { page.gameObject.SetActive(false); Destroy(page.gameObject); page=null; }
             Time.timeScale=1; Game.ResumeInput(); prompt.text="";PromptIcon(null);
         }

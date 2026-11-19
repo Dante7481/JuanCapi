@@ -27,6 +27,7 @@ namespace JuanCapi
         }
         private IEnumerator Start()
         {
+            Application.runInBackground=true;
             Directory.CreateDirectory(output);Application.logMessageReceived+=Log;
             deadline=Time.realtimeSinceStartup+100;
             yield return null;yield return new WaitForSecondsRealtime(1);
@@ -34,6 +35,7 @@ namespace JuanCapi
             yield return Capture("01-menu");
             Game.NewCampaign(true);yield return WaitScene();
             yield return new WaitForSecondsRealtime(.7f);
+            while(SierraLevel.Current!=null&&SierraLevel.Current.IntroRunning)yield return null;
             Check(Game.Player!=null&&Game.Data!=null&&Game.Data.healthQuarters==12,"Nueva campaña llega al nivel con tres corazones");
             Check(!Game.Data.sword&&!Game.Data.dash&&!Game.Data.gun&&!Game.Data.shield,"Equipo inicial bloqueado");
             Game.Player.DamageQuarters(Game.Player.transform.position+Vector3.right,1);
@@ -79,7 +81,7 @@ namespace JuanCapi
             Check(Game.UI.ScreenName=="death"&&Game.Data.deaths==1,"Derrota abre opciones una sola vez");
             Game.Retry();yield return WaitScene();
             Check(Game.Data.healthQuarters==12&&Game.Data.deaths==1,"Reintento conserva muerte y restaura tres corazones");
-            var pickup=FindObjectsByType<CampaignPickup>(FindObjectsSortMode.None).FirstOrDefault();
+            var pickup=FindObjectsByType<CampaignPickup>(FindObjectsSortMode.None).FirstOrDefault(p=>p.item=="piece");
             if(pickup!=null)
             {
                 Game.Player.transform.position=pickup.transform.position;yield return new WaitForSecondsRealtime(.15f);

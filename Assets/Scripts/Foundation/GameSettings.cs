@@ -74,8 +74,23 @@ namespace JuanCapi
     }
     public static class GameInput
     {
-        public static bool Down(string action) => Input.GetKeyDown(Key(action));
-        public static bool Held(string action) => Input.GetKey(Key(action));
+        #if UNITY_EDITOR || DEVELOPMENT_BUILD
+        public static System.Func<string,bool> ValidationDown,ValidationHeld;
+        #endif
+        public static bool Down(string action)
+        {
+            #if UNITY_EDITOR || DEVELOPMENT_BUILD
+            if(ValidationDown!=null)return ValidationDown(action);
+            #endif
+            return Input.GetKeyDown(Key(action));
+        }
+        public static bool Held(string action)
+        {
+            #if UNITY_EDITOR || DEVELOPMENT_BUILD
+            if(ValidationHeld!=null)return ValidationHeld(action);
+            #endif
+            return Input.GetKey(Key(action));
+        }
         public static KeyCode Key(string action) => GameRuntime.Instance?.Settings.Key(action) ?? KeyCode.None;
         public static string Label(string action)
         {

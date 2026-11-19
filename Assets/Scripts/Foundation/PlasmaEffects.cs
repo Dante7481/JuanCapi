@@ -9,6 +9,13 @@ namespace JuanCapi
         private float age,duration=.35f,size=1;
         private Color tint;
         private static Material lineMaterial;
+        public static void Beam(Vector3 from,Vector3 to,Color color)
+        {
+            var go=new GameObject("Descarga de plasma");var line=go.AddComponent<LineRenderer>();
+            if(lineMaterial==null)lineMaterial=new Material(Shader.Find("Sprites/Default"));
+            line.sharedMaterial=lineMaterial;line.positionCount=2;line.SetPositions(new[]{from,to});line.sortingOrder=35;
+            line.startColor=line.endColor=color;line.startWidth=.09f;line.endWidth=.03f;Destroy(go,.12f);
+        }
         public static void Burst(Vector3 position,Color color,float radius=1)
         {
             var go=new GameObject("Pulso de plasma");go.transform.position=position;

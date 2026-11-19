@@ -12,6 +12,7 @@ namespace JuanCapi.Editor
     public static class FoundationValidation
     {
         [Serializable] private class Report { public List<string> passed=new List<string>(); public List<string> failed=new List<string>(); public string build; }
+        [Serializable] private class LegacyEnvelope {public int version=1;public string payload,sha256;}
         private static Report report;
         private static string output;
         private static void Check(bool value,string name) { if(value)report.passed.Add(name);else report.failed.Add(name); }
@@ -67,6 +68,15 @@ namespace JuanCapi.Editor
             var restarted=new CampaignStore(root);
             Check(restarted.Records().Count==6&&restarted.Records().Single(r=>r.kind=="Manual").id==manual,"Cinco autos rotan sin alterar manual");
             Check(restarted.Records()[0].data.gold==128,"Cierre y reapertura conservan progreso");
+            string legacyRoot=Path.Combine(root,"legacy");Directory.CreateDirectory(legacyRoot);
+            var legacyArchive=new CampaignArchive{schemaVersion=1,revision=1};
+            legacyArchive.automatic.Add(new SaveRecord{id="legacy",savedUtc=DateTime.UtcNow.ToString("o"),kind="Autoguardado",label="Anterior",revision=1,data=new CampaignData{sword=true,x=-28,y=-9,hasPosition=true}});
+            string legacyPayload=JsonUtility.ToJson(legacyArchive);
+            foreach(string field in new[]{"sierraLayout","sierraFinished","sierraSeconds"})legacyPayload=System.Text.RegularExpressions.Regex.Replace(legacyPayload,"\\\""+field+"\\\":[^,}]+,?","");
+            string legacyHash;using(var sha=System.Security.Cryptography.SHA256.Create())legacyHash=Convert.ToBase64String(sha.ComputeHash(System.Text.Encoding.UTF8.GetBytes(legacyPayload)));
+            File.WriteAllText(Path.Combine(legacyRoot,"campaign.json"),JsonUtility.ToJson(new LegacyEnvelope{payload=legacyPayload,sha256=legacyHash}));
+            var legacyStore=new CampaignStore(legacyRoot);Check(!legacyStore.IsBlocked&&legacyStore.Records()[0].data.sierraLayout==0&&legacyStore.Records()[0].data.sword,"Formato anterior sin campos de sierra se lee y conserva equipo");
+            Check(legacyStore.Save(legacyStore.Records()[0].data,false,"Migración",null,out _)&&File.ReadAllText(legacyStore.FilePath).Contains("\"version\":2"),"Nueva escritura protege formato ampliado frente a ejecutables antiguos");
             var independent=restarted.Records();independent[0].data.gold=0;Check(restarted.Records()[0].data.gold==128,"Copias de lectura aisladas");
             string before=File.ReadAllText(store.FilePath);
             var failing=new CampaignStore(root,()=>throw new IOException("Fallo de disco simulado"));
@@ -79,7 +89,7 @@ namespace JuanCapi.Editor
             Check(recovery.Recover(out _)&&!recovery.IsBlocked&&recovery.HasRecords,"Recuperación explícita válida");
             Check(File.ReadAllText(store.FilePath)==File.ReadAllText(store.FilePath+".bak"),"Recuperación conserva respaldo válido");
             Check(Directory.GetFiles(root,"*.damaged-*").Length==1,"Archivo dañado preservado");
-            string valid=File.ReadAllText(store.FilePath);File.WriteAllText(store.FilePath,valid.Replace("\"version\":1","\"version\":99"));
+            string valid=File.ReadAllText(store.FilePath);File.WriteAllText(store.FilePath,valid.Replace("\"version\":"+CampaignStore.FormatVersion,"\"version\":99"));
             var future=new CampaignStore(root);Check(future.IsBlocked&&!future.RecoveryAvailable&&!future.Save(d,true,"Future",null,out _),"Versión futura bloqueada sin degradar");
             File.WriteAllText(store.FilePath,valid);
             var replaced=new CampaignStore(root);var nextCampaign=new CampaignData();

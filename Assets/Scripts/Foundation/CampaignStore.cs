@@ -11,7 +11,8 @@ namespace JuanCapi
     // All records live in one atomic archive: a new campaign or a reward cannot partially commit.
     public sealed class CampaignStore
     {
-        [Serializable] private sealed class Envelope { public int version = 1; public string payload, sha256; }
+        public const int FormatVersion = 2;
+        [Serializable] private sealed class Envelope { public int version = FormatVersion; public string payload, sha256; }
         public const int AutoSaveCount = 5;
         public readonly string FilePath;
         private CampaignArchive archive = new CampaignArchive();
@@ -102,6 +103,7 @@ namespace JuanCapi
         }
         private void Write(CampaignArchive next)
         {
+            next.schemaVersion=FormatVersion;
             Directory.CreateDirectory(Path.GetDirectoryName(FilePath));
             string payload = JsonUtility.ToJson(next);
             string encoded = JsonUtility.ToJson(new Envelope { payload = payload, sha256 = Hash(payload) });
@@ -121,15 +123,15 @@ namespace JuanCapi
             if (new FileInfo(path).Length > 12000000) throw new IOException("El archivo excede el tamaño permitido.");
             var envelope = JsonUtility.FromJson<Envelope>(File.ReadAllText(path, Encoding.UTF8));
             if (envelope == null) throw new IOException("Archivo ilegible.");
-            if (envelope.version > 1) throw new NotSupportedException("Partida de una versión más reciente. No se sobrescribirá.");
-            if (envelope.version != 1 || envelope.payload == null || Hash(envelope.payload) != envelope.sha256) throw new IOException("Archivo incompleto o dañado.");
+            if (envelope.version > FormatVersion) throw new NotSupportedException("Partida de una versión más reciente. No se sobrescribirá.");
+            if (envelope.version < 1 || envelope.payload == null || Hash(envelope.payload) != envelope.sha256) throw new IOException("Archivo incompleto o dañado.");
             var result = JsonUtility.FromJson<CampaignArchive>(envelope.payload); Validate(result); return result;
         }
         private static void Validate(CampaignArchive data)
         {
             if (data == null) throw new IOException("No hay datos de campaña.");
-            if (data.schemaVersion > 1) throw new NotSupportedException("Partida de una versión más reciente. No se sobrescribirá.");
-            if (data.schemaVersion != 1 || data.revision < 1 || data.automatic == null || data.automatic.Count > AutoSaveCount || data.manual == null || data.manual.Count > 1) throw new IOException("Historial inválido.");
+            if (data.schemaVersion > FormatVersion) throw new NotSupportedException("Partida de una versión más reciente. No se sobrescribirá.");
+            if (data.schemaVersion < 1 || data.revision < 1 || data.automatic == null || data.automatic.Count > AutoSaveCount || data.manual == null || data.manual.Count > 1) throw new IOException("Historial inválido.");
             var records = new List<SaveRecord>(data.automatic); records.AddRange(data.manual);
             if (records.Count == 0) throw new IOException("No hay registros válidos.");
             string id = records[0]?.data?.campaignId;

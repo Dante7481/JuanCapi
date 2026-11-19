@@ -19,7 +19,8 @@ namespace JuanCapi
         public PlayerController Player { get; private set; }
         public bool IsPractice { get; private set; }
         public bool Busy { get; private set; }
-        public bool CanPlay => Data != null && Player != null && !Busy && UI != null && !UI.IsOpen && Data.healthQuarters > 0;
+        public bool Cinematic { get; set; }
+        public bool CanPlay => Data != null && Player != null && !Busy && !Cinematic && UI != null && !UI.IsOpen && Data.healthQuarters > 0;
         public event Action Changed;
         private bool deathHandled;
         private float autoClock;
@@ -52,11 +53,12 @@ namespace JuanCapi
             if (mode == LoadSceneMode.Additive) return;
             UI.EnsureInput();
             foreach (var canvas in FindObjectsByType<Canvas>(FindObjectsInactive.Include, FindObjectsSortMode.None))
-                if (canvas.gameObject.scene == scene) canvas.gameObject.SetActive(false);
+                if (canvas.gameObject.scene == scene && canvas.renderMode!=RenderMode.WorldSpace) canvas.gameObject.SetActive(false);
             foreach (var old in FindObjectsByType<PauseMenu>(FindObjectsSortMode.None)) old.enabled = false;
             foreach (var old in FindObjectsByType<GameManager>(FindObjectsSortMode.None)) old.enabled = false;
             foreach (var old in FindObjectsByType<HealthManager>(FindObjectsSortMode.None)) old.enabled = false;
             Player = FindFirstObjectByType<PlayerController>(); deathHandled = false; autoClock = 0;
+            Cinematic = false;
             if (scene.name == "Menu") { Data = null; UI.MainMenu(); return; }
             if (FindFirstObjectByType<ArtPreviewScene>() != null) { Data = null; IsPractice = true; UI.ArtPreview(); return; }
             if (Player == null) { UI.Message("No se encontró al jugador en esta escena."); return; }
@@ -67,6 +69,8 @@ namespace JuanCapi
             }
             Data.scene = scene.name;
             if(scene.name=="LV1")Data.region="Quebrada de la sierra";
+            var sierra=FindFirstObjectByType<SierraLevel>();
+            if(sierra!=null)sierra.Prepare(Data);
             if (Data.hasPosition) Player.transform.position = new Vector3(Data.x, Data.y, Data.z);
             else CaptureSafePosition(Player.transform.position);
             Player.ApplyCampaign();
@@ -114,16 +118,24 @@ namespace JuanCapi
                 deathHandled = true; Data.deaths++; UI.Death(); return;
             }
             if (!CanPlay) return;
-            WorldInteraction.Tick(this);
+            if(SierraLevel.Current==null)WorldInteraction.Tick(this);
             Data.activeSeconds += Time.unscaledDeltaTime; autoClock += Time.unscaledDeltaTime;
             if (GameInput.Down("Consumible") && Data.Use(Data.assignedConsumable)) NotifyChanged();
             if (GameInput.Down("Cambiar arma") && Data.gun) { Data.equippedWeapon = Data.equippedWeapon == "sword" ? "gun" : "sword"; NotifyChanged(); }
             if (autoClock >= 120 && Player.EnSuelo && !Player.InDanger) { autoClock = 0; Save(false, "Avance por " + Data.region); }
         }
-        private void OnApplicationFocus(bool focus) { if (!focus && CanPlay) UI.Pause(); }
+        private void OnApplicationFocus(bool focus)
+        {
+            #if UNITY_EDITOR || DEVELOPMENT_BUILD
+            var arguments=Environment.GetCommandLineArgs();
+            if(arguments.Contains("-juanDataPath")&&(arguments.Contains("-juanSierraValidate")||arguments.Contains("-juanValidate")))return;
+            #endif
+            if (!focus && (CanPlay || Cinematic && UI.ScreenName=="cinematic")) UI.Pause();
+        }
         public void CaptureSafePosition(Vector3 position)
         {
             if (Data == null) return;
+            if(SierraLevel.Current!=null)position=SierraLevel.Current.SafeSavePosition(position);
             Data.x = position.x; Data.y = position.y; Data.z = position.z; Data.hasPosition = true;
         }
         public void NotifyChanged() { if (Player != null) Player.ApplyCampaign(); Changed?.Invoke(); }
@@ -175,7 +187,7 @@ namespace JuanCapi
         }
         private void InstallSceneInteractions()
         {
-            if (Data.scene != "LV1") return;
+            if (Data.scene != "LV1" || SierraLevel.Current!=null) return;
             // The current level remains playable while its final art and encounters are produced in later phases.
             var spawn = new Vector3(-28.2f, -9.45f, -9);
             WorldInteraction.Create("CAPSULE", "Espada de plasma", "sword", spawn, new Color(.15f, .95f, .9f));

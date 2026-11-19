@@ -138,7 +138,12 @@ namespace JuanCapi
                     Label(page,names[i],x,447,140,38,22,TextAnchor.MiddleCenter,Gold);
                     Symbol(page,rescued?SymbolGraphic.Shape.Check:SymbolGraphic.Shape.Lock,x+54,493,30,rescued?Cyan:Color.gray);
                 }
-                for(int i=0;i<6;i++)Icon(page,"record",788+(i%3)*112,275+(i/3)*105,76,76,i<d.records.Count?Color.white:new Color(.25f,.35f,.35f));
+                for(int i=0;i<6;i++)
+                {
+                    int index=i;float x=788+(i%3)*112,y=275+(i/3)*105;bool owned=i<d.records.Count;
+                    var button=Button(page,"",x-6,y-6,88,88,()=>RecordDetail(d.records[index]),owned);button.name="Prueba "+(i+1);
+                    Icon(button.transform,"record",6,6,76,76,owned?Color.white:new Color(.25f,.35f,.35f));
+                }
                 Icon(page,"key",881,498,76,56,d.maintenanceKey?Color.white:new Color(.25f,.35f,.35f));
             }
         }
@@ -150,6 +155,16 @@ namespace JuanCapi
             Label(page,description,x+213,338,306,102,20,TextAnchor.MiddleLeft);
             if(owned)Symbol(page,SymbolGraphic.Shape.Check,x+482,270,24,Cyan);
             Button(page,action,x+34,492,482,48,click??(()=>{}),enabled);
+        }
+        private void RecordDetail(string id)
+        {
+            string title=id=="REC_B01"?"Muestreo de cabecera":id=="REC_B02"?"Orden de vigilancia":"Registro recuperado";
+            string content=id=="REC_B01"?
+                "Mara midió el agua antes y después del paso de los convoyes. Los residuos aparecen río abajo, junto al pantano. El taller enviaba las muestras cuando llegó el Rastreador.":
+                id=="REC_B02"?"La orden lleva el sello de MinerTown: retener los registros del río y mantener abierta la ruta de carga. El siguiente puesto está en el humedal. El Rastreador protegía el transporte de residuos.":
+                "Una prueba de la actividad industrial en la cuenca. Consérvala para reconstruir el origen de los vertidos.";
+            Begin("record",title,"",Inventory);Icon(page,"record",100,224,240,240);
+            Label(page,content,400,230,745,270,26,TextAnchor.MiddleLeft);
         }
     }
 }

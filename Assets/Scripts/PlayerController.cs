@@ -14,6 +14,10 @@ public class PlayerController : MonoBehaviour
     public bool isDead;
     public bool EnSuelo => enSuelo;
     public bool IsInvulnerable => Time.time < damageUntil;
+    public int AttackSequence { get; private set; }
+    public float Facing => facing;
+    public bool SwingActive => Game!=null&&Game.CanPlay&&attackUntil-Time.time<.34f&&attackUntil-Time.time>.14f;
+    public bool IsDashing => Time.time<dashUntil;
     public string VisualState => isDead ? "Death" : Time.time < damageUntil ? "Hurt" : Time.time < dashUntil ? "Dash" : Time.time < attackUntil ? "Melee" : !enSuelo ? (rb != null && rb.linearVelocity.y > .1f ? "Jump" : "Fall") : Mathf.Abs(inputX) > .01f ? "Run" : "Idle";
     public bool InDanger => damageUntil > Time.time || attackUntil > Time.time || dashUntil > Time.time;
     private bool enSuelo;
@@ -38,19 +42,21 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         ApplyCampaign();
-        enSuelo=Physics2D.Raycast(transform.position,Vector2.down,longitudRaycast,layerSuelo).collider!=null;
+        var ground=Physics2D.BoxCast(transform.position+Vector3.up*.1f,new Vector2(.7f,.05f),0,Vector2.down,longitudRaycast+.05f,layerSuelo);
+        enSuelo=ground.collider!=null&&ground.normal.y>.5f&&rb.linearVelocity.y<=.1f;
         if(enSuelo)groundedUntil=Time.time+.1f;
         bool allowed=Game!=null&&Game.InputAllowed&&!isDead;
         inputX=allowed&&Time.time>=damageUntil?(GameInput.Held("Derecha")?1:0)-(GameInput.Held("Izquierda")?1:0):0;
         if(allowed)
         {
+            bool dashFromGround=enSuelo||groundedUntil>Time.time;
             if(enSuelo&&!InDanger)Game.CaptureSafePosition(transform.position);
             if(GameInput.Down("Saltar"))jumpUntil=Time.time+.12f;
             if(jumpUntil>Time.time&&groundedUntil>Time.time&&Time.time>=damageUntil)
             {rb.linearVelocity=new Vector2(rb.linearVelocity.x,fuerzaSalto);jumpUntil=groundedUntil=0;enSuelo=false;}
             if(GameInput.Down("Atacar")&&Game.Data.sword&&Game.Data.equippedWeapon=="sword")Attack();
-            if(GameInput.Down("Dash")&&Game.Data.dash&&enSuelo&&Time.time>=dashReady)
-            {dashUntil=Time.time+.18f;dashReady=Time.time+1.1f;}
+            if(GameInput.Down("Dash")&&Game.Data.dash&&dashFromGround&&Time.time>=dashReady)
+            {dashUntil=Time.time+.24f;dashReady=Time.time+1.1f;}
         }
         bool attacking=allowed&&Time.time<attackUntil;
         foreach(var weapon in weapons)if(weapon!=null)weapon.enabled=attacking&&attackUntil-Time.time<.34f&&attackUntil-Time.time>.14f;
@@ -62,7 +68,7 @@ public class PlayerController : MonoBehaviour
     {
         if(Game==null||!Game.CanPlay||isDead)return;
         if(Time.time<damageUntil)return;
-        rb.linearVelocity=new Vector2(Time.time<dashUntil?facing*15:inputX*velocidad,rb.linearVelocity.y);
+        rb.linearVelocity=new Vector2(Time.time<dashUntil?facing*17:inputX*velocidad,rb.linearVelocity.y);
     }
     public void Movement()
     {
@@ -72,14 +78,15 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(Vector2 direction,int amount) { DamageQuarters(direction,amount*2); }
     public void DamageQuarters(Vector2 direction,int quarters)
     {
-        if(Game==null||!Game.CanPlay||quarters<=0||Time.time<damageUntil||Time.time<dashUntil-.06f)return;
+        if(Game==null||!Game.CanPlay||quarters<=0||Time.time<damageUntil||Time.time<dashUntil-.12f)return;
         Game.Data.healthQuarters=Mathf.Max(0,Game.Data.healthQuarters-quarters);damageUntil=Time.time+.7f;
+        attackUntil=dashUntil=jumpUntil=0;
         rb.linearVelocity=Vector2.zero;
         if(Game.Data.healthQuarters>0)rb.AddForce(new Vector2(transform.position.x-direction.x,.5f).normalized*fuerzaRebote,ForceMode2D.Impulse);
         ApplyCampaign();Game.NotifyChanged();
     }
     public void StopDamage(){damageUntil=0;}
-    public void Attack(){if(Game?.Data?.sword==true&&Time.time>=attackUntil&&Time.time>=damageUntil)attackUntil=Time.time+.48f;}
+    public void Attack(){if(Game?.InputAllowed==true&&Game.Data.sword&&Game.Data.equippedWeapon=="sword"&&Time.time>=attackUntil&&Time.time>=damageUntil){attackUntil=Time.time+.48f;AttackSequence++;}}
     public void StopAttack(){attackUntil=0;}
     public void RespawnAt(Vector3 position)
     {

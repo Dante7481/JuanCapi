@@ -156,6 +156,7 @@ namespace JuanCapi.Editor
             string scenePath="Assets/Scenes/LV1.unity",backup=Path.Combine(Output,"LV1-antes-de-arte.unity");
             if(!File.Exists(backup))File.Copy(scenePath,backup);
             var scene=EditorSceneManager.OpenScene(scenePath);var previous=GameObject.Find("Entorno de sierra");if(previous!=null)UnityEngine.Object.DestroyImmediate(previous);
+            if(UnityEngine.Object.FindFirstObjectByType<SierraLevel>()!=null){checks.Add("LV1 conserva su recorrido jugable de sierra");return;}
             var root=new GameObject("Entorno de sierra");
             foreach(var renderer in UnityEngine.Object.FindObjectsByType<SpriteRenderer>(FindObjectsSortMode.None))
                 if(renderer.name.ToLowerInvariant().Contains("fondo"))renderer.enabled=false;
