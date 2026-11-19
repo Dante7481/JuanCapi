@@ -58,6 +58,7 @@ namespace JuanCapi
             foreach (var old in FindObjectsByType<HealthManager>(FindObjectsSortMode.None)) old.enabled = false;
             Player = FindFirstObjectByType<PlayerController>(); deathHandled = false; autoClock = 0;
             if (scene.name == "Menu") { Data = null; UI.MainMenu(); return; }
+            if (FindFirstObjectByType<ArtPreviewScene>() != null) { Data = null; IsPractice = true; UI.ArtPreview(); return; }
             if (Player == null) { UI.Message("No se encontró al jugador en esta escena."); return; }
             if (Data == null)
             {
@@ -65,9 +66,17 @@ namespace JuanCapi
                 Data = new CampaignData { sword = true, introSeen = true }; IsPractice = true;
             }
             Data.scene = scene.name;
+            if(scene.name=="LV1")Data.region="Quebrada de la sierra";
             if (Data.hasPosition) Player.transform.position = new Vector3(Data.x, Data.y, Data.z);
             else CaptureSafePosition(Player.transform.position);
             Player.ApplyCampaign();
+            var art=CampaignArt.Current;
+            if(art!=null)
+            {
+                (Player.GetComponent<PlayerArtDriver>()??Player.gameObject.AddComponent<PlayerArtDriver>()).Install(art);
+                foreach(var enemy in FindObjectsByType<EnemyController>(FindObjectsSortMode.None))
+                    (enemy.GetComponent<EnemyArtDriver>()??enemy.gameObject.AddComponent<EnemyArtDriver>()).Install(art);
+            }
             var cameraFollow = FindFirstObjectByType<CameraFollow>();
             if (cameraFollow != null) cameraFollow.transform.position = Player.transform.position + cameraFollow.desplazamiento;
             InstallSceneInteractions(); UI.Play(); NotifyChanged();

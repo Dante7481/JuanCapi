@@ -11,6 +11,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LV1.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Art/Sierra.unity
+    guid: 4a401ce2029e046418625424b3ae1d09
+  - enabled: 1
+    path: Assets/Scenes/Art/Pantano.unity
+    guid: 1e87a6549db5c4243b860b62215cbf50
+  - enabled: 1
+    path: Assets/Scenes/Art/PantanoAcuatico.unity
+    guid: 276004ec0b27cd84eb11429a664b7f6e
+  - enabled: 1
+    path: Assets/Scenes/Art/MinerTown.unity
+    guid: 61abbb962c414564d89da3d6d1f87ca1
   m_configObjects:
     com.unity.dt.app-ui: {fileID: 11400000, guid: 1b1c20d82303e4b5781c3ef50ac1449f, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

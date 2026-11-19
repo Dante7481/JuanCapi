@@ -9,7 +9,6 @@ namespace JuanCapi
         private static readonly List<WorldInteraction> Active = new List<WorldInteraction>();
         public string persistentId, title, kind;
         public float radius=1.8f;
-        private static Sprite marker;
         private void OnEnable(){if(!Active.Contains(this))Active.Add(this);}
         private void OnDisable(){Active.Remove(this);}
         public static string StableId(GameObject target)
@@ -22,9 +21,20 @@ namespace JuanCapi
         {
             var go=new GameObject(label);go.transform.position=position;
             var interaction=go.AddComponent<WorldInteraction>();interaction.persistentId=id;interaction.title=label;interaction.kind=type;
-            if(marker==null){var texture=new Texture2D(1,1);texture.SetPixel(0,0,Color.white);texture.Apply();marker=Sprite.Create(texture,new Rect(0,0,1,1),new Vector2(.5f,.5f),1);}
-            var sprite=go.AddComponent<SpriteRenderer>();sprite.sprite=marker;sprite.color=color;sprite.sortingOrder=8;
-            go.transform.localScale=type=="sword"?new Vector3(.15f,.9f,1):new Vector3(.5f,.5f,1);
+            var art=CampaignArt.Current;if(art==null)return;
+            string key=type=="sword"?"drone":type=="shelter"?"bench":"crate";
+            var visual=new GameObject("Objeto");visual.transform.SetParent(go.transform,false);
+            var sprite=visual.AddComponent<SpriteRenderer>();sprite.sprite=art.Icon(key);sprite.sortingOrder=12;
+            float height=type=="shelter"?1.1f:.75f;
+            visual.transform.localScale=Vector3.one*(height/sprite.sprite.bounds.size.y);visual.transform.localPosition=Vector3.up*(height*.5f-.12f);
+            if(type=="shelter")
+            {
+                var mara=AnimatedActor.Create("Mara",go.transform,art.allyControllers[0],art.allies[0],.85f);
+                mara.transform.localPosition=new Vector3(1.1f,-.12f,0);
+            }
+            var beacon=new GameObject("Señal de interacción");beacon.transform.SetParent(go.transform,false);beacon.transform.localPosition=Vector3.up*(height+.4f);
+            var sign=beacon.AddComponent<SpriteRenderer>();sign.sprite=art.Icon(type=="sword"?"sword":type=="shelter"?"scrap":"fruit");sign.sortingOrder=18;
+            beacon.transform.localScale=Vector3.one*(.42f/sign.sprite.bounds.size.y);beacon.AddComponent<FloatingArtwork>();
         }
         public static void Tick(GameRuntime game)
         {
@@ -36,11 +46,12 @@ namespace JuanCapi
                 float distance=Vector2.Distance(target.transform.position,game.Player.transform.position);
                 if(distance<target.radius&&distance<best){best=distance;nearest=target;}
             }
-            game.UI.Prompt(nearest==null?"":$"[{GameInput.Label("Interactuar")}]  {nearest.title}");
+            game.UI.PromptIcon(nearest==null?null:nearest.kind=="sword"?"sword":nearest.kind=="shelter"?"bench":"crate");
             if(nearest!=null&&GameInput.Down("Interactuar"))nearest.Interact(game);
         }
         private void Interact(GameRuntime game)
         {
+            PlasmaEffects.Burst(transform.position+Vector3.up*.5f,new Color(.25f,.95f,1),.8f);
             if(kind=="sword")game.Transaction(d=>{if(!d.Grant(CampaignReward.Sword))return false;d.collected.Add(persistentId);return true;},"Espada de plasma obtenida");
             if(kind=="supplies")game.Transaction(d=>
             {if(d.collected.Contains(persistentId))return false;d.Collect(persistentId,"gold",40);d.scrap+=10;d.fruit=Mathf.Min(3,d.fruit+1);return true;},"Provisiones recuperadas");

@@ -1,0 +1,2667 @@
+fileFormatVersion: 2
+guid: 320eef194ec7eae4cbda83d8887b9d00
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4629783153533575061
+    second: Director_0
+  - first:
+      213: 595049890656741926
+    second: Director_1
+  - first:
+      213: -4044108431913370891
+    second: Director_2
+  - first:
+      213: -147236866072392124
+    second: Director_3
+  - first:
+      213: 6691201282921171529
+    second: Director_4
+  - first:
+      213: -8734184331087180931
+    second: Director_5
+  - first:
+      213: 4746963153905285989
+    second: Director_6
+  - first:
+      213: 4372469322683255098
+    second: Director_7
+  - first:
+      213: 5032997956834015856
+    second: Director_8
+  - first:
+      213: 5866901067881602554
+    second: Director_9
+  - first:
+      213: -7457723436101904267
+    second: Director_10
+  - first:
+      213: -7008725577485779772
+    second: Director_11
+  - first:
+      213: -7132474980940504188
+    second: Director_12
+  - first:
+      213: -5026136507322181011
+    second: Director_13
+  - first:
+      213: -4935666253619824457
+    second: Director_14
+  - first:
+      213: 8571599846525366585
+    second: Director_15
+  - first:
+      213: 5072185641441321042
+    second: Director_16
+  - first:
+      213: -1240581601344244392
+    second: Director_17
+  - first:
+      213: 8005230392883441931
+    second: Director_18
+  - first:
+      213: -2648772306630400280
+    second: Director_19
+  - first:
+      213: 3934026243647870552
+    second: Director_20
+  - first:
+      213: 5338154370530454278
+    second: Director_21
+  - first:
+      213: 6527443171213829700
+    second: Director_22
+  - first:
+      213: 5653553627308825352
+    second: Director_23
+  - first:
+      213: -5831141695513420511
+    second: Director_24
+  - first:
+      213: -4769370152499108273
+    second: Director_25
+  - first:
+      213: 5644609114965014281
+    second: Director_26
+  - first:
+      213: -6433262748068317072
+    second: Director_27
+  - first:
+      213: -7770320154371890466
+    second: Director_28
+  - first:
+      213: -632334268502006894
+    second: Director_29
+  - first:
+      213: 2970177227765845263
+    second: Director_30
+  - first:
+      213: -8121146635331394218
+    second: Director_31
+  - first:
+      213: 8490966522029188306
+    second: Director_32
+  - first:
+      213: 5260318837468159807
+    second: Director_33
+  - first:
+      213: -1501813367644917773
+    second: Director_34
+  - first:
+      213: -98610100180256222
+    second: Director_35
+  - first:
+      213: -3449923288515973532
+    second: Director_36
+  - first:
+      213: -1112997671330626974
+    second: Director_37
+  - first:
+      213: 1647484986966499808
+    second: Director_38
+  - first:
+      213: 872221459584153603
+    second: Director_39
+  - first:
+      213: -1171746132104503604
+    second: Director_40
+  - first:
+      213: -7104114733749350318
+    second: Director_41
+  - first:
+      213: 6573670780027415469
+    second: Director_42
+  - first:
+      213: 3518281956659101555
+    second: Director_43
+  - first:
+      213: -3335517918275224631
+    second: Director_44
+  - first:
+      213: 6304663120868033799
+    second: Director_45
+  - first:
+      213: 655458779363301950
+    second: Director_46
+  - first:
+      213: 2142189053929209280
+    second: Director_47
+  - first:
+      213: -4792694454457295226
+    second: Director_48
+  - first:
+      213: -4915956077127310753
+    second: Director_49
+  - first:
+      213: 6271228703779843203
+    second: Director_50
+  - first:
+      213: 1589724082109434296
+    second: Director_51
+  - first:
+      213: 3222029291248397544
+    second: Director_52
+  - first:
+      213: -6330950848407167161
+    second: Director_53
+  - first:
+      213: -2449996582540628949
+    second: Director_54
+  - first:
+      213: -3568218120580791212
+    second: Director_55
+  - first:
+      213: 6460303054104684837
+    second: Director_56
+  - first:
+      213: 9013001892176929566
+    second: Director_57
+  - first:
+      213: 7506588056428008246
+    second: Director_58
+  - first:
+      213: 742237497275058810
+    second: Director_59
+  - first:
+      213: -4689852065375702843
+    second: Director_60
+  - first:
+      213: 8856152746828597041
+    second: Director_61
+  - first:
+      213: 569842103453797368
+    second: Director_62
+  - first:
+      213: 1769345839939776812
+    second: Director_63
+  - first:
+      213: -3578289960252931949
+    second: Director_64
+  - first:
+      213: 9061257790994400253
+    second: Director_65
+  - first:
+      213: -6153797488842759482
+    second: Director_66
+  - first:
+      213: 853139862251095061
+    second: Director_67
+  - first:
+      213: -6547813358846730749
+    second: Director_68
+  - first:
+      213: -2076951014614928408
+    second: Director_69
+  - first:
+      213: -666631620188559602
+    second: Director_70
+  - first:
+      213: 3192788825562506332
+    second: Director_71
+  - first:
+      213: 7114437629760816377
+    second: Director_72
+  - first:
+      213: 6533001209022212470
+    second: Director_73
+  - first:
+      213: -5454758611742779255
+    second: Director_74
+  - first:
+      213: -4774751670822849284
+    second: Director_75
+  - first:
+      213: -2780558387505276958
+    second: Director_76
+  - first:
+      213: -1165900844880149168
+    second: Director_77
+  - first:
+      213: -6201577001210053586
+    second: Director_78
+  - first:
+      213: 4531850338612697447
+    second: Director_79
+  - first:
+      213: 7636516564868947286
+    second: Director_80
+  - first:
+      213: 277053057914788265
+    second: Director_81
+  - first:
+      213: -521713285907676454
+    second: Director_82
+  - first:
+      213: 3146489321487468843
+    second: Director_83
+  - first:
+      213: 839104305366055333
+    second: Director_84
+  - first:
+      213: 355501010164665347
+    second: Director_85
+  - first:
+      213: 3614492835611204379
+    second: Director_86
+  - first:
+      213: 8585396663971971464
+    second: Director_87
+  - first:
+      213: -2461738063151537334
+    second: Director_88
+  - first:
+      213: 4601347633518309260
+    second: Director_89
+  - first:
+      213: 5514744544637535787
+    second: Director_90
+  - first:
+      213: -3245993906077037843
+    second: Director_91
+  - first:
+      213: -5576768747598012876
+    second: Director_92
+  - first:
+      213: -3735307330453931983
+    second: Director_93
+  - first:
+      213: -7586021415177789587
+    second: Director_94
+  - first:
+      213: 39533599404696171
+    second: Director_95
+  - first:
+      213: -1005822502922426699
+    second: Director_96
+  - first:
+      213: 823842062113139856
+    second: Director_97
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Director_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 922
+        width: 315
+        height: 316
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59fd47d9f3b404040800000000000000
+      internalID: 4629783153533575061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_1
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 1223
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62aea3c09ba024800800000000000000
+      internalID: 595049890656741926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_2
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 944
+        width: 332
+        height: 306
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fa34aacec070e7c0800000000000000
+      internalID: -4044108431913370891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_3
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 925
+        width: 304
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44ec9e3b9d8e4fdf0800000000000000
+      internalID: -147236866072392124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_4
+      rect:
+        serializedVersion: 2
+        x: 943
+        y: 923
+        width: 311
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94a87258d1cebdc50800000000000000
+      internalID: 6691201282921171529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_5
+      rect:
+        serializedVersion: 2
+        x: 1157
+        y: 1231
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7b04c660a1f9c680800000000000000
+      internalID: -8734184331087180931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_6
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 1194
+        width: 21
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56b746686d990e140800000000000000
+      internalID: 4746963153905285989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_7
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 1183
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3904d1cea12eac30800000000000000
+      internalID: 4372469322683255098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_8
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 1191
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07abb5cc9fcc8d540800000000000000
+      internalID: 5032997956834015856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_9
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 1160
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afd5173ef6b6b6150800000000000000
+      internalID: 5866901067881602554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1050
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5785a0e2c08d08890800000000000000
+      internalID: -7457723436101904267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1012
+        width: 6
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ccf3c998310cbe90800000000000000
+      internalID: -7008725577485779772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_12
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 947
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4832ea75bcb540d90800000000000000
+      internalID: -7132474980940504188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_13
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 939
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6a5078e9739f3ab0800000000000000
+      internalID: -5026136507322181011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_14
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 630
+        width: 298
+        height: 331
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b87b1f41bdf08bb0800000000000000
+      internalID: -4935666253619824457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_15
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 941
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 931ffe865a074f670800000000000000
+      internalID: 8571599846525366585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_16
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 939
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25062f0a7f5046640800000000000000
+      internalID: 5072185641441321042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_17
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 907
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 855bdf04b9198cee0800000000000000
+      internalID: -1240581601344244392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_18
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 939
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b017af8f0aa481f60800000000000000
+      internalID: 8005230392883441931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_19
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 913
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e62764fe9bad3bd0800000000000000
+      internalID: -2648772306630400280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_20
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 929
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85612b57608789630800000000000000
+      internalID: 3934026243647870552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_21
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 923
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60baaa30e1fe41a40800000000000000
+      internalID: 5338154370530454278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_22
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 929
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 446efb7faf2269a50800000000000000
+      internalID: 6527443171213829700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_23
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 921
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80b1d5af115757e40800000000000000
+      internalID: 5653553627308825352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_24
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 922
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12d14fbc58f931fa0800000000000000
+      internalID: -5831141695513420511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_25
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 922
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f46a0f19d1bcfcdb0800000000000000
+      internalID: -4769370152499108273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_26
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 929
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 907fb69651ea55e40800000000000000
+      internalID: 5644609114965014281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_27
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 901
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07872a29d9578b6a0800000000000000
+      internalID: -6433262748068317072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_28
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 928
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed2ea9f0df64a2490800000000000000
+      internalID: -7770320154371890466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_29
+      rect:
+        serializedVersion: 2
+        x: 924
+        y: 923
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 293a1a2455f7937f0800000000000000
+      internalID: -632334268502006894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_30
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 929
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0d00f4b370383920800000000000000
+      internalID: 2970177227765845263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_31
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 608
+        width: 305
+        height: 318
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 655a630b924eb4f80800000000000000
+      internalID: -8121146635331394218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_32
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 911
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d4a8419019f5d570800000000000000
+      internalID: 8490966522029188306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_33
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 902
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3fd590cc18600940800000000000000
+      internalID: 5260318837468159807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_34
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 254
+        width: 639
+        height: 673
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ff6796f2bc782be0800000000000000
+      internalID: -1501813367644917773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_35
+      rect:
+        serializedVersion: 2
+        x: 1188
+        y: 913
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22a7d77e2aaa1aef0800000000000000
+      internalID: -98610100180256222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 659
+        width: 5
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46e68ad2c096f10d0800000000000000
+      internalID: -3449923288515973532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_37
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 606
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 262408cc386dd80f0800000000000000
+      internalID: -1112997671330626974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_38
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 616
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e16decedda0dd610800000000000000
+      internalID: 1647484986966499808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_39
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 620
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3087cf7dbc0ca1c00800000000000000
+      internalID: 872221459584153603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_40
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 606
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cce19fcd91f1dbfe0800000000000000
+      internalID: -1171746132104503604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_41
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 614
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2505043f94d196d90800000000000000
+      internalID: -7104114733749350318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_42
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 328
+        width: 296
+        height: 307
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dab26e1eebe5a3b50800000000000000
+      internalID: 6573670780027415469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_43
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 612
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37ff4568cc273d030800000000000000
+      internalID: 3518281956659101555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 302
+        width: 333
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cb314b202cd5b1d0800000000000000
+      internalID: -3335517918275224631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_45
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 610
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70548d374b9ae7750800000000000000
+      internalID: 6304663120868033799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_46
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 610
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3a5cdc7948a81900800000000000000
+      internalID: 655458779363301950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_47
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 562
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cd3e2148959abd10800000000000000
+      internalID: 2142189053929209280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_48
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 529
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68e961559cdec7db0800000000000000
+      internalID: -4792694454457295226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_49
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 535
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5267636ef307cbb0800000000000000
+      internalID: -4915956077127310753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_50
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 537
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38ce70a9741e70750800000000000000
+      internalID: 6271228703779843203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_51
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 535
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b9440541a5df0610800000000000000
+      internalID: 1589724082109434296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_52
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 527
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eca3c0c192f6bc20800000000000000
+      internalID: 3222029291248397544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_53
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 381
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74f9b360fb1f328a0800000000000000
+      internalID: -6330950848407167161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 276
+        width: 10
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2caebcb61ddffdd0800000000000000
+      internalID: -2449996582540628949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_55
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 0
+        width: 313
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4548ba946842b7ec0800000000000000
+      internalID: -3568218120580791212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_56
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 328
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 529e749466b97a950800000000000000
+      internalID: 6460303054104684837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_57
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 326
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e13212fc77d941d70800000000000000
+      internalID: 9013001892176929566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_58
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 345
+        height: 304
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 633d492d012cc2860800000000000000
+      internalID: 7506588056428008246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_59
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 284
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7a0e0c3215fc4a00800000000000000
+      internalID: 742237497275058810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_60
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 292
+        width: 15
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c0362af46c4aeeb0800000000000000
+      internalID: -4689852065375702843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_61
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 278
+        width: 30
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1378157500067ea70800000000000000
+      internalID: 8856152746828597041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_62
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 302
+        width: 7
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fbcc6abf5c78e700800000000000000
+      internalID: 569842103453797368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_63
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 300
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c21fc62caaafd8810800000000000000
+      internalID: 1769345839939776812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_64
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 294
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39007cf5d3c575ec0800000000000000
+      internalID: -3578289960252931949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_65
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 274
+        width: 64
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df3467ac3fd00cd70800000000000000
+      internalID: 9061257790994400253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_66
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 294
+        width: 13
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c226d1c9c1599aa0800000000000000
+      internalID: -6153797488842759482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_67
+      rect:
+        serializedVersion: 2
+        x: 796
+        y: 294
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 514c3314f26f6db00800000000000000
+      internalID: 853139862251095061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_68
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 296
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30e1262217e7125a0800000000000000
+      internalID: -6547813358846730749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_69
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 248
+        width: 25
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e37dfd6e003d23e0800000000000000
+      internalID: -2076951014614928408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_70
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 294
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e072e9ac216afb6f0800000000000000
+      internalID: -666631620188559602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_71
+      rect:
+        serializedVersion: 2
+        x: 876
+        y: 298
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c546d7e45801f4c20800000000000000
+      internalID: 3192788825562506332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_72
+      rect:
+        serializedVersion: 2
+        x: 892
+        y: 290
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f4c092945f8bb260800000000000000
+      internalID: 7114437629760816377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_73
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 268
+        width: 44
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67967fc7cf1e9aa50800000000000000
+      internalID: 6533001209022212470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_74
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 293
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 988919371fdcc44b0800000000000000
+      internalID: -5454758611742779255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_75
+      rect:
+        serializedVersion: 2
+        x: 1131
+        y: 290
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf4b6e137acacbdb0800000000000000
+      internalID: -4774751670822849284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_76
+      rect:
+        serializedVersion: 2
+        x: 1218
+        y: 296
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e7d38be0e87969d0800000000000000
+      internalID: -2780558387505276958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_77
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 250
+        width: 47
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0554799db53e1dfe0800000000000000
+      internalID: -1165900844880149168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_78
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 278
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2c74a323929fe9a0800000000000000
+      internalID: -6201577001210053586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_79
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 254
+        width: 29
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7695e384fdd54ee30800000000000000
+      internalID: 4531850338612697447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_80
+      rect:
+        serializedVersion: 2
+        x: 914
+        y: 262
+        width: 24
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65d56621b5b5af960800000000000000
+      internalID: 7636516564868947286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_81
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 223
+        width: 68
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a952fcc94a48d300800000000000000
+      internalID: 277053057914788265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_82
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 0
+        width: 307
+        height: 285
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad20fd6d78082c8f0800000000000000
+      internalID: -521713285907676454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_83
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 272
+        width: 9
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2902d8fd539aab20800000000000000
+      internalID: 3146489321487468843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_84
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 256
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a938d28be815ab00800000000000000
+      internalID: 839104305366055333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_85
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 266
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30c4824094efee400800000000000000
+      internalID: 355501010164665347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_86
+      rect:
+        serializedVersion: 2
+        x: 890
+        y: 232
+        width: 31
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1bdcc56512492230800000000000000
+      internalID: 3614492835611204379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_87
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 198
+        width: 6
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8818fdb47c4752770800000000000000
+      internalID: 8585396663971971464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_88
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 242
+        width: 11
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a436bcf364626ddd0800000000000000
+      internalID: -2461738063151537334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_89
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 0
+        width: 311
+        height: 252
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8f61ff2b454bdf30800000000000000
+      internalID: 4601347633518309260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_90
+      rect:
+        serializedVersion: 2
+        x: 842
+        y: 250
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b26c42ae1fe488c40800000000000000
+      internalID: 5514744544637535787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_91
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 232
+        width: 19
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dea023d8db9e3f2d0800000000000000
+      internalID: -3245993906077037843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_92
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 210
+        width: 22
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43e9becfe565b92b0800000000000000
+      internalID: -5576768747598012876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_93
+      rect:
+        serializedVersion: 2
+        x: 920
+        y: 198
+        width: 18
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 138716106c5892cc0800000000000000
+      internalID: -3735307330453931983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_94
+      rect:
+        serializedVersion: 2
+        x: 918
+        y: 113
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6f52d127b909b690800000000000000
+      internalID: -7586021415177789587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_95
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 79
+        width: 5
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b62a53569937c8000800000000000000
+      internalID: 39533599404696171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_96
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 99
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b6e63e33c99a02f0800000000000000
+      internalID: -1005822502922426699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Director_97
+      rect:
+        serializedVersion: 2
+        x: 948
+        y: 71
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09c67479dffde6b00800000000000000
+      internalID: 823842062113139856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Director_0: 4629783153533575061
+      Director_1: 595049890656741926
+      Director_10: -7457723436101904267
+      Director_11: -7008725577485779772
+      Director_12: -7132474980940504188
+      Director_13: -5026136507322181011
+      Director_14: -4935666253619824457
+      Director_15: 8571599846525366585
+      Director_16: 5072185641441321042
+      Director_17: -1240581601344244392
+      Director_18: 8005230392883441931
+      Director_19: -2648772306630400280
+      Director_2: -4044108431913370891
+      Director_20: 3934026243647870552
+      Director_21: 5338154370530454278
+      Director_22: 6527443171213829700
+      Director_23: 5653553627308825352
+      Director_24: -5831141695513420511
+      Director_25: -4769370152499108273
+      Director_26: 5644609114965014281
+      Director_27: -6433262748068317072
+      Director_28: -7770320154371890466
+      Director_29: -632334268502006894
+      Director_3: -147236866072392124
+      Director_30: 2970177227765845263
+      Director_31: -8121146635331394218
+      Director_32: 8490966522029188306
+      Director_33: 5260318837468159807
+      Director_34: -1501813367644917773
+      Director_35: -98610100180256222
+      Director_36: -3449923288515973532
+      Director_37: -1112997671330626974
+      Director_38: 1647484986966499808
+      Director_39: 872221459584153603
+      Director_4: 6691201282921171529
+      Director_40: -1171746132104503604
+      Director_41: -7104114733749350318
+      Director_42: 6573670780027415469
+      Director_43: 3518281956659101555
+      Director_44: -3335517918275224631
+      Director_45: 6304663120868033799
+      Director_46: 655458779363301950
+      Director_47: 2142189053929209280
+      Director_48: -4792694454457295226
+      Director_49: -4915956077127310753
+      Director_5: -8734184331087180931
+      Director_50: 6271228703779843203
+      Director_51: 1589724082109434296
+      Director_52: 3222029291248397544
+      Director_53: -6330950848407167161
+      Director_54: -2449996582540628949
+      Director_55: -3568218120580791212
+      Director_56: 6460303054104684837
+      Director_57: 9013001892176929566
+      Director_58: 7506588056428008246
+      Director_59: 742237497275058810
+      Director_6: 4746963153905285989
+      Director_60: -4689852065375702843
+      Director_61: 8856152746828597041
+      Director_62: 569842103453797368
+      Director_63: 1769345839939776812
+      Director_64: -3578289960252931949
+      Director_65: 9061257790994400253
+      Director_66: -6153797488842759482
+      Director_67: 853139862251095061
+      Director_68: -6547813358846730749
+      Director_69: -2076951014614928408
+      Director_7: 4372469322683255098
+      Director_70: -666631620188559602
+      Director_71: 3192788825562506332
+      Director_72: 7114437629760816377
+      Director_73: 6533001209022212470
+      Director_74: -5454758611742779255
+      Director_75: -4774751670822849284
+      Director_76: -2780558387505276958
+      Director_77: -1165900844880149168
+      Director_78: -6201577001210053586
+      Director_79: 4531850338612697447
+      Director_8: 5032997956834015856
+      Director_80: 7636516564868947286
+      Director_81: 277053057914788265
+      Director_82: -521713285907676454
+      Director_83: 3146489321487468843
+      Director_84: 839104305366055333
+      Director_85: 355501010164665347
+      Director_86: 3614492835611204379
+      Director_87: 8585396663971971464
+      Director_88: -2461738063151537334
+      Director_89: 4601347633518309260
+      Director_9: 5866901067881602554
+      Director_90: 5514744544637535787
+      Director_91: -3245993906077037843
+      Director_92: -5576768747598012876
+      Director_93: -3735307330453931983
+      Director_94: -7586021415177789587
+      Director_95: 39533599404696171
+      Director_96: -1005822502922426699
+      Director_97: 823842062113139856
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

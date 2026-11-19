@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 namespace JuanCapi
 {
-    public sealed class GameInterface : MonoBehaviour
+    public sealed partial class GameInterface : MonoBehaviour
     {
         private static readonly Color Ink = new Color(.035f,.09f,.11f,.97f);
         private static readonly Color Panel = new Color(.07f,.16f,.18f,.98f);
@@ -15,7 +15,7 @@ namespace JuanCapi
         private static readonly Color Cyan = new Color(.39f,.9f,.84f);
         private GameRuntime Game => GameRuntime.Instance;
         private RectTransform stage, page, hud, toastRoot;
-        private Text toast, hudInfo, objective, prompt;
+        private Text toast, prompt;
         private HeartGraphic[] hearts;
         private readonly List<Texture2D> thumbnails = new List<Texture2D>();
         private Font font;
@@ -39,16 +39,7 @@ namespace JuanCapi
             var center=new GameObject("Zona segura",typeof(RectTransform)); center.transform.SetParent(canvasObject.transform,false); stage=center.GetComponent<RectTransform>();
             stage.anchorMin=stage.anchorMax=new Vector2(.5f,.5f); stage.sizeDelta=new Vector2(1280,720);
             hud = Rect("HUD",stage,0,0,1280,720);
-            Box(hud,25,20,420,122,new Color(.025f,.08f,.09f,.88f));
-            hearts=new HeartGraphic[20];
-            for(int i=0;i<20;i++)
-            {
-                var h=Rect("Corazón "+(i+1),hud,40+(i%10)*34,34+(i/10)*30,30,27).gameObject.AddComponent<HeartGraphic>();
-                h.color=new Color(.97f,.24f,.29f); h.raycastTarget=false; hearts[i]=h;
-            }
-            hudInfo=Label(hud,"",40,97,390,32,18);
-            objective=Label(hud,"",465,30,760,58,20,TextAnchor.UpperRight);
-            prompt=Label(hud,"",240,612,800,50,24,TextAnchor.MiddleCenter);
+            BuildVisualHud();
             toastRoot=Rect("Notificación",stage,290,650,700,46); Box(toastRoot,0,0,700,46,Ink);
             toast=Label(toastRoot,"",12,0,676,46,19,TextAnchor.MiddleCenter); toastRoot.gameObject.SetActive(false);
             var e=new GameObject("Entrada UI",typeof(EventSystem),typeof(StandaloneInputModule)); e.transform.SetParent(transform,false); events=e.GetComponent<EventSystem>();
@@ -56,14 +47,13 @@ namespace JuanCapi
         private void Update()
         {
             scaler.matchWidthOrHeight=Screen.width/(float)Math.Max(1,Screen.height)<16f/9f?0:1;
-            toastRoot.gameObject.SetActive(Time.unscaledTime<toastUntil);
+            toastRoot.gameObject.SetActive(screen!="art"&&Time.unscaledTime<toastUntil);
             var d=Game.Data;
             if(d!=null)
             {
                 hud.gameObject.SetActive(!IsOpen);
                 for(int i=0;i<20;i++) { hearts[i].gameObject.SetActive(i<d.maxHearts); hearts[i].SetQuarters(Mathf.Clamp(d.healthQuarters-i*4,0,4)); }
-                hudInfo.text=$"Oro {d.gold}   ·   Chatarra {d.scrap}   ·   {FormatTime(d.activeSeconds)}";
-                objective.text=!d.sword?"Recupera la espada del dron":d.completed?"El río tiene una nueva oportunidad":!d.dash?"Explora el bosque y ayuda a tus aliados":!d.gun?"Sigue el rastro hacia el pantano":!d.shield?"Persigue al caimán bajo el agua":"Detén los vertidos en MinerTown";
+                RefreshVisualHud(d);
                 if(d.healthQuarters<=4 && !Game.Settings.reducedFlashes)
                     foreach(var h in hearts) h.color=new Color(1,.2f,.25f,.72f+.28f*Mathf.Sin(Time.unscaledTime*4));
                 else foreach(var h in hearts) h.color=new Color(.97f,.24f,.29f);
@@ -97,11 +87,12 @@ namespace JuanCapi
             if(page!=null) { page.gameObject.SetActive(false); Destroy(page.gameObject); }
             foreach(var t in thumbnails) Destroy(t); thumbnails.Clear();
             page=Rect(name,stage,0,0,1280,720); Box(page,0,0,1280,720,Ink);
-            var bg=Resources.Load<Texture2D>("Foundation/MenuForest");
+            var bg=CampaignArt.Current!=null?CampaignArt.Current.sierra.texture:Resources.Load<Texture2D>("Foundation/MenuForest");
             if(bg!=null && name=="menu")
             {
-                var image=Rect("Bosque",page,0,0,1280,720).gameObject.AddComponent<RawImage>(); image.texture=bg; image.color=new Color(.5f,.65f,.6f,.8f); image.raycastTarget=false;
-                Box(page,0,0,650,720,new Color(.025f,.08f,.1f,.9f));
+                var image=Rect("Sierra",page,-405,0,2160,720).gameObject.AddComponent<RawImage>(); image.texture=bg; image.color=new Color(.8f,.88f,.92f,1); image.raycastTarget=false;
+                Box(page,0,0,590,720,new Color(.025f,.08f,.1f,.92f));
+                if(CampaignArt.Current!=null)Icon(page,CampaignArt.Current.menuHero,762,272,370,370);
             }
             Label(page,title,64,40,1152,64,34,TextAnchor.MiddleLeft,Gold);
             Label(page,subtitle,66,106,1140,42,18,TextAnchor.UpperLeft,new Color(.7f,.82f,.8f));
@@ -113,14 +104,15 @@ namespace JuanCapi
         {
             Game.Store.Refresh();
             Begin("menu","JUAN CAPI","GUARDIANES DEL RÍO");
-            Label(page,"Una aventura para devolverle\nel pulso al bosque.",68,185,540,95,26);
+            Symbol(page,SymbolGraphic.Shape.Mountain,80,206,46,Gold);Symbol(page,SymbolGraphic.Shape.Arrow,158,220,23,Cyan);
+            Symbol(page,SymbolGraphic.Shape.Water,218,206,46,Gold);Symbol(page,SymbolGraphic.Shape.Arrow,296,220,23,Cyan);Symbol(page,SymbolGraphic.Shape.Factory,356,206,46,Gold);
             var first=Button(page,"Continuar partida",68,316,380,56,()=>History(MainMenu),Game.Store.HasRecords||Game.Store.IsBlocked);
             Button(page,"Nueva partida",68,385,380,56,()=>Confirm("¿Comenzar una nueva aventura?",Game.Store.HasRecords?
                 "Se reemplazará la campaña actual: guardado manual y todos los autoguardados. Esta acción no se puede deshacer desde el juego.":
-                "Juan comienza en el bosque con tres corazones. La espada espera en el dron caído.",()=>Game.NewCampaign(true),MainMenu),!Game.Store.IsBlocked);
+                "Juan comienza en la sierra con tres corazones. La espada espera en el dron caído.",()=>Game.NewCampaign(true),MainMenu),!Game.Store.IsBlocked);
             Button(page,"Ajustes",68,454,380,56,()=>Settings(MainMenu));
             Button(page,"Salir",68,523,380,56,Quit);
-            Label(page,"Mouse para seleccionar · Flechas y Enter para navegar",68,632,650,40,17);
+            Symbol(page,SymbolGraphic.Shape.Mouse,70,642,26,Cyan);Label(page,"/   Flechas + Enter",112,638,370,34,17,TextAnchor.MiddleLeft);
             Focus(first.interactable?first:page.GetComponentsInChildren<Button>().FirstOrDefault(b=>b.interactable));
         }
         public void EnsureInput()
@@ -128,7 +120,7 @@ namespace JuanCapi
         public void Play()
         {
             screen="game"; back=null; if(page!=null) { page.gameObject.SetActive(false); Destroy(page.gameObject); page=null; }
-            Time.timeScale=1; Game.ResumeInput(); prompt.text="";
+            Time.timeScale=1; Game.ResumeInput(); prompt.text="";PromptIcon(null);
         }
         public void Pause()
         {
@@ -195,38 +187,7 @@ namespace JuanCapi
             if(records.Count==0) Label(page,"Aún no hay una partida guardada.",120,220,1000,70,24,TextAnchor.MiddleCenter);
             Focus(first);
         }
-        public void Inventory()
-        {
-            var d=Game.Data; if(d==null) return;
-            Begin("inventory","INVENTARIO",$"Oro {d.gold}   ·   Chatarra {d.scrap}   ·   Piezas de corazón {d.heartPieces}/4",Play);
-            string[] tabs={"Equipo","Módulos","Provisiones","Misión"};
-            for(int i=0;i<tabs.Length;i++) { string value=tabs[i]; var b=Button(page,value,66+i*290,160,275,48,()=>{tab=value;Inventory();}); if(value==tab) Focus(b); }
-            Box(page,66,230,1148,370,Panel);
-            if(tab=="Equipo")
-            {
-                Item("Espada de plasma",d.sword?"Herramienta recuperada del dron. Ataque terrestre.":"Recupérala del dron al comenzar el bosque.",260,d.sword,()=>{d.equippedWeapon="sword";Game.NotifyChanged();Inventory();},d.equippedWeapon=="sword"&&d.sword?"Equipada":"Equipar");
-                Item("Disparador de plasma",d.gun?"Apuntado con mouse. Tres disparos por cargador.":"Se obtiene al vencer al caimán terrestre.",400,d.gun,()=>{d.equippedWeapon="gun";Game.NotifyChanged();Inventory();},d.equippedWeapon=="gun"?"Equipado":"Equipar");
-            }
-            else if(tab=="Módulos")
-            {
-                Item("Impulsor",d.dash?"Dash terrestre desbloqueado.":"Recompensa del Rastreador.",260,false,null,d.dash?"Disponible":"Bloqueado");
-                Item("Escudo de plasma",d.shield?$"Energía {d.shieldEnergy:0}/{d.MaximumShield}. Protege el frente.":"Recompensa del caimán acuático.",400,false,null,d.shield?"Disponible":"Bloqueado");
-            }
-            else if(tab=="Provisiones")
-            {
-                Item($"Fruta medicinal  {d.fruit}/3","Recupera tres corazones. No se consume con vida llena.",260,d.fruit>0&&d.healthQuarters<d.MaximumHealth,()=>{d.Use("fruit");Game.NotifyChanged();Inventory();},"Usar");
-                Button(page,d.assignedConsumable=="fruit"?"Asignada a "+GameInput.Label("Consumible"):"Asignar fruta",740,337,370,42,()=>{d.assignedConsumable="fruit";Inventory();});
-                Item($"Celda de reserva  {d.cells}/3","Recupera 50 de energía del escudo.",415,d.cells>0&&d.shield&&d.shieldEnergy<d.MaximumShield,()=>{d.Use("cell");Game.NotifyChanged();Inventory();},"Usar");
-                Button(page,d.assignedConsumable=="cell"?"Asignada a "+GameInput.Label("Consumible"):"Asignar celda",740,492,370,42,()=>{d.assignedConsumable="cell";Inventory();});
-            }
-            else
-            {
-                Label(page,$"Rescates: {d.rescues.Count}/3    ·    Pruebas: {d.records.Count}/6",100,254,1000,42,22);
-                Label(page,d.rescues.Count==0?"Aún no has rescatado a tus aliados.":"Aliados: "+string.Join(", ",d.rescues),100,310,1000,48,20);
-                Label(page,d.records.Count==0?"Explora para reunir pruebas de los vertidos.":string.Join("\n",d.records),100,365,1000,155,20);
-                Label(page,d.maintenanceKey?"Llave de mantenimiento: obtenida":"La llave de mantenimiento está en MinerTown.",100,540,1000,42,18);
-            }
-        }
+        public void Inventory() { VisualInventory(); }
         private void Item(string name,string description,float y,bool enabled,Action action,string actionName)
         { Label(page,name,100,y,620,38,25,TextAnchor.MiddleLeft,Gold); Label(page,description,100,y+45,610,65,19); Button(page,actionName,740,y+15,370,52,action??(()=>{}),enabled); }
         public void Bank(string shelter)

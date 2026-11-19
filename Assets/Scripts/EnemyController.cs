@@ -22,6 +22,7 @@ public class EnemyController : MonoBehaviour
     private Vector2 movement;
     private string persistentId;
     public float longitudRaycast = 0.1f;
+    public string VisualState => isDead ? "Death" : damage ? "Hurt" : attack ? "Attack" : enMovement ? "Run" : "Idle";
 
     void Start()
     {

@@ -1,0 +1,5163 @@
+fileFormatVersion: 2
+guid: 6b6a8bb2a2fbbef4dbab93feeb8eab9b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2612008909585843980
+    second: AimBodies_0
+  - first:
+      213: 402647684030087613
+    second: AimBodies_1
+  - first:
+      213: -3682338304495087895
+    second: AimBodies_2
+  - first:
+      213: 6555543451344462065
+    second: AimBodies_3
+  - first:
+      213: -497520927612400869
+    second: AimBodies_4
+  - first:
+      213: -3207286806159109001
+    second: AimBodies_5
+  - first:
+      213: 2407547535154020346
+    second: AimBodies_6
+  - first:
+      213: 4922216572404336087
+    second: AimBodies_7
+  - first:
+      213: 6321659258428414035
+    second: AimBodies_8
+  - first:
+      213: 1342133407818667432
+    second: AimBodies_9
+  - first:
+      213: 7305819512552630437
+    second: AimBodies_10
+  - first:
+      213: -4565809161809344455
+    second: AimBodies_11
+  - first:
+      213: -4354667093745835723
+    second: AimBodies_12
+  - first:
+      213: -7029726150445011294
+    second: AimBodies_13
+  - first:
+      213: -5422222849984825383
+    second: AimBodies_14
+  - first:
+      213: -2070935103708139725
+    second: AimBodies_15
+  - first:
+      213: -5467480533757755530
+    second: AimBodies_16
+  - first:
+      213: -7497185944632437399
+    second: AimBodies_17
+  - first:
+      213: 172555958543126143
+    second: AimBodies_18
+  - first:
+      213: -916122474445885919
+    second: AimBodies_19
+  - first:
+      213: -3454811838733778839
+    second: AimBodies_20
+  - first:
+      213: -625805376074196992
+    second: AimBodies_21
+  - first:
+      213: 8480043285344107298
+    second: AimBodies_22
+  - first:
+      213: 6899359522359951543
+    second: AimBodies_23
+  - first:
+      213: 362163157537230633
+    second: AimBodies_24
+  - first:
+      213: -9054627114886590610
+    second: AimBodies_25
+  - first:
+      213: -845091006480198288
+    second: AimBodies_26
+  - first:
+      213: 5067965928626006993
+    second: AimBodies_27
+  - first:
+      213: -5177056687908964425
+    second: AimBodies_28
+  - first:
+      213: 8187829430287231994
+    second: AimBodies_29
+  - first:
+      213: 3606391378450281817
+    second: AimBodies_30
+  - first:
+      213: -3495760545725297116
+    second: AimBodies_31
+  - first:
+      213: 6882458238639256940
+    second: AimBodies_32
+  - first:
+      213: -4451080539646393872
+    second: AimBodies_33
+  - first:
+      213: 9131584521637789662
+    second: AimBodies_34
+  - first:
+      213: 7053185156979470682
+    second: AimBodies_35
+  - first:
+      213: 5676807536889257324
+    second: AimBodies_36
+  - first:
+      213: 8280402283867838339
+    second: AimBodies_37
+  - first:
+      213: -7312117398176451711
+    second: AimBodies_38
+  - first:
+      213: -7005974451979828715
+    second: AimBodies_39
+  - first:
+      213: -2223129927647828184
+    second: AimBodies_40
+  - first:
+      213: 7273140267762005745
+    second: AimBodies_41
+  - first:
+      213: 2976042437930733659
+    second: AimBodies_42
+  - first:
+      213: 3555842297072435577
+    second: AimBodies_43
+  - first:
+      213: 239684727901399079
+    second: AimBodies_44
+  - first:
+      213: -6839832070681025314
+    second: AimBodies_45
+  - first:
+      213: 6187537295278472623
+    second: AimBodies_46
+  - first:
+      213: -6357215137869506226
+    second: AimBodies_47
+  - first:
+      213: -6628503127903520414
+    second: AimBodies_48
+  - first:
+      213: -2114535947467086636
+    second: AimBodies_49
+  - first:
+      213: 263499658347098198
+    second: AimBodies_50
+  - first:
+      213: -177669928971449925
+    second: AimBodies_51
+  - first:
+      213: 1303805674159714948
+    second: AimBodies_52
+  - first:
+      213: -8909784323827166744
+    second: AimBodies_53
+  - first:
+      213: -8526556789737225552
+    second: AimBodies_54
+  - first:
+      213: 7366365814257335709
+    second: AimBodies_55
+  - first:
+      213: 7571664642794728238
+    second: AimBodies_56
+  - first:
+      213: -837812980779449786
+    second: AimBodies_57
+  - first:
+      213: -8443936902646138096
+    second: AimBodies_58
+  - first:
+      213: -3819644795033965521
+    second: AimBodies_59
+  - first:
+      213: 2431350429845376091
+    second: AimBodies_60
+  - first:
+      213: -3938033055615365134
+    second: AimBodies_61
+  - first:
+      213: 6574848573336743896
+    second: AimBodies_62
+  - first:
+      213: -5671152510850425993
+    second: AimBodies_63
+  - first:
+      213: 4501855225639876709
+    second: AimBodies_64
+  - first:
+      213: -6249599765269297648
+    second: AimBodies_65
+  - first:
+      213: -7939418389977729188
+    second: AimBodies_66
+  - first:
+      213: -752285266797151233
+    second: AimBodies_67
+  - first:
+      213: -1687611659238521876
+    second: AimBodies_68
+  - first:
+      213: -2752161136249388193
+    second: AimBodies_69
+  - first:
+      213: -6529153085238525980
+    second: AimBodies_70
+  - first:
+      213: 976199733516277017
+    second: AimBodies_71
+  - first:
+      213: -8698966039758414343
+    second: AimBodies_72
+  - first:
+      213: 5532068961224779441
+    second: AimBodies_73
+  - first:
+      213: -6805864387484412931
+    second: AimBodies_74
+  - first:
+      213: 5860162137126177846
+    second: AimBodies_75
+  - first:
+      213: 3181391141891117633
+    second: AimBodies_76
+  - first:
+      213: -5640704484322250194
+    second: AimBodies_77
+  - first:
+      213: -2250782128468107249
+    second: AimBodies_78
+  - first:
+      213: -1582083126549645072
+    second: AimBodies_79
+  - first:
+      213: -7406813141854045482
+    second: AimBodies_80
+  - first:
+      213: -6406377597876913135
+    second: AimBodies_81
+  - first:
+      213: -1734409499596438966
+    second: AimBodies_82
+  - first:
+      213: -4631755809730742233
+    second: AimBodies_83
+  - first:
+      213: 8959114847752804201
+    second: AimBodies_84
+  - first:
+      213: -6291892105822593116
+    second: AimBodies_85
+  - first:
+      213: -6520726486186248205
+    second: AimBodies_86
+  - first:
+      213: -4326847610252533656
+    second: AimBodies_87
+  - first:
+      213: 6376240095884331625
+    second: AimBodies_88
+  - first:
+      213: 7218954075937226997
+    second: AimBodies_89
+  - first:
+      213: -7379214796898054828
+    second: AimBodies_90
+  - first:
+      213: -4906146927212030140
+    second: AimBodies_91
+  - first:
+      213: -836123369266281014
+    second: AimBodies_92
+  - first:
+      213: -8596245238953761059
+    second: AimBodies_93
+  - first:
+      213: 8269234991673527977
+    second: AimBodies_94
+  - first:
+      213: 320163302638106209
+    second: AimBodies_95
+  - first:
+      213: 4106426863985853001
+    second: AimBodies_96
+  - first:
+      213: 6664928764270675588
+    second: AimBodies_97
+  - first:
+      213: -3333288781454437508
+    second: AimBodies_98
+  - first:
+      213: 3659479828764783329
+    second: AimBodies_99
+  - first:
+      213: -2780601747008016688
+    second: AimBodies_100
+  - first:
+      213: 7922258788856228199
+    second: AimBodies_101
+  - first:
+      213: 3363743906588206634
+    second: AimBodies_102
+  - first:
+      213: 1233031875436656689
+    second: AimBodies_103
+  - first:
+      213: -1779671006115408136
+    second: AimBodies_104
+  - first:
+      213: 4494118017633231456
+    second: AimBodies_105
+  - first:
+      213: 2869524886987680730
+    second: AimBodies_106
+  - first:
+      213: 4838198364445396258
+    second: AimBodies_107
+  - first:
+      213: -3536536241351547117
+    second: AimBodies_108
+  - first:
+      213: 3736249781733120214
+    second: AimBodies_109
+  - first:
+      213: 3903533911446217032
+    second: AimBodies_110
+  - first:
+      213: -2068584611461496663
+    second: AimBodies_111
+  - first:
+      213: -4921103441709554424
+    second: AimBodies_112
+  - first:
+      213: -4669418368848276466
+    second: AimBodies_113
+  - first:
+      213: 7501941029907281095
+    second: AimBodies_114
+  - first:
+      213: -7716329192841128327
+    second: AimBodies_115
+  - first:
+      213: -1234578593516295468
+    second: AimBodies_116
+  - first:
+      213: 2816908970300011974
+    second: AimBodies_117
+  - first:
+      213: -6611988949109965836
+    second: AimBodies_118
+  - first:
+      213: -1877574919748508649
+    second: AimBodies_119
+  - first:
+      213: -1347768466767679005
+    second: AimBodies_120
+  - first:
+      213: 2121749135646309145
+    second: AimBodies_121
+  - first:
+      213: -2491686047610822128
+    second: AimBodies_122
+  - first:
+      213: 6513807263224041013
+    second: AimBodies_123
+  - first:
+      213: 8118500079904015220
+    second: AimBodies_124
+  - first:
+      213: 2982494384470909322
+    second: AimBodies_125
+  - first:
+      213: -171119826278614780
+    second: AimBodies_126
+  - first:
+      213: 9147750982999794598
+    second: AimBodies_127
+  - first:
+      213: -5443844314392174892
+    second: AimBodies_128
+  - first:
+      213: -895623923249896070
+    second: AimBodies_129
+  - first:
+      213: -7615151625585492433
+    second: AimBodies_130
+  - first:
+      213: 2246108100707039215
+    second: AimBodies_131
+  - first:
+      213: -1782247574962249908
+    second: AimBodies_132
+  - first:
+      213: -1578210163712935818
+    second: AimBodies_133
+  - first:
+      213: 5297522438212340262
+    second: AimBodies_134
+  - first:
+      213: 3066931281238955613
+    second: AimBodies_135
+  - first:
+      213: 836144097062064230
+    second: AimBodies_136
+  - first:
+      213: -5634151574907481458
+    second: AimBodies_137
+  - first:
+      213: -357003311185348658
+    second: AimBodies_138
+  - first:
+      213: -9221694437393200979
+    second: AimBodies_139
+  - first:
+      213: -7029316726976795415
+    second: AimBodies_140
+  - first:
+      213: 8498980512164356666
+    second: AimBodies_141
+  - first:
+      213: 386432621706850166
+    second: AimBodies_142
+  - first:
+      213: -5080188290657764387
+    second: AimBodies_143
+  - first:
+      213: -2879202830376073555
+    second: AimBodies_144
+  - first:
+      213: 3024840625260008771
+    second: AimBodies_145
+  - first:
+      213: 6943914276586855734
+    second: AimBodies_146
+  - first:
+      213: -2355188726547297091
+    second: AimBodies_147
+  - first:
+      213: 8330450807186922312
+    second: AimBodies_148
+  - first:
+      213: 624822473553727566
+    second: AimBodies_149
+  - first:
+      213: 5849316128826721094
+    second: AimBodies_150
+  - first:
+      213: 4146389457614982710
+    second: AimBodies_151
+  - first:
+      213: 4456552617579749492
+    second: AimBodies_152
+  - first:
+      213: 791603898805150355
+    second: AimBodies_153
+  - first:
+      213: 9112279797666937599
+    second: AimBodies_154
+  - first:
+      213: -6312344979139459335
+    second: AimBodies_155
+  - first:
+      213: -6906278297579655761
+    second: AimBodies_156
+  - first:
+      213: -1362382605600844966
+    second: AimBodies_157
+  - first:
+      213: -4224576746832245157
+    second: AimBodies_158
+  - first:
+      213: 2044903616718756488
+    second: AimBodies_159
+  - first:
+      213: -3125208146965782684
+    second: AimBodies_160
+  - first:
+      213: -2549579735600681250
+    second: AimBodies_161
+  - first:
+      213: -3187286476695416127
+    second: AimBodies_162
+  - first:
+      213: 5067090662204054364
+    second: AimBodies_163
+  - first:
+      213: 5430887300176619183
+    second: AimBodies_164
+  - first:
+      213: 4870158359119221804
+    second: AimBodies_165
+  - first:
+      213: 3308901094620995260
+    second: AimBodies_166
+  - first:
+      213: -3213085037121368991
+    second: AimBodies_167
+  - first:
+      213: -380560346193340784
+    second: AimBodies_168
+  - first:
+      213: 2743655119487435003
+    second: AimBodies_169
+  - first:
+      213: 1926788038352747859
+    second: AimBodies_170
+  - first:
+      213: -5461981794534608124
+    second: AimBodies_171
+  - first:
+      213: -8471702263267282398
+    second: AimBodies_172
+  - first:
+      213: -2363146779869040442
+    second: AimBodies_173
+  - first:
+      213: 8433039902616599435
+    second: AimBodies_174
+  - first:
+      213: -6000456543446565968
+    second: AimBodies_175
+  - first:
+      213: 2937685807713745939
+    second: AimBodies_176
+  - first:
+      213: -7882211838980619550
+    second: AimBodies_177
+  - first:
+      213: 5369137617122816161
+    second: AimBodies_178
+  - first:
+      213: 6599662282369327911
+    second: AimBodies_179
+  - first:
+      213: -4835050979731944181
+    second: AimBodies_180
+  - first:
+      213: -6343623589096927121
+    second: AimBodies_181
+  - first:
+      213: -5808977050165289027
+    second: AimBodies_182
+  - first:
+      213: -2781472433513374828
+    second: AimBodies_183
+  - first:
+      213: -847963153639268952
+    second: AimBodies_184
+  - first:
+      213: 5331479136744913141
+    second: AimBodies_185
+  - first:
+      213: -8469973189218604755
+    second: AimBodies_186
+  - first:
+      213: 4568043418894334285
+    second: AimBodies_187
+  - first:
+      213: -170570816677051562
+    second: AimBodies_188
+  - first:
+      213: -1611764518724041797
+    second: AimBodies_189
+  - first:
+      213: -2097936467535448342
+    second: AimBodies_190
+  - first:
+      213: -5954581634097796458
+    second: AimBodies_191
+  - first:
+      213: 946529522712702681
+    second: AimBodies_192
+  - first:
+      213: 460104328719257777
+    second: AimBodies_193
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: AimBodies_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 780
+        width: 49
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c070506a348bf3420800000000000000
+      internalID: 2612008909585843980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 358
+        width: 439
+        height: 444
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db14f307fed769500800000000000000
+      internalID: 402647684030087613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_2
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 716
+        width: 52
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ee81c962d4b5ecc0800000000000000
+      internalID: -3682338304495087895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_3
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 852
+        width: 26
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f066074908f9fa50800000000000000
+      internalID: 6555543451344462065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_4
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 743
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1b07513a537819f0800000000000000
+      internalID: -497520927612400869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_5
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 795
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 774d61a84ad6d73d0800000000000000
+      internalID: -3207286806159109001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_6
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 856
+        width: 20
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afff8bc3ab3596120800000000000000
+      internalID: 2407547535154020346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_7
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 805
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d583b1c4e93f4440800000000000000
+      internalID: 4922216572404336087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_8
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 838
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3585fa91a9b0bb750800000000000000
+      internalID: 6321659258428414035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_9
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 798
+        width: 108
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a55736393730a210800000000000000
+      internalID: 1342133407818667432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_10
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 778
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a821d6832c736560800000000000000
+      internalID: 7305819512552630437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_11
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 821
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 938412e02ccf2a0c0800000000000000
+      internalID: -4565809161809344455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_12
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 807
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 531623aa95d1193c0800000000000000
+      internalID: -4354667093745835723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_13
+      rect:
+        serializedVersion: 2
+        x: 314
+        y: 825
+        width: 26
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ae637eaf45617e90800000000000000
+      internalID: -7029726150445011294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_14
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 805
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d7f5adcb0560c4b0800000000000000
+      internalID: -5422222849984825383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_15
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 821
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33fe696de7f8243e0800000000000000
+      internalID: -2070935103708139725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_16
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 842
+        width: 54
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67f71092c6b9f14b0800000000000000
+      internalID: -5467480533757755530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_17
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 761
+        width: 54
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 965d12bea15a4f790800000000000000
+      internalID: -7497185944632437399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_18
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 715
+        width: 11
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7e07d4eaba056200800000000000000
+      internalID: 172555958543126143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_19
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 811
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12ea6eb96774943f0800000000000000
+      internalID: -916122474445885919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_20
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 360
+        width: 405
+        height: 438
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9608572efea0e00d0800000000000000
+      internalID: -3454811838733778839
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_21
+      rect:
+        serializedVersion: 2
+        x: 441
+        y: 813
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 008519c7351b057f0800000000000000
+      internalID: -625805376074196992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_22
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 721
+        width: 100
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22b3fd6507a2fa570800000000000000
+      internalID: 8480043285344107298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_23
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 721
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b049f36ee27fbf50800000000000000
+      internalID: 6899359522359951543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_24
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 811
+        width: 30
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92f8db31979a60500800000000000000
+      internalID: 362163157537230633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_25
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 811
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6f809bcc90875280800000000000000
+      internalID: -9054627114886590610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_26
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 799
+        width: 34
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 075ded30532a544f0800000000000000
+      internalID: -845091006480198288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_27
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 800
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1db298d2928055640800000000000000
+      internalID: 5067965928626006993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_28
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 805
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b7302f1f566728b0800000000000000
+      internalID: -5177056687908964425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_29
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 837
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afb62c16c7301a170800000000000000
+      internalID: 8187829430287231994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_30
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 807
+        width: 25
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9557f89e9d97c0230800000000000000
+      internalID: 3606391378450281817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_31
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 829
+        width: 32
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42ec7341e409c7fc0800000000000000
+      internalID: -3495760545725297116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_32
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 805
+        width: 69
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c65bd8f9d47638f50800000000000000
+      internalID: 6882458238639256940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_33
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 825
+        width: 56
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f109bff4d59a32c0800000000000000
+      internalID: -4451080539646393872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_34
+      rect:
+        serializedVersion: 2
+        x: 806
+        y: 823
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edffca0cdb7e9be70800000000000000
+      internalID: 9131584521637789662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_35
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 795
+        width: 32
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a51b1d8e782f1e160800000000000000
+      internalID: 7053185156979470682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_36
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 789
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6d5b86b06218ce40800000000000000
+      internalID: 5676807536889257324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_37
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 338
+        width: 474
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38796477106e9e270800000000000000
+      internalID: 8280402283867838339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_38
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 743
+        width: 49
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1833db5b7f3268a90800000000000000
+      internalID: -7312117398176451711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_39
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 688
+        width: 90
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 512c74cea57c5ce90800000000000000
+      internalID: -7005974451979828715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_40
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 757
+        width: 154
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 827e2050c1bd521e0800000000000000
+      internalID: -2223129927647828184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_41
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 805
+        width: 28
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f63b8de9826fe460800000000000000
+      internalID: 7273140267762005745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_42
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 809
+        width: 44
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b50595d54d60d4920800000000000000
+      internalID: 2976042437930733659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_43
+      rect:
+        serializedVersion: 2
+        x: 1151
+        y: 767
+        width: 156
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 971cf42cab3e85130800000000000000
+      internalID: 3555842297072435577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_44
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 307
+        width: 462
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72826a87df7835300800000000000000
+      internalID: 239684727901399079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_45
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 765
+        width: 13
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed4abbf78f80411a0800000000000000
+      internalID: -6839832070681025314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_46
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 719
+        width: 45
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fadfd87136c8ed550800000000000000
+      internalID: 6187537295278472623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_47
+      rect:
+        serializedVersion: 2
+        x: 1571
+        y: 854
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e495d8a9382a6c7a0800000000000000
+      internalID: -6357215137869506226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_48
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 860
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 269beb44683d204a0800000000000000
+      internalID: -6628503127903520414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_49
+      rect:
+        serializedVersion: 2
+        x: 1699
+        y: 749
+        width: 54
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d42e6252c8a7a2e0800000000000000
+      internalID: -2114535947467086636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_50
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 692
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 650373e0b8328a300800000000000000
+      internalID: 263499658347098198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_51
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 676
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb94364142ac88df0800000000000000
+      internalID: -177669928971449925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_52
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 665
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 482bd605a5c081210800000000000000
+      internalID: 1303805674159714948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_53
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 654
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e110f01d561a5480800000000000000
+      internalID: -8909784323827166744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_54
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 652
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b2848e76c59ba980800000000000000
+      internalID: -8526556789737225552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_55
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 646
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9db36ceda69a3660800000000000000
+      internalID: 7366365814257335709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_56
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 620
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2b2a2050e4f31960800000000000000
+      internalID: 7571664642794728238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_57
+      rect:
+        serializedVersion: 2
+        x: 1345
+        y: 614
+        width: 9
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6420e6c688d7f54f0800000000000000
+      internalID: -837812980779449786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_58
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 580
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01bf6fbff1c11da80800000000000000
+      internalID: -8443936902646138096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_59
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 584
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2ca4d7db45edfac0800000000000000
+      internalID: -3819644795033965521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_60
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 577
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5c4d678554edb120800000000000000
+      internalID: 2431350429845376091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_61
+      rect:
+        serializedVersion: 2
+        x: 855
+        y: 553
+        width: 37
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ffcc4eeccb4959c0800000000000000
+      internalID: -3938033055615365134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_62
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 561
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8df68b141fd8e3b50800000000000000
+      internalID: 6574848573336743896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_63
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 553
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77b12b3a6d40c41b0800000000000000
+      internalID: -5671152510850425993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_64
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 563
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5683082d97dc97e30800000000000000
+      internalID: 4501855225639876709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_65
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 564
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01642c21026f449a0800000000000000
+      internalID: -6249599765269297648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_66
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 547
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c577c260a0581d190800000000000000
+      internalID: -7939418389977729188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_67
+      rect:
+        serializedVersion: 2
+        x: 1330
+        y: 572
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffbbbce19885f85f0800000000000000
+      internalID: -752285266797151233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_68
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 549
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce3c74423266498e0800000000000000
+      internalID: -1687611659238521876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_69
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 534
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f534835370c5ec9d0800000000000000
+      internalID: -2752161136249388193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_70
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 559
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ef3636acd9c365a0800000000000000
+      internalID: -6529153085238525980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_71
+      rect:
+        serializedVersion: 2
+        x: 923
+        y: 545
+        width: 11
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 915911a4c782c8d00800000000000000
+      internalID: 976199733516277017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_72
+      rect:
+        serializedVersion: 2
+        x: 941
+        y: 547
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fd5307d970174780800000000000000
+      internalID: -8698966039758414343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_73
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 557
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b664caf86bd5cc40800000000000000
+      internalID: 5532068961224779441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_74
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 531
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df3928a0666bc81a0800000000000000
+      internalID: -6805864387484412931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_75
+      rect:
+        serializedVersion: 2
+        x: 1355
+        y: 547
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63c899d4a6a735150800000000000000
+      internalID: 5860162137126177846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_76
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 515
+        width: 9
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1429ef74362962c20800000000000000
+      internalID: 3181391141891117633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_77
+      rect:
+        serializedVersion: 2
+        x: 508
+        y: 504
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e22f401482138b1b0800000000000000
+      internalID: -5640704484322250194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_78
+      rect:
+        serializedVersion: 2
+        x: 1318
+        y: 511
+        width: 28
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f006cdd449d93c0e0800000000000000
+      internalID: -2250782128468107249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_79
+      rect:
+        serializedVersion: 2
+        x: 1381
+        y: 507
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f87ed457cf4b0ae0800000000000000
+      internalID: -1582083126549645072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_80
+      rect:
+        serializedVersion: 2
+        x: 1713
+        y: 505
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6da3812c0b6b53990800000000000000
+      internalID: -7406813141854045482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_81
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 466
+        width: 15
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11cb6856489f717a0800000000000000
+      internalID: -6406377597876913135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_82
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 485
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a42cd79dfb32ee7e0800000000000000
+      internalID: -1734409499596438966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_83
+      rect:
+        serializedVersion: 2
+        x: 1318
+        y: 483
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 728b5a291a2b8bfb0800000000000000
+      internalID: -4631755809730742233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_84
+      rect:
+        serializedVersion: 2
+        x: 1724
+        y: 469
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 967db329c7b255c70800000000000000
+      internalID: 8959114847752804201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_85
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 465
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4af1c533775bea8a0800000000000000
+      internalID: -6291892105822593116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_86
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 466
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f733612fc9b185a0800000000000000
+      internalID: -6520726486186248205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_87
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 442
+        width: 17
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86066a9e503f3f3c0800000000000000
+      internalID: -4326847610252533656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_88
+      rect:
+        serializedVersion: 2
+        x: 1421
+        y: 453
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96ac9cd9594fc7850800000000000000
+      internalID: 6376240095884331625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_89
+      rect:
+        serializedVersion: 2
+        x: 1709
+        y: 467
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f0c8120c70ee2460800000000000000
+      internalID: 7218954075937226997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_90
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 451
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45dc59d2d33c79990800000000000000
+      internalID: -7379214796898054828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_91
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 430
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44717a31d5dd9ebb0800000000000000
+      internalID: -4906146927212030140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_92
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 439
+        width: 7
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac50b72c93e7564f0800000000000000
+      internalID: -836123369266281014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_93
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 442
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd6a402008004b880800000000000000
+      internalID: -8596245238953761059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_94
+      rect:
+        serializedVersion: 2
+        x: 1234
+        y: 402
+        width: 73
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ae4ee2a96932c270800000000000000
+      internalID: 8269234991673527977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_95
+      rect:
+        serializedVersion: 2
+        x: 1459
+        y: 446
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1663cd3d3d2717400800000000000000
+      internalID: 320163302638106209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_96
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 442
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9428ffbd975fcf830800000000000000
+      internalID: 4106426863985853001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_97
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 432
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48603a716659e7c50800000000000000
+      internalID: 6664928764270675588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_98
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 418
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c731d978387cdb1d0800000000000000
+      internalID: -3333288781454437508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_99
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 436
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e27b38f38519c230800000000000000
+      internalID: 3659479828764783329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_100
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 426
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dea1cf71715969d0800000000000000
+      internalID: -2780601747008016688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_101
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 432
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 769ed70056481fd60800000000000000
+      internalID: 7922258788856228199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_102
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 434
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a26239bd24b6eae20800000000000000
+      internalID: 3363743906588206634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_103
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 426
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 138b22435fb9c1110800000000000000
+      internalID: 1233031875436656689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_104
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 422
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f6dd6726a65d47e0800000000000000
+      internalID: -1779671006115408136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_105
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 418
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06226b3b6805e5e30800000000000000
+      internalID: 4494118017633231456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_106
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 392
+        width: 25
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adb2b0b6ea992d720800000000000000
+      internalID: 2869524886987680730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_107
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 404
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22dc4a157cbb42340800000000000000
+      internalID: 4838198364445396258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_108
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 408
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31722fe9603bbeec0800000000000000
+      internalID: -3536536241351547117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_109
+      rect:
+        serializedVersion: 2
+        x: 1030
+        y: 390
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d855588163d9d330800000000000000
+      internalID: 3736249781733120214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_110
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 402
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 841617029632c2630800000000000000
+      internalID: 3903533911446217032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_111
+      rect:
+        serializedVersion: 2
+        x: 1322
+        y: 404
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a08ff57149ea43e0800000000000000
+      internalID: -2068584611461496663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_112
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 386
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80523fd2e7ab4bbb0800000000000000
+      internalID: -4921103441709554424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_113
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 392
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e045d11bbb4e23fb0800000000000000
+      internalID: -4669418368848276466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_114
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 394
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c43d85ae9f3c1860800000000000000
+      internalID: 7501941029907281095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_115
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 383
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9765ab26b771ae490800000000000000
+      internalID: -7716329192841128327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_116
+      rect:
+        serializedVersion: 2
+        x: 304
+        y: 392
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dae82e6f45eddee0800000000000000
+      internalID: -1234578593516295468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_117
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 366
+        width: 39
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c5f75ba8cba71720800000000000000
+      internalID: 2816908970300011974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_118
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 373
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fbfd75251f7d34a0800000000000000
+      internalID: -6611988949109965836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_119
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 393
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 714253dee8381f5e0800000000000000
+      internalID: -1877574919748508649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_120
+      rect:
+        serializedVersion: 2
+        x: 752
+        y: 388
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e1f6d268b3cb4de0800000000000000
+      internalID: -1347768466767679005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_121
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 386
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91bb0bce897f17d10800000000000000
+      internalID: 2121749135646309145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_122
+      rect:
+        serializedVersion: 2
+        x: 812
+        y: 386
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0122c50cdb0cb6dd0800000000000000
+      internalID: -2491686047610822128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_123
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 388
+        width: 24
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53e04dbb131b56a50800000000000000
+      internalID: 6513807263224041013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_124
+      rect:
+        serializedVersion: 2
+        x: 837
+        y: 386
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 473c8ab1fc4baa070800000000000000
+      internalID: 8118500079904015220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_125
+      rect:
+        serializedVersion: 2
+        x: 879
+        y: 0
+        width: 440
+        height: 407
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a816cfa37d2f36920800000000000000
+      internalID: 2982494384470909322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_126
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 390
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 409f2a4bc6f00adf0800000000000000
+      internalID: -171119826278614780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_127
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 372
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a3ee6b5d0753fe70800000000000000
+      internalID: 9147750982999794598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_128
+      rect:
+        serializedVersion: 2
+        x: 1464
+        y: 372
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dedf1450749374b0800000000000000
+      internalID: -5443844314392174892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_129
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 380
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a75295a79ca1293f0800000000000000
+      internalID: -895623923249896070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_130
+      rect:
+        serializedVersion: 2
+        x: 1697
+        y: 386
+        width: 18
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2efc3e71fb815690800000000000000
+      internalID: -7615151625585492433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_131
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 372
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe735cdca67cb2f10800000000000000
+      internalID: 2246108100707039215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_132
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 356
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4fd298f54f2447e0800000000000000
+      internalID: -1782247574962249908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_133
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 344
+        width: 41
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 678baf2c732191ae0800000000000000
+      internalID: -1578210163712935818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_134
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 370
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62ace4f0794948940800000000000000
+      internalID: 5297522438212340262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_135
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 358
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5618c040cdef8a20800000000000000
+      internalID: 3066931281238955613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_136
+      rect:
+        serializedVersion: 2
+        x: 1393
+        y: 338
+        width: 29
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6609c6e40a49a9b00800000000000000
+      internalID: 836144097062064230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_137
+      rect:
+        serializedVersion: 2
+        x: 1441
+        y: 380
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e829eee5ef87fc1b0800000000000000
+      internalID: -5634151574907481458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_138
+      rect:
+        serializedVersion: 2
+        x: 1524
+        y: 372
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec7b825416bab0bf0800000000000000
+      internalID: -357003311185348658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_139
+      rect:
+        serializedVersion: 2
+        x: 1542
+        y: 374
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da88bff84c5f50080800000000000000
+      internalID: -9221694437393200979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_140
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 360
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ec26d20ea9d27e90800000000000000
+      internalID: -7029316726976795415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_141
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 0
+        width: 404
+        height: 365
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a32268c0fb172f570800000000000000
+      internalID: 8498980512164356666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_142
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 354
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67fa57a0c62ec5500800000000000000
+      internalID: 386432621706850166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_143
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 348
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddbbe376aab8f79b0800000000000000
+      internalID: -5080188290657764387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_144
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 357
+        width: 7
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da6822bc7440b08d0800000000000000
+      internalID: -2879202830376073555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_145
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 21
+        width: 447
+        height: 344
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3451bcab5846af920800000000000000
+      internalID: 3024840625260008771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_146
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 338
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63d19be7e3dbd5060800000000000000
+      internalID: 6943914276586855734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_147
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 332
+        width: 19
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbcc42fd450b05fd0800000000000000
+      internalID: -2355188726547297091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_148
+      rect:
+        serializedVersion: 2
+        x: 1588
+        y: 356
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84b1e3d5fd4bb9370800000000000000
+      internalID: 8330450807186922312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_149
+      rect:
+        serializedVersion: 2
+        x: 1659
+        y: 358
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e40d9dfaab0dba800800000000000000
+      internalID: 624822473553727566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_150
+      rect:
+        serializedVersion: 2
+        x: 1666
+        y: 356
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6430ea53702fc2150800000000000000
+      internalID: 5849316128826721094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_151
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 342
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63ec0914e3fea8930800000000000000
+      internalID: 4146389457614982710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_152
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 325
+        width: 16
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 470adad6efad8dd30800000000000000
+      internalID: 4456552617579749492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_153
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 321
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39268174d875cfa00800000000000000
+      internalID: 791603898805150355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_154
+      rect:
+        serializedVersion: 2
+        x: 1320
+        y: 0
+        width: 437
+        height: 357
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffaf7e17232557e70800000000000000
+      internalID: 9112279797666937599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_155
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 303
+        width: 48
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f60caa8fab0668a0800000000000000
+      internalID: -6312344979139459335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_156
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 321
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fad66c8ba78f720a0800000000000000
+      internalID: -6906278297579655761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_157
+      rect:
+        serializedVersion: 2
+        x: 907
+        y: 321
+        width: 27
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a539df80d38d71de0800000000000000
+      internalID: -1362382605600844966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_158
+      rect:
+        serializedVersion: 2
+        x: 1730
+        y: 277
+        width: 29
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5e40bed4d94f55c0800000000000000
+      internalID: -4224576746832245157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_159
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 257
+        width: 50
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88ade6a4105f06c10800000000000000
+      internalID: 2044903616718756488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_160
+      rect:
+        serializedVersion: 2
+        x: 1347
+        y: 212
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46f92f69fb701a4d0800000000000000
+      internalID: -3125208146965782684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_161
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 180
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edeacfc1db21e9cd0800000000000000
+      internalID: -2549579735600681250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_162
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 168
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c2d92f16db74c3d0800000000000000
+      internalID: -3187286476695416127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_163
+      rect:
+        serializedVersion: 2
+        x: 917
+        y: 182
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5b1f555c1ce15640800000000000000
+      internalID: 5067090662204054364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_164
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 178
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa62536b9336e5b40800000000000000
+      internalID: 5430887300176619183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_165
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 143
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2453337937469340800000000000000
+      internalID: 4870158359119221804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_166
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 146
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbe19c5a3049bed20800000000000000
+      internalID: 3308901094620995260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_167
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 160
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16c0241be24d863d0800000000000000
+      internalID: -3213085037121368991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_168
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 150
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 096db85a16af7baf0800000000000000
+      internalID: -380560346193340784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_169
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 87
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf00b3f6bcb631620800000000000000
+      internalID: 2743655119487435003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_170
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 104
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35dbc7723835dba10800000000000000
+      internalID: 1926788038352747859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_171
+      rect:
+        serializedVersion: 2
+        x: 1284
+        y: 103
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4033d172f742334b0800000000000000
+      internalID: -5461981794534608124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_172
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 71
+        width: 23
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 222b4133da77e6a80800000000000000
+      internalID: -8471702263267282398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_173
+      rect:
+        serializedVersion: 2
+        x: 1732
+        y: 100
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c03cc1368a643fd0800000000000000
+      internalID: -2363146779869040442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_174
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 97
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8b382c7c1d280570800000000000000
+      internalID: 8433039902616599435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_175
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 76
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bbf2b5c0981abca0800000000000000
+      internalID: -6000456543446565968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_176
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 53
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31cfb767da1c4c820800000000000000
+      internalID: 2937685807713745939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_177
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 50
+        width: 11
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e28e2d1812cc9290800000000000000
+      internalID: -7882211838980619550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_178
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 51
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a0fac24732038a40800000000000000
+      internalID: 5369137617122816161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_179
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 39
+        width: 66
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 723ea2a11e5b69b50800000000000000
+      internalID: 6599662282369327911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_180
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 65
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0d4c2a40c276ecb0800000000000000
+      internalID: -4835050979731944181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_181
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 49
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f60d617a4fbe6f7a0800000000000000
+      internalID: -6343623589096927121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_182
+      rect:
+        serializedVersion: 2
+        x: 1205
+        y: 61
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbf5080762e526fa0800000000000000
+      internalID: -5808977050165289027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_183
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 59
+        width: 9
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49bd4effe893669d0800000000000000
+      internalID: -2781472433513374828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_184
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 57
+        width: 13
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ad16b4210e6b34f0800000000000000
+      internalID: -847963153639268952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_185
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 55
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f8361907083df940800000000000000
+      internalID: 5331479136744913141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_186
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 53
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d29ea8f924c947a80800000000000000
+      internalID: -8469973189218604755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_187
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 45
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d49f1c57943f46f30800000000000000
+      internalID: 4568043418894334285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_188
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 50
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6538ae6feb202adf0800000000000000
+      internalID: -170570816677051562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_189
+      rect:
+        serializedVersion: 2
+        x: 822
+        y: 47
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb300efa5bcd1a9e0800000000000000
+      internalID: -1611764518724041797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_190
+      rect:
+        serializedVersion: 2
+        x: 1107
+        y: 50
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae6363be5e1a2e2e0800000000000000
+      internalID: -2097936467535448342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_191
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 31
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69a29817d831d5da0800000000000000
+      internalID: -5954581634097796458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_192
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 31
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dee5b2069fb22d00800000000000000
+      internalID: 946529522712702681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AimBodies_193
+      rect:
+        serializedVersion: 2
+        x: 1336
+        y: 19
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b05ee0037e926600800000000000000
+      internalID: 460104328719257777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      AimBodies_0: 2612008909585843980
+      AimBodies_1: 402647684030087613
+      AimBodies_10: 7305819512552630437
+      AimBodies_100: -2780601747008016688
+      AimBodies_101: 7922258788856228199
+      AimBodies_102: 3363743906588206634
+      AimBodies_103: 1233031875436656689
+      AimBodies_104: -1779671006115408136
+      AimBodies_105: 4494118017633231456
+      AimBodies_106: 2869524886987680730
+      AimBodies_107: 4838198364445396258
+      AimBodies_108: -3536536241351547117
+      AimBodies_109: 3736249781733120214
+      AimBodies_11: -4565809161809344455
+      AimBodies_110: 3903533911446217032
+      AimBodies_111: -2068584611461496663
+      AimBodies_112: -4921103441709554424
+      AimBodies_113: -4669418368848276466
+      AimBodies_114: 7501941029907281095
+      AimBodies_115: -7716329192841128327
+      AimBodies_116: -1234578593516295468
+      AimBodies_117: 2816908970300011974
+      AimBodies_118: -6611988949109965836
+      AimBodies_119: -1877574919748508649
+      AimBodies_12: -4354667093745835723
+      AimBodies_120: -1347768466767679005
+      AimBodies_121: 2121749135646309145
+      AimBodies_122: -2491686047610822128
+      AimBodies_123: 6513807263224041013
+      AimBodies_124: 8118500079904015220
+      AimBodies_125: 2982494384470909322
+      AimBodies_126: -171119826278614780
+      AimBodies_127: 9147750982999794598
+      AimBodies_128: -5443844314392174892
+      AimBodies_129: -895623923249896070
+      AimBodies_13: -7029726150445011294
+      AimBodies_130: -7615151625585492433
+      AimBodies_131: 2246108100707039215
+      AimBodies_132: -1782247574962249908
+      AimBodies_133: -1578210163712935818
+      AimBodies_134: 5297522438212340262
+      AimBodies_135: 3066931281238955613
+      AimBodies_136: 836144097062064230
+      AimBodies_137: -5634151574907481458
+      AimBodies_138: -357003311185348658
+      AimBodies_139: -9221694437393200979
+      AimBodies_14: -5422222849984825383
+      AimBodies_140: -7029316726976795415
+      AimBodies_141: 8498980512164356666
+      AimBodies_142: 386432621706850166
+      AimBodies_143: -5080188290657764387
+      AimBodies_144: -2879202830376073555
+      AimBodies_145: 3024840625260008771
+      AimBodies_146: 6943914276586855734
+      AimBodies_147: -2355188726547297091
+      AimBodies_148: 8330450807186922312
+      AimBodies_149: 624822473553727566
+      AimBodies_15: -2070935103708139725
+      AimBodies_150: 5849316128826721094
+      AimBodies_151: 4146389457614982710
+      AimBodies_152: 4456552617579749492
+      AimBodies_153: 791603898805150355
+      AimBodies_154: 9112279797666937599
+      AimBodies_155: -6312344979139459335
+      AimBodies_156: -6906278297579655761
+      AimBodies_157: -1362382605600844966
+      AimBodies_158: -4224576746832245157
+      AimBodies_159: 2044903616718756488
+      AimBodies_16: -5467480533757755530
+      AimBodies_160: -3125208146965782684
+      AimBodies_161: -2549579735600681250
+      AimBodies_162: -3187286476695416127
+      AimBodies_163: 5067090662204054364
+      AimBodies_164: 5430887300176619183
+      AimBodies_165: 4870158359119221804
+      AimBodies_166: 3308901094620995260
+      AimBodies_167: -3213085037121368991
+      AimBodies_168: -380560346193340784
+      AimBodies_169: 2743655119487435003
+      AimBodies_17: -7497185944632437399
+      AimBodies_170: 1926788038352747859
+      AimBodies_171: -5461981794534608124
+      AimBodies_172: -8471702263267282398
+      AimBodies_173: -2363146779869040442
+      AimBodies_174: 8433039902616599435
+      AimBodies_175: -6000456543446565968
+      AimBodies_176: 2937685807713745939
+      AimBodies_177: -7882211838980619550
+      AimBodies_178: 5369137617122816161
+      AimBodies_179: 6599662282369327911
+      AimBodies_18: 172555958543126143
+      AimBodies_180: -4835050979731944181
+      AimBodies_181: -6343623589096927121
+      AimBodies_182: -5808977050165289027
+      AimBodies_183: -2781472433513374828
+      AimBodies_184: -847963153639268952
+      AimBodies_185: 5331479136744913141
+      AimBodies_186: -8469973189218604755
+      AimBodies_187: 4568043418894334285
+      AimBodies_188: -170570816677051562
+      AimBodies_189: -1611764518724041797
+      AimBodies_19: -916122474445885919
+      AimBodies_190: -2097936467535448342
+      AimBodies_191: -5954581634097796458
+      AimBodies_192: 946529522712702681
+      AimBodies_193: 460104328719257777
+      AimBodies_2: -3682338304495087895
+      AimBodies_20: -3454811838733778839
+      AimBodies_21: -625805376074196992
+      AimBodies_22: 8480043285344107298
+      AimBodies_23: 6899359522359951543
+      AimBodies_24: 362163157537230633
+      AimBodies_25: -9054627114886590610
+      AimBodies_26: -845091006480198288
+      AimBodies_27: 5067965928626006993
+      AimBodies_28: -5177056687908964425
+      AimBodies_29: 8187829430287231994
+      AimBodies_3: 6555543451344462065
+      AimBodies_30: 3606391378450281817
+      AimBodies_31: -3495760545725297116
+      AimBodies_32: 6882458238639256940
+      AimBodies_33: -4451080539646393872
+      AimBodies_34: 9131584521637789662
+      AimBodies_35: 7053185156979470682
+      AimBodies_36: 5676807536889257324
+      AimBodies_37: 8280402283867838339
+      AimBodies_38: -7312117398176451711
+      AimBodies_39: -7005974451979828715
+      AimBodies_4: -497520927612400869
+      AimBodies_40: -2223129927647828184
+      AimBodies_41: 7273140267762005745
+      AimBodies_42: 2976042437930733659
+      AimBodies_43: 3555842297072435577
+      AimBodies_44: 239684727901399079
+      AimBodies_45: -6839832070681025314
+      AimBodies_46: 6187537295278472623
+      AimBodies_47: -6357215137869506226
+      AimBodies_48: -6628503127903520414
+      AimBodies_49: -2114535947467086636
+      AimBodies_5: -3207286806159109001
+      AimBodies_50: 263499658347098198
+      AimBodies_51: -177669928971449925
+      AimBodies_52: 1303805674159714948
+      AimBodies_53: -8909784323827166744
+      AimBodies_54: -8526556789737225552
+      AimBodies_55: 7366365814257335709
+      AimBodies_56: 7571664642794728238
+      AimBodies_57: -837812980779449786
+      AimBodies_58: -8443936902646138096
+      AimBodies_59: -3819644795033965521
+      AimBodies_6: 2407547535154020346
+      AimBodies_60: 2431350429845376091
+      AimBodies_61: -3938033055615365134
+      AimBodies_62: 6574848573336743896
+      AimBodies_63: -5671152510850425993
+      AimBodies_64: 4501855225639876709
+      AimBodies_65: -6249599765269297648
+      AimBodies_66: -7939418389977729188
+      AimBodies_67: -752285266797151233
+      AimBodies_68: -1687611659238521876
+      AimBodies_69: -2752161136249388193
+      AimBodies_7: 4922216572404336087
+      AimBodies_70: -6529153085238525980
+      AimBodies_71: 976199733516277017
+      AimBodies_72: -8698966039758414343
+      AimBodies_73: 5532068961224779441
+      AimBodies_74: -6805864387484412931
+      AimBodies_75: 5860162137126177846
+      AimBodies_76: 3181391141891117633
+      AimBodies_77: -5640704484322250194
+      AimBodies_78: -2250782128468107249
+      AimBodies_79: -1582083126549645072
+      AimBodies_8: 6321659258428414035
+      AimBodies_80: -7406813141854045482
+      AimBodies_81: -6406377597876913135
+      AimBodies_82: -1734409499596438966
+      AimBodies_83: -4631755809730742233
+      AimBodies_84: 8959114847752804201
+      AimBodies_85: -6291892105822593116
+      AimBodies_86: -6520726486186248205
+      AimBodies_87: -4326847610252533656
+      AimBodies_88: 6376240095884331625
+      AimBodies_89: 7218954075937226997
+      AimBodies_9: 1342133407818667432
+      AimBodies_90: -7379214796898054828
+      AimBodies_91: -4906146927212030140
+      AimBodies_92: -836123369266281014
+      AimBodies_93: -8596245238953761059
+      AimBodies_94: 8269234991673527977
+      AimBodies_95: 320163302638106209
+      AimBodies_96: 4106426863985853001
+      AimBodies_97: 6664928764270675588
+      AimBodies_98: -3333288781454437508
+      AimBodies_99: 3659479828764783329
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1783 @@
+fileFormatVersion: 2
+guid: 7c19ce7541409ad4eb9a34b91e9bccad
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9085766962622039540
+    second: MenuHero_0
+  - first:
+      213: -3277961134877413180
+    second: MenuHero_1
+  - first:
+      213: 987643746392620596
+    second: MenuHero_2
+  - first:
+      213: 8742868695565091392
+    second: MenuHero_3
+  - first:
+      213: -5999952405646652576
+    second: MenuHero_4
+  - first:
+      213: 8272831691124764691
+    second: MenuHero_5
+  - first:
+      213: 2591071293441624810
+    second: MenuHero_6
+  - first:
+      213: 1272494706464575237
+    second: MenuHero_7
+  - first:
+      213: 5190412452724294785
+    second: MenuHero_8
+  - first:
+      213: 1057480446641295450
+    second: MenuHero_9
+  - first:
+      213: -894754265862539168
+    second: MenuHero_10
+  - first:
+      213: -7940992867848193893
+    second: MenuHero_11
+  - first:
+      213: 4764848462470390892
+    second: MenuHero_12
+  - first:
+      213: -8077390660160048278
+    second: MenuHero_13
+  - first:
+      213: 2449515031839481129
+    second: MenuHero_14
+  - first:
+      213: 8855256625919728342
+    second: MenuHero_15
+  - first:
+      213: -1758703728013808513
+    second: MenuHero_16
+  - first:
+      213: -523619778043860512
+    second: MenuHero_17
+  - first:
+      213: 5701301602960968167
+    second: MenuHero_18
+  - first:
+      213: 7336073349294359699
+    second: MenuHero_19
+  - first:
+      213: -7093618696851133138
+    second: MenuHero_20
+  - first:
+      213: -4204296625911449842
+    second: MenuHero_21
+  - first:
+      213: 4531279233361591705
+    second: MenuHero_22
+  - first:
+      213: -702191424264603706
+    second: MenuHero_23
+  - first:
+      213: -8672482924111964771
+    second: MenuHero_24
+  - first:
+      213: 224834222602091127
+    second: MenuHero_25
+  - first:
+      213: -5034119309786258591
+    second: MenuHero_26
+  - first:
+      213: 3354772645455845827
+    second: MenuHero_27
+  - first:
+      213: 4311644078964014043
+    second: MenuHero_28
+  - first:
+      213: -1078190596267162181
+    second: MenuHero_29
+  - first:
+      213: 2551138462727820022
+    second: MenuHero_30
+  - first:
+      213: -6120339383943103072
+    second: MenuHero_31
+  - first:
+      213: 7403896718705503567
+    second: MenuHero_32
+  - first:
+      213: -1802352070181289387
+    second: MenuHero_33
+  - first:
+      213: 3252333825775175146
+    second: MenuHero_34
+  - first:
+      213: -3289327306214639692
+    second: MenuHero_35
+  - first:
+      213: 5737565527046798245
+    second: MenuHero_36
+  - first:
+      213: -8740806573666028762
+    second: MenuHero_37
+  - first:
+      213: 1038788839121653854
+    second: MenuHero_38
+  - first:
+      213: 3037841832026583178
+    second: MenuHero_39
+  - first:
+      213: -845517292128768801
+    second: MenuHero_40
+  - first:
+      213: 4861437672776299271
+    second: MenuHero_41
+  - first:
+      213: -6996816597518931791
+    second: MenuHero_42
+  - first:
+      213: 5164577292873334095
+    second: MenuHero_43
+  - first:
+      213: -8491678012895073693
+    second: MenuHero_44
+  - first:
+      213: 4700572401323243899
+    second: MenuHero_45
+  - first:
+      213: -8503884206082397748
+    second: MenuHero_46
+  - first:
+      213: 3159531566163301260
+    second: MenuHero_47
+  - first:
+      213: -4187468505937306647
+    second: MenuHero_48
+  - first:
+      213: 5775266771236220060
+    second: MenuHero_49
+  - first:
+      213: -5765623753556935197
+    second: MenuHero_50
+  - first:
+      213: 1052093691358047858
+    second: MenuHero_51
+  - first:
+      213: -3116772980840837744
+    second: MenuHero_52
+  - first:
+      213: 7365080265559919439
+    second: MenuHero_53
+  - first:
+      213: -1281811724232871363
+    second: MenuHero_54
+  - first:
+      213: 1310484379598802139
+    second: MenuHero_55
+  - first:
+      213: 7388255261537630037
+    second: MenuHero_56
+  - first:
+      213: -4584393657250506664
+    second: MenuHero_57
+  - first:
+      213: -7932098248753116724
+    second: MenuHero_58
+  - first:
+      213: 679084686560431788
+    second: MenuHero_59
+  - first:
+      213: 3392311973614445029
+    second: MenuHero_60
+  - first:
+      213: 6764543823395867693
+    second: MenuHero_61
+  - first:
+      213: -6253809136524526721
+    second: MenuHero_62
+  - first:
+      213: 203830671382439052
+    second: MenuHero_63
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: MenuHero_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1159
+        height: 1141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f5011ff9e0271e70800000000000000
+      internalID: 9085766962622039540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1045
+        width: 154
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c0781817b75282d0800000000000000
+      internalID: -3277961134877413180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_2
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 1108
+        width: 78
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43e3e5c21c0d4bd00800000000000000
+      internalID: 987643746392620596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_3
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 1120
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0424a05c1c8e45970800000000000000
+      internalID: 8742868695565091392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_4
+      rect:
+        serializedVersion: 2
+        x: 418
+        y: 1061
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06b4e208313ebbca0800000000000000
+      internalID: -5999952405646652576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_5
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 1021
+        width: 195
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 310f51c77900fc270800000000000000
+      internalID: 8272831691124764691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 731
+        width: 70
+        height: 261
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeacc410d9555f320800000000000000
+      internalID: 2591071293441624810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_7
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 699
+        width: 47
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50fc26d813fc8a110800000000000000
+      internalID: 1272494706464575237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_8
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 739
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 184456230ac080840800000000000000
+      internalID: 5190412452724294785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_9
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 884
+        width: 90
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a50d9fa0ddcecae00800000000000000
+      internalID: 1057480446641295450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_10
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 691
+        width: 21
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0687ffd5cb13593f0800000000000000
+      internalID: -894754265862539168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_11
+      rect:
+        serializedVersion: 2
+        x: 1161
+        y: 949
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b987ff35f0debc190800000000000000
+      internalID: -7940992867848193893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_12
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 892
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c642d1e6e64202240800000000000000
+      internalID: 4764848462470390892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_13
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 794
+        width: 66
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a633a1d8df757ef80800000000000000
+      internalID: -8077390660160048278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_14
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 858
+        width: 55
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92d95c081fc6ef120800000000000000
+      internalID: 2449515031839481129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_15
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 915
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6da9edeebf034ea70800000000000000
+      internalID: 8855256625919728342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_16
+      rect:
+        serializedVersion: 2
+        x: 1209
+        y: 730
+        width: 51
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7ce4920744d797e0800000000000000
+      internalID: -1758703728013808513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_17
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 858
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e9a35c069abbb8f0800000000000000
+      internalID: -523619778043860512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_18
+      rect:
+        serializedVersion: 2
+        x: 1291
+        y: 747
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e98ad1e9971f1f40800000000000000
+      internalID: 5701301602960968167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_19
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 753
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39486eec7d7fec560800000000000000
+      internalID: 7336073349294359699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_20
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 713
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2d6e1af0676e8d90800000000000000
+      internalID: -7093618696851133138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_21
+      rect:
+        serializedVersion: 2
+        x: 1227
+        y: 699
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e07bc2a7e7657a5c0800000000000000
+      internalID: -4204296625911449842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_22
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 578
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99d3f9a747652ee30800000000000000
+      internalID: 4531279233361591705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_23
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 661
+        width: 25
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c7f168be905146f0800000000000000
+      internalID: -702191424264603706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_24
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 586
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d955aa3bab625a780800000000000000
+      internalID: -8672482924111964771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_25
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 619
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77a7c83c885ce1300800000000000000
+      internalID: 224834222602091127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_26
+      rect:
+        serializedVersion: 2
+        x: 1126
+        y: 548
+        width: 52
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 163614fd827332ab0800000000000000
+      internalID: -5034119309786258591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_27
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 600
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c9d79a52fb8e8e20800000000000000
+      internalID: 3354772645455845827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_28
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 629
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdbf09c127906db30800000000000000
+      internalID: 4311644078964014043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_29
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 596
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb5445d7d5f7901f0800000000000000
+      internalID: -1078190596267162181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_30
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 588
+        width: 56
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f25ab35ae6776320800000000000000
+      internalID: 2551138462727820022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_31
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 587
+        width: 60
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0adfc3bd1cf201ba0800000000000000
+      internalID: -6120339383943103072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_32
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 514
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4d2f1096dcefb660800000000000000
+      internalID: 7403896718705503567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_33
+      rect:
+        serializedVersion: 2
+        x: 1160
+        y: 532
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55287a86752ccf6e0800000000000000
+      internalID: -1802352070181289387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_34
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 504
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae50158026c922d20800000000000000
+      internalID: 3252333825775175146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 450
+        width: 64
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b7751b1e36f952d0800000000000000
+      internalID: -3289327306214639692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_36
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 436
+        width: 33
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5abb62ba27def9f40800000000000000
+      internalID: 5737565527046798245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_37
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 474
+        width: 26
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 623bc366bba62b680800000000000000
+      internalID: -8740806573666028762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_38
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 417
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e509c7802f48a6e00800000000000000
+      internalID: 1038788839121653854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_39
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 369
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8034c11d05982a20800000000000000
+      internalID: 3037841832026583178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_40
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 242
+        width: 106
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdce637a08e1444f0800000000000000
+      internalID: -845517292128768801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_41
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 424
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 703788f6ecb477340800000000000000
+      internalID: 4861437672776299271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_42
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 412
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b8a352106056ee90800000000000000
+      internalID: -6996816597518931791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_43
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 353
+        width: 76
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4d73cc4fa34ca740800000000000000
+      internalID: 5164577292873334095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_44
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 352
+        width: 20
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36ae46e86df772a80800000000000000
+      internalID: -8491678012895073693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_45
+      rect:
+        serializedVersion: 2
+        x: 1187
+        y: 405
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7970edb1b9cb3140800000000000000
+      internalID: 4700572401323243899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_46
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 391
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc9676dbe522cf980800000000000000
+      internalID: -8503884206082397748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_47
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 296
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c831cc13839e8db20800000000000000
+      internalID: 3159531566163301260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_48
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 273
+        width: 7
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eb987b749f13e5c0800000000000000
+      internalID: -4187468505937306647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_49
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 232
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9ce6ae978ed52050800000000000000
+      internalID: 5775266771236220060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_50
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 190
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ed3fa46eb36cffa0800000000000000
+      internalID: -5765623753556935197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_51
+      rect:
+        serializedVersion: 2
+        x: 1104
+        y: 152
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27e63d753a9c99e00800000000000000
+      internalID: 1052093691358047858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_52
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 63
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09d427fbc7ffeb4d0800000000000000
+      internalID: -3116772980840837744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_53
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 47
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4b40faca75063660800000000000000
+      internalID: 7365080265559919439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_54
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 21
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d323b243707163ee0800000000000000
+      internalID: -1281811724232871363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_55
+      rect:
+        serializedVersion: 2
+        x: 625
+        y: 29
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdc4fa99996cf2210800000000000000
+      internalID: 1310484379598802139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_56
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 54
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5577cd5040b588660800000000000000
+      internalID: 7388255261537630037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_57
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 53
+        width: 17
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85897050246f060c0800000000000000
+      internalID: -4584393657250506664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_58
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 8
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc982973ba68be190800000000000000
+      internalID: -7932098248753116724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_59
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 21
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cae87daace79c6900800000000000000
+      internalID: 679084686560431788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_60
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 0
+        width: 49
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e1e79a44c9e31f20800000000000000
+      internalID: 3392311973614445029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_61
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 23
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2cc21d64cc70ed50800000000000000
+      internalID: 6764543823395867693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_62
+      rect:
+        serializedVersion: 2
+        x: 1011
+        y: 61
+        width: 13
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7bfc5479b10639a0800000000000000
+      internalID: -6253809136524526721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MenuHero_63
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 17
+        width: 159
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c84641a6ae624d200800000000000000
+      internalID: 203830671382439052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      MenuHero_0: 9085766962622039540
+      MenuHero_1: -3277961134877413180
+      MenuHero_10: -894754265862539168
+      MenuHero_11: -7940992867848193893
+      MenuHero_12: 4764848462470390892
+      MenuHero_13: -8077390660160048278
+      MenuHero_14: 2449515031839481129
+      MenuHero_15: 8855256625919728342
+      MenuHero_16: -1758703728013808513
+      MenuHero_17: -523619778043860512
+      MenuHero_18: 5701301602960968167
+      MenuHero_19: 7336073349294359699
+      MenuHero_2: 987643746392620596
+      MenuHero_20: -7093618696851133138
+      MenuHero_21: -4204296625911449842
+      MenuHero_22: 4531279233361591705
+      MenuHero_23: -702191424264603706
+      MenuHero_24: -8672482924111964771
+      MenuHero_25: 224834222602091127
+      MenuHero_26: -5034119309786258591
+      MenuHero_27: 3354772645455845827
+      MenuHero_28: 4311644078964014043
+      MenuHero_29: -1078190596267162181
+      MenuHero_3: 8742868695565091392
+      MenuHero_30: 2551138462727820022
+      MenuHero_31: -6120339383943103072
+      MenuHero_32: 7403896718705503567
+      MenuHero_33: -1802352070181289387
+      MenuHero_34: 3252333825775175146
+      MenuHero_35: -3289327306214639692
+      MenuHero_36: 5737565527046798245
+      MenuHero_37: -8740806573666028762
+      MenuHero_38: 1038788839121653854
+      MenuHero_39: 3037841832026583178
+      MenuHero_4: -5999952405646652576
+      MenuHero_40: -845517292128768801
+      MenuHero_41: 4861437672776299271
+      MenuHero_42: -6996816597518931791
+      MenuHero_43: 5164577292873334095
+      MenuHero_44: -8491678012895073693
+      MenuHero_45: 4700572401323243899
+      MenuHero_46: -8503884206082397748
+      MenuHero_47: 3159531566163301260
+      MenuHero_48: -4187468505937306647
+      MenuHero_49: 5775266771236220060
+      MenuHero_5: 8272831691124764691
+      MenuHero_50: -5765623753556935197
+      MenuHero_51: 1052093691358047858
+      MenuHero_52: -3116772980840837744
+      MenuHero_53: 7365080265559919439
+      MenuHero_54: -1281811724232871363
+      MenuHero_55: 1310484379598802139
+      MenuHero_56: 7388255261537630037
+      MenuHero_57: -4584393657250506664
+      MenuHero_58: -7932098248753116724
+      MenuHero_59: 679084686560431788
+      MenuHero_6: 2591071293441624810
+      MenuHero_60: 3392311973614445029
+      MenuHero_61: 6764543823395867693
+      MenuHero_62: -6253809136524526721
+      MenuHero_63: 203830671382439052
+      MenuHero_7: 1272494706464575237
+      MenuHero_8: 5190412452724294785
+      MenuHero_9: 1057480446641295450
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

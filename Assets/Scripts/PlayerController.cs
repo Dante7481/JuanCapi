@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     public int health = 12;
     public bool isDead;
     public bool EnSuelo => enSuelo;
+    public bool IsInvulnerable => Time.time < damageUntil;
+    public string VisualState => isDead ? "Death" : Time.time < damageUntil ? "Hurt" : Time.time < dashUntil ? "Dash" : Time.time < attackUntil ? "Melee" : !enSuelo ? (rb != null && rb.linearVelocity.y > .1f ? "Jump" : "Fall") : Mathf.Abs(inputX) > .01f ? "Run" : "Idle";
     public bool InDanger => damageUntil > Time.time || attackUntil > Time.time || dashUntil > Time.time;
     private bool enSuelo;
     private Rigidbody2D rb;

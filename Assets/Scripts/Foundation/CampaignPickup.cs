@@ -17,7 +17,7 @@ namespace JuanCapi
             var game=GameRuntime.Instance;
             if(!other.CompareTag("Player")||game?.CanPlay!=true)return;
             if(!game.Data.Collect(persistentId,item,amount)){game.UI.Toast("No necesitas este objeto o ya tienes el máximo.");return;}
-            game.NotifyChanged();game.UI.Toast(item=="piece"?$"Pieza de corazón · {game.Data.heartPieces}/4":item=="container"?"¡Un corazón más de capacidad!":"Objeto obtenido");
+            game.NotifyChanged();PlasmaEffects.Burst(transform.position,item=="piece"?new Color(1,.3f,.5f):new Color(.3f,.95f,.85f),.6f);
             gameObject.SetActive(false);
         }
     }

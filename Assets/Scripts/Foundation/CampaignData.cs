@@ -11,7 +11,7 @@ namespace JuanCapi
     {
         public string campaignId = Guid.NewGuid().ToString("N");
         public string scene = "LV1";
-        public string region = "Bosque herido";
+        public string region = "Quebrada de la sierra";
         public string checkpoint = "CP_B01";
         public bool hasPosition;
         public float x, y, z;

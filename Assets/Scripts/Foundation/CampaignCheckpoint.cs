@@ -5,7 +5,7 @@ namespace JuanCapi
     public sealed class CampaignCheckpoint : MonoBehaviour
     {
         public string checkpointId="CP_B01";
-        public string region="Bosque herido";
+        public string region="Quebrada de la sierra";
         public Transform safeSpawn;
         private bool activated;
         private void OnTriggerEnter2D(Collider2D other)
