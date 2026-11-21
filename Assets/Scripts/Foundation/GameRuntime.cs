@@ -25,7 +25,9 @@ namespace JuanCapi
         private bool deathHandled;
         private float autoClock;
         private int ignoreInputFrame;
+        private bool fireMustRelease;
         public bool InputAllowed => CanPlay && Time.frameCount > ignoreInputFrame;
+        public bool AttackInputAllowed => InputAllowed && !fireMustRelease;
 
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.SubsystemRegistration)]
         private static void ResetStatics() { Instance = null; }
@@ -52,6 +54,7 @@ namespace JuanCapi
         {
             if (mode == LoadSceneMode.Additive) return;
             UI.EnsureInput();
+            UI.ResetEncounter();
             foreach (var canvas in FindObjectsByType<Canvas>(FindObjectsInactive.Include, FindObjectsSortMode.None))
                 if (canvas.gameObject.scene == scene && canvas.renderMode!=RenderMode.WorldSpace) canvas.gameObject.SetActive(false);
             foreach (var old in FindObjectsByType<PauseMenu>(FindObjectsSortMode.None)) old.enabled = false;
@@ -62,6 +65,7 @@ namespace JuanCapi
             if (scene.name == "Menu") { Data = null; UI.MainMenu(); return; }
             if (FindFirstObjectByType<ArtPreviewScene>() != null) { Data = null; IsPractice = true; UI.ArtPreview(); return; }
             if (Player == null) { UI.Message("No se encontró al jugador en esta escena."); return; }
+            if(Player.GetComponent<WeaponCombat>()==null)Player.gameObject.AddComponent<WeaponCombat>();
             if (Data == null)
             {
                 // Direct editor scene entry never writes into a real player's campaign.
@@ -71,6 +75,8 @@ namespace JuanCapi
             if(scene.name=="LV1")Data.region="Quebrada de la sierra";
             var sierra=FindFirstObjectByType<SierraLevel>();
             if(sierra!=null)sierra.Prepare(Data);
+            var swamp=FindFirstObjectByType<SwampLevel>();
+            if(swamp!=null)swamp.Prepare(Data,IsPractice);
             if (Data.hasPosition) Player.transform.position = new Vector3(Data.x, Data.y, Data.z);
             else CaptureSafePosition(Player.transform.position);
             Player.ApplyCampaign();
@@ -118,17 +124,18 @@ namespace JuanCapi
                 deathHandled = true; Data.deaths++; UI.Death(); return;
             }
             if (!CanPlay) return;
-            if(SierraLevel.Current==null)WorldInteraction.Tick(this);
+            if(SierraLevel.Current==null&&SwampLevel.Current==null)WorldInteraction.Tick(this);
+            if(fireMustRelease&&!GameInput.Held("Atacar"))fireMustRelease=false;
             Data.activeSeconds += Time.unscaledDeltaTime; autoClock += Time.unscaledDeltaTime;
             if (GameInput.Down("Consumible") && Data.Use(Data.assignedConsumable)) NotifyChanged();
-            if (GameInput.Down("Cambiar arma") && Data.gun) { Data.equippedWeapon = Data.equippedWeapon == "sword" ? "gun" : "sword"; NotifyChanged(); }
-            if (autoClock >= 120 && Player.EnSuelo && !Player.InDanger) { autoClock = 0; Save(false, "Avance por " + Data.region); }
+            if (GameInput.Down("Cambiar arma") && Data.gun && !Player.aquatic && !Player.InDanger) { Data.equippedWeapon = Data.equippedWeapon == "sword" ? "gun" : "sword"; NotifyChanged(); }
+            if (autoClock >= 120 && (Player.EnSuelo||Player.aquatic) && !Player.InDanger) { autoClock = 0; Save(false, "Avance por " + Data.region); }
         }
         private void OnApplicationFocus(bool focus)
         {
             #if UNITY_EDITOR || DEVELOPMENT_BUILD
             var arguments=Environment.GetCommandLineArgs();
-            if(arguments.Contains("-juanDataPath")&&(arguments.Contains("-juanSierraValidate")||arguments.Contains("-juanValidate")))return;
+            if(arguments.Contains("-juanDataPath")&&(arguments.Contains("-juanSierraValidate")||arguments.Contains("-juanValidate")||arguments.Contains("-juanSwampValidate")))return;
             #endif
             if (!focus && (CanPlay || Cinematic && UI.ScreenName=="cinematic")) UI.Pause();
         }
@@ -136,10 +143,23 @@ namespace JuanCapi
         {
             if (Data == null) return;
             if(SierraLevel.Current!=null)position=SierraLevel.Current.SafeSavePosition(position);
+            if(SwampLevel.Current!=null)position=SwampLevel.Current.SafeSavePosition(position);
             Data.x = position.x; Data.y = position.y; Data.z = position.z; Data.hasPosition = true;
         }
         public void NotifyChanged() { if (Player != null) Player.ApplyCampaign(); Changed?.Invoke(); }
-        public void ResumeInput() { ignoreInputFrame = Time.frameCount + 1; }
+        public void ResumeInput() { ignoreInputFrame = Time.frameCount + 1; fireMustRelease=true; }
+        public bool Travel(string scene,string checkpoint,string region,Vector3 spawn,bool recoverySupply=false)
+        {
+            if(Busy||Data==null||!Application.CanStreamedLevelBeLoaded(scene))return false;
+            if(scene=="AmazoniaTerrestre"&&!Data.dash||scene=="AmazoniaAcuatica"&&!Data.gun)return false;
+            var next=Data.Clone();next.scene=scene;next.checkpoint=checkpoint;next.region=region;
+            next.x=spawn.x;next.y=spawn.y;next.z=spawn.z;next.hasPosition=true;next.swampLayout=6;
+            if(scene=="AmazoniaTerrestre"&&next.swampStarted<=0)next.swampStarted=next.activeSeconds;
+            if(scene=="AmazoniaAcuatica")next.equippedWeapon="gun";
+            var snapshot=next.Clone();if(recoverySupply){snapshot.healthQuarters=snapshot.MaximumHealth;snapshot.ammunition=3;snapshot.reloadRemaining=0;}
+            if(!IsPractice&&!Store.Save(snapshot,false,"Llegada a "+region,CaptureThumbnail(),out string error)){UI.Message(error);return false;}
+            Data=next;LoadScene(scene);return true;
+        }
         public bool Save(bool manual, string label)
         {
             if (Busy || Data == null || Data.healthQuarters <= 0) return false;
@@ -166,6 +186,7 @@ namespace JuanCapi
             recovered.activeSeconds = Math.Max(recovered.activeSeconds, Data.activeSeconds);
             recovered.deaths = Math.Max(recovered.deaths, Data.deaths);
             recovered.healthQuarters = Math.Min(12, recovered.MaximumHealth);
+            if(recovered.scene=="AmazoniaAcuatica"){recovered.healthQuarters=recovered.MaximumHealth;recovered.ammunition=3;recovered.reloadRemaining=0;}
             if (!Store.Save(recovered, false, "Reintento", null, out string error)) { UI.Message(error); return; }
             Data = recovered; LoadScene(Data.scene);
         }

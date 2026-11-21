@@ -24,6 +24,7 @@ namespace JuanCapi
         public void Prepare(CampaignData data)
         {
             Current=this;
+            checkpointFour=data.checkpoint=="CP_B04"||data.dash;
             if(data.sierraLayout<5)
             {
                 float x=data.dash?96:data.checkpoint=="CP_B04"?73:data.rescues.Contains("MARA")?34:data.sword?11:2;

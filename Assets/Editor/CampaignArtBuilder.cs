@@ -80,7 +80,7 @@ namespace JuanCapi.Editor
             ReskinLevel();
             for(int i=0;i<4;i++)PreviewScene(i);
             EditorSceneManager.OpenScene("Assets/Scenes/Menu.unity");
-            EditorBuildSettings.scenes=new[]{"Menu","LV1","Art/Sierra","Art/Pantano","Art/PantanoAcuatico","Art/MinerTown"}.Select(n=>new EditorBuildSettingsScene("Assets/Scenes/"+n+".unity",true)).ToArray();
+            EditorBuildSettings.scenes=new[]{"Menu","LV1","AmazoniaTerrestre","AmazoniaAcuatica","Art/Sierra","Art/Pantano","Art/PantanoAcuatico","Art/MinerTown"}.Select(n=>"Assets/Scenes/"+n+".unity").Where(File.Exists).Select(n=>new EditorBuildSettingsScene(n,true)).ToArray();
             foreach(string path in Directory.GetFiles(Root+"Generated","*.png"))
             {var imp=(TextureImporter)AssetImporter.GetAtPath(path.Replace('\\','/'));imp.isReadable=false;imp.SaveAndReimport();}
             AssetDatabase.SaveAssets();File.WriteAllLines(Path.Combine(Output,"preparacion-arte.log"),checks);

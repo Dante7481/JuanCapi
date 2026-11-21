@@ -11,6 +11,8 @@ namespace JuanCapi
         private Text cinematicText;
         private RectTransform bossPanel, lessonPanel;
         private Image bossFill;
+        private Image bossPortrait;
+        private Text bossTitle;
         private string lesson;
         public void CinematicFrame(string caption,Action skip)
         {
@@ -31,15 +33,18 @@ namespace JuanCapi
             Time.timeScale=1;hud.gameObject.SetActive(false);Game.ResumeInput();
         }
         public void BossMeter(float remaining,float maximum,bool visible)
+        {EncounterMeter(remaining,maximum,visible,"RASTREADOR",CampaignArt.Current.rastreadorPortrait);}
+        public void EncounterMeter(float remaining,float maximum,bool visible,string title,Sprite portrait)
         {
             if(bossPanel==null)
             {
                 bossPanel=Rect("Rastreador",hud,428,28,424,70);Box(bossPanel,0,0,424,70,Ink);
-                Icon(bossPanel,CampaignArt.Current.rastreadorPortrait,8,3,68,64);
-                Label(bossPanel,"RASTREADOR",85,6,320,28,18,TextAnchor.MiddleLeft,Gold);
+                bossPortrait=Icon(bossPanel,portrait,8,3,68,64);
+                bossTitle=Label(bossPanel,title,85,6,320,28,18,TextAnchor.MiddleLeft,Gold);
                 Box(bossPanel,85,42,320,12,new Color(.25f,.17f,.14f));bossFill=Box(bossPanel,85,42,320,12,new Color(.94f,.52f,.23f));
             }
-            bossPanel.gameObject.SetActive(visible);bossFill.rectTransform.sizeDelta=new Vector2(320*Mathf.Clamp01(remaining/maximum),12);
+            bossTitle.text=title;bossPortrait.sprite=portrait;
+            bossPanel.gameObject.SetActive(visible);bossFill.rectTransform.sizeDelta=new Vector2(320*Mathf.Clamp01(remaining/Mathf.Max(1,maximum)),12);
         }
         public void Lesson(string action,string icon)
         {
@@ -48,9 +53,11 @@ namespace JuanCapi
             if(string.IsNullOrEmpty(action))return;
             lessonPanel=Rect("Gesto",hud,542,462,196,92);Box(lessonPanel,0,0,196,92,Ink);
             if(icon=="jump") {var arrow=Symbol(lessonPanel,SymbolGraphic.Shape.Arrow,27,14,47,Cyan);arrow.rectTransform.localRotation=Quaternion.Euler(0,0,90);}
+            else if(icon=="swim")Symbol(lessonPanel,SymbolGraphic.Shape.Water,20,15,60,Cyan);
             else Icon(lessonPanel,icon,12,6,78,78);
             KeyHint(lessonPanel,action,104,32,80);
             if(action=="Dash") {lessonPanel.sizeDelta=new Vector2(196,120);KeyHint(lessonPanel,"Saltar",104,74,80);}
+            if(icon=="swim") {lessonPanel.sizeDelta=new Vector2(196,120);KeyHint(lessonPanel,"Nadar abajo",104,74,80);}
         }
         public void SierraResults()
         {
@@ -64,7 +71,8 @@ namespace JuanCapi
             Icon(page,"crate",370,420,50,50);Label(page,secrets+" / 3",440,426,160,36,23);
             Icon(page,"record",650,420,50,50);Label(page,d.records.FindAll(id=>id.StartsWith("REC_B")).Count+" / 2",720,426,160,36,23);
             Label(page,"Tu progreso está guardado. Puedes volver a explorar la quebrada.",200,500,880,48,20,TextAnchor.MiddleCenter);
-            Focus(Button(page,"Seguir explorando",245,575,375,62,Play));Button(page,"Menú principal",660,575,375,62,Game.ToMenu);
+            Focus(Button(page,"Ir al pantano",170,575,300,62,()=>Game.Travel("AmazoniaTerrestre","CP_P01","Pantano · orilla de los vertidos",new Vector3(3,.08f,0))));
+            Button(page,"Explorar",490,575,300,62,Play);Button(page,"Menú principal",810,575,300,62,Game.ToMenu);
         }
     }
 }

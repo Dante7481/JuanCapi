@@ -82,6 +82,7 @@ namespace JuanCapi
             provisionIcon.sprite=CampaignArt.Current?.Icon(d.assignedConsumable);provisionCount.text=(d.assignedConsumable=="fruit"?d.fruit:d.cells).ToString();
             int region=d.scene=="LV1"?0:d.scene.Contains("Miner")?2:1;
             for(int i=0;i<3;i++)route[i].color=i==region?Gold:new Color(.46f,.61f,.61f,.5f);
+            RefreshCombatHud(d);
         }
         public void PromptIcon(string key)
         {
@@ -109,7 +110,8 @@ namespace JuanCapi
             for(int i=0;i<tabs.Length;i++){string value=tabs[i];var b=Button(page,value,66+i*290,166,275,48,()=>{tab=value;Inventory();});if(value==tab)Focus(b);}
             if(tab=="Equipo")
             {
-                ArtCard(66,"sword","Espada de plasma",d.sword?"Ataque de corto alcance.":"En el dron de la quebrada.",d.sword,d.sword,d.equippedWeapon=="sword"&&d.sword?"Equipada":"Equipar",()=>{d.equippedWeapon="sword";Game.NotifyChanged();Inventory();});
+                bool water=Game.Player!=null&&Game.Player.aquatic;
+                ArtCard(66,"sword","Espada de plasma",water?"Se conserva para los tramos terrestres.":d.sword?"Ataque de corto alcance.":"En el dron de la quebrada.",d.sword,d.sword&&!water,water?"En tierra":d.equippedWeapon=="sword"&&d.sword?"Equipada":"Equipar",()=>{d.equippedWeapon="sword";Game.NotifyChanged();Inventory();});
                 ArtCard(664,"gun","Disparador de plasma",d.gun?"Apunta con el mouse.":"Tras el caimán terrestre.",d.gun,d.gun,d.equippedWeapon=="gun"?"Equipado":"Equipar",()=>{d.equippedWeapon="gun";Game.NotifyChanged();Inventory();});
                 if(d.gun)for(int i=0;i<3;i++)Icon(page,"cell",980+i*35,448,24,37,i<d.ammunition?Color.white:new Color(.3f,.4f,.4f));
             }
@@ -163,6 +165,8 @@ namespace JuanCapi
                 "Mara midió el agua antes y después del paso de los convoyes. Los residuos aparecen río abajo, junto al pantano. El taller enviaba las muestras cuando llegó el Rastreador.":
                 id=="REC_B02"?"La orden lleva el sello de MinerTown: retener los registros del río y mantener abierta la ruta de carga. El siguiente puesto está en el humedal. El Rastreador protegía el transporte de residuos.":
                 "Una prueba de la actividad industrial en la cuenca. Consérvala para reconstruir el origen de los vertidos.";
+            if(id=="REC_P01"){title="Condensador de vertidos";content="El puesto extrae energía de los residuos que llegan de MinerTown. La abrazadera obliga al caimán a vigilar la orilla. Mara reconoce el condensador: puede convertirlo en un disparador sellado para seguir el rastro bajo el agua.";}
+            if(id=="REC_A01"){title="Plano de mantenimiento";content="Tico encontró una ruta de evacuación dentro de las tuberías. La compuerta se abre al liberar la campana de aire. Más allá del guardián, el conducto asciende hacia las canteras de MinerTown, donde nacen los vertidos.";}
             Begin("record",title,"",Inventory);Icon(page,"record",100,224,240,240);
             Label(page,content,400,230,745,270,26,TextAnchor.MiddleLeft);
         }

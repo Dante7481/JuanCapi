@@ -18,6 +18,7 @@ namespace JuanCapi
         private static void Reset() { instance = null; }
         public Sprite Icon(string key)
         {
+            if(key=="caiman")return caimanPortrait;
             int index=Array.IndexOf(new[]{"sword","gun","shield","dash","fruit","cell","gold","scrap","drone","capsule","bench","crate","cage","valve","key","record"},key);
             return index>=0&&equipment!=null&&index<equipment.Length?equipment[index]:null;
         }

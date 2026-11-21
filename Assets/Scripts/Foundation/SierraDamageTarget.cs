@@ -8,5 +8,6 @@ namespace JuanCapi
         public void SwordHit(int sequence,Vector2 origin)
         {if(lastSwing==sequence)return;lastSwing=sequence;Hit(origin);}
         protected abstract void Hit(Vector2 origin);
+        public virtual void PlasmaHit(Vector2 origin,int damage){Hit(origin);}
     }
 }

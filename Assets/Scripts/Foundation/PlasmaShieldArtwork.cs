@@ -8,6 +8,7 @@ namespace JuanCapi
         public LineRenderer rim;
         public SpriteRenderer emitter;
         private float hitUntil;
+        private void OnDestroy(){if(rim!=null&&rim.sharedMaterial!=null)Destroy(rim.sharedMaterial);}
         public void Show(Vector2 direction,float energy,bool active)
         {
             gameObject.SetActive(active);if(!active)return;

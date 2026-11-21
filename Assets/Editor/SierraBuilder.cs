@@ -72,7 +72,7 @@ namespace JuanCapi.Editor
             Picture("Señal del río",art.Icon("record"),new Vector3(121,2.7f,0),new Vector2(.8f,.9f),9);
             level.props=props.ToArray();
             EditorSceneManager.SaveScene(scene,path);AssetDatabase.SaveAssets();
-            EditorBuildSettings.scenes=new[]{"Menu","LV1","Art/Sierra","Art/Pantano","Art/PantanoAcuatico","Art/MinerTown"}.Select(n=>new EditorBuildSettingsScene("Assets/Scenes/"+n+".unity",true)).ToArray();
+            EditorBuildSettings.scenes=new[]{"Menu","LV1","AmazoniaTerrestre","AmazoniaAcuatica","Art/Sierra","Art/Pantano","Art/PantanoAcuatico","Art/MinerTown"}.Select(n=>"Assets/Scenes/"+n+".unity").Where(File.Exists).Select(n=>new EditorBuildSettingsScene(n,true)).ToArray();
             Debug.Log("SIERRA BUILT: 6 tramos, 3 secretos, 2 registros, 4 enemigos, Rastreador.");
         }
         private static void CreatePlayer()

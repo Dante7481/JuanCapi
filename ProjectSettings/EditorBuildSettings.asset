@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/LV1.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/Scenes/AmazoniaTerrestre.unity
+    guid: ad0d508994f362f43b33d9576e1e6fd7
+  - enabled: 1
+    path: Assets/Scenes/AmazoniaAcuatica.unity
+    guid: 85ce0cac4809f7a45b177c54f2e827f1
+  - enabled: 1
     path: Assets/Scenes/Art/Sierra.unity
     guid: 4a401ce2029e046418625424b3ae1d09
   - enabled: 1

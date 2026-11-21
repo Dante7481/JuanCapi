@@ -30,6 +30,9 @@ namespace JuanCapi
         public int sierraLayout;
         public bool sierraFinished;
         public double sierraSeconds;
+        public int swampLayout;
+        public bool swampFinished;
+        public double swampStarted, swampSeconds;
         public List<string> collected = new List<string>();
         public List<string> defeated = new List<string>();
         public List<string> rescues = new List<string>();
@@ -139,6 +142,7 @@ namespace JuanCapi
             if (!Finite(x) || !Finite(y) || !Finite(z) || Math.Abs(x) > 100000 || Math.Abs(y) > 100000 || Math.Abs(z) > 10000) return false;
             if (double.IsNaN(activeSeconds) || double.IsInfinity(activeSeconds) || activeSeconds < 0 || deaths < 0) return false;
             if (sierraLayout < 0 || double.IsNaN(sierraSeconds) || double.IsInfinity(sierraSeconds) || sierraSeconds < 0 || (sierraFinished && !dash)) return false;
+            if (swampLayout < 0 || double.IsNaN(swampStarted) || double.IsInfinity(swampStarted) || swampStarted < 0 || double.IsNaN(swampSeconds) || double.IsInfinity(swampSeconds) || swampSeconds < 0 || (swampFinished && !shield)) return false;
             foreach (var list in new[] { collected, defeated, rescues, records, purchases })
             {
                 if (list == null || list.Count > 10000 || new HashSet<string>(list).Count != list.Count) return false;
@@ -158,7 +162,7 @@ namespace JuanCapi
     }
     [Serializable] public sealed class CampaignArchive
     {
-        public int schemaVersion = 2;
+        public int schemaVersion = 3;
         public long revision;
         public List<SaveRecord> manual = new List<SaveRecord>();
         public List<SaveRecord> automatic = new List<SaveRecord>();

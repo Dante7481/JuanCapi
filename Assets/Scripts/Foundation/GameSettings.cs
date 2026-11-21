@@ -76,6 +76,7 @@ namespace JuanCapi
     {
         #if UNITY_EDITOR || DEVELOPMENT_BUILD
         public static System.Func<string,bool> ValidationDown,ValidationHeld;
+        public static System.Func<Vector3> ValidationPointer;
         #endif
         public static bool Down(string action)
         {
@@ -92,6 +93,16 @@ namespace JuanCapi
             return Input.GetKey(Key(action));
         }
         public static KeyCode Key(string action) => GameRuntime.Instance?.Settings.Key(action) ?? KeyCode.None;
+        public static Vector3 PointerWorld(Vector3 plane)
+        {
+            #if UNITY_EDITOR || DEVELOPMENT_BUILD
+            if(ValidationPointer!=null)return ValidationPointer();
+            #endif
+            if(Camera.main==null)return plane;
+            var mouse=Input.mousePosition;mouse.z=Mathf.Abs(Camera.main.transform.position.z-plane.z);
+            var world=Camera.main.ScreenToWorldPoint(mouse);world.z=plane.z;
+            return float.IsNaN(world.x)||float.IsNaN(world.y)||float.IsInfinity(world.x)||float.IsInfinity(world.y)?plane:world;
+        }
         public static string Label(string action)
         {
             var key = Key(action);

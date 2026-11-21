@@ -11,7 +11,7 @@ namespace JuanCapi
     // All records live in one atomic archive: a new campaign or a reward cannot partially commit.
     public sealed class CampaignStore
     {
-        public const int FormatVersion = 2;
+        public const int FormatVersion = 3;
         [Serializable] private sealed class Envelope { public int version = FormatVersion; public string payload, sha256; }
         public const int AutoSaveCount = 5;
         public readonly string FilePath;

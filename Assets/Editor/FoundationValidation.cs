@@ -76,7 +76,7 @@ namespace JuanCapi.Editor
             string legacyHash;using(var sha=System.Security.Cryptography.SHA256.Create())legacyHash=Convert.ToBase64String(sha.ComputeHash(System.Text.Encoding.UTF8.GetBytes(legacyPayload)));
             File.WriteAllText(Path.Combine(legacyRoot,"campaign.json"),JsonUtility.ToJson(new LegacyEnvelope{payload=legacyPayload,sha256=legacyHash}));
             var legacyStore=new CampaignStore(legacyRoot);Check(!legacyStore.IsBlocked&&legacyStore.Records()[0].data.sierraLayout==0&&legacyStore.Records()[0].data.sword,"Formato anterior sin campos de sierra se lee y conserva equipo");
-            Check(legacyStore.Save(legacyStore.Records()[0].data,false,"Migración",null,out _)&&File.ReadAllText(legacyStore.FilePath).Contains("\"version\":2"),"Nueva escritura protege formato ampliado frente a ejecutables antiguos");
+            Check(legacyStore.Save(legacyStore.Records()[0].data,false,"Migración",null,out _)&&File.ReadAllText(legacyStore.FilePath).Contains("\"version\":"+CampaignStore.FormatVersion),"Nueva escritura protege formato ampliado frente a ejecutables antiguos");
             var independent=restarted.Records();independent[0].data.gold=0;Check(restarted.Records()[0].data.gold==128,"Copias de lectura aisladas");
             string before=File.ReadAllText(store.FilePath);
             var failing=new CampaignStore(root,()=>throw new IOException("Fallo de disco simulado"));

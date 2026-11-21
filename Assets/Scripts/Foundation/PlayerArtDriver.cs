@@ -13,6 +13,7 @@ namespace JuanCapi
         private float nextGhost;
         public Vector2 AimDirection { get; private set; } = Vector2.right;
         public Vector3 Muzzle => shoulder!=null?shoulder.TransformPoint(new Vector3(.72f,0,0)):transform.position;
+        public Vector3 Shoulder => shoulder!=null?shoulder.position:transform.position+Vector3.up*.78f;
         private void Awake(){player=GetComponent<PlayerController>();}
         public void Install(CampaignArt art)
         {
@@ -20,11 +21,14 @@ namespace JuanCapi
             {
                 shoulder=actor.transform.Find("Hombro · apuntado libre");
                 gun=shoulder!=null?shoulder.GetComponentInChildren<SpriteRenderer>(true):null;
+                if(player==null)player=GetComponent<PlayerController>();
+                actor.animator.runtimeAnimatorController=player!=null&&player.aquatic?art.playerWater:art.playerLand;
                 return;
             }
             foreach(var r in GetComponentsInChildren<SpriteRenderer>())r.enabled=false;
             var old=GetComponent<Animator>();if(old!=null)old.enabled=false;
-            actor=AnimatedActor.Create("Arte de Juan",transform,art.playerLand,art.playerPortrait,1.35f);
+            if(player==null)player=GetComponent<PlayerController>();
+            actor=AnimatedActor.Create("Arte de Juan",transform,player!=null&&player.aquatic?art.playerWater:art.playerLand,art.playerPortrait,1.35f);
             actor.transform.localPosition=new Vector3(0,1.25f,0);
             shoulder=new GameObject("Hombro · apuntado libre").transform;shoulder.SetParent(actor.transform,false);
             shoulder.localPosition=new Vector3(.16f,.03f,0);
@@ -47,13 +51,12 @@ namespace JuanCapi
             gun.gameObject.SetActive(armed);
             if(armed&&CampaignArt.Current.aimBodies!=null&&CampaignArt.Current.aimBodies.Length>=4)
             {
-                int pose=!player.EnSuelo?3:state=="Run"?1+Mathf.FloorToInt(Time.time*8)%2:0;
+                int pose=player.aquatic?4+(state=="Idle"||state=="Reload"?0:1+Mathf.FloorToInt(Time.time*7)%3):!player.EnSuelo?3:state=="Run"?1+Mathf.FloorToInt(Time.time*8)%2:0;
                 actor.sprite.sprite=CampaignArt.Current.aimBodies[pose];
             }
             if(armed&&Camera.main!=null)
             {
-                Vector3 mouse=Input.mousePosition;mouse.z=Mathf.Abs(Camera.main.transform.position.z-shoulder.position.z);
-                Vector3 target=Camera.main.ScreenToWorldPoint(mouse);AimAt(target);
+                AimAt(GameInput.PointerWorld(shoulder.position));
             }
             if(state!=previous)
             {
@@ -67,6 +70,7 @@ namespace JuanCapi
         }
         public void AimAt(Vector3 worldPoint)
         {
+            if(float.IsNaN(worldPoint.x)||float.IsNaN(worldPoint.y)||float.IsInfinity(worldPoint.x)||float.IsInfinity(worldPoint.y))return;
             if(shoulder==null)return;
             Vector3 world=worldPoint-shoulder.position;if(world.sqrMagnitude<.0001f)return;
             AimDirection=((Vector2)world).normalized;
