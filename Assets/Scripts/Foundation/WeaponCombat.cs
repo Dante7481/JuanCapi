@@ -68,7 +68,7 @@ namespace JuanCapi
         public bool BlockProjectile(CampaignProjectile shot)
         {
             if(!ConsumeBlock(shot.transform.position,shot.reflectable,out bool precise))return false;
-            if(precise){shot.Reflect(Aim,gameObject);SwampLevel.Current?.ReflectedShot();}
+            if(precise){shot.Reflect(Aim,gameObject);SwampLevel.Current?.ReflectedShot();MineLevel.Current?.ReflectedShot();}
             else shot.Expire();return true;
         }
         private bool ConsumeBlock(Vector2 source,bool reflectable,out bool precise)

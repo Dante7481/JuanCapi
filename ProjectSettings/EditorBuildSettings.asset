@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/AmazoniaAcuatica.unity
     guid: 85ce0cac4809f7a45b177c54f2e827f1
   - enabled: 1
+    path: Assets/Scenes/MinerTown.unity
+    guid: 188a2cb531dddce468d23c1ca9a1e06f
+  - enabled: 1
     path: Assets/Scenes/Art/Sierra.unity
     guid: 4a401ce2029e046418625424b3ae1d09
   - enabled: 1

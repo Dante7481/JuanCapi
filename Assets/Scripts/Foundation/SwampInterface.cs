@@ -13,6 +13,7 @@ namespace JuanCapi
             if(bossPanel!=null)bossPanel.gameObject.SetActive(false);
             if(targetPanel!=null)targetPanel.gameObject.SetActive(false);
             if(objectivePanel!=null)objectivePanel.gameObject.SetActive(false);
+            if(corePanel!=null)corePanel.gameObject.SetActive(false);
             Lesson(null,null);PromptIcon(null);
         }
         public void TrainingTargets(bool visible,CampaignData d)
@@ -59,7 +60,8 @@ namespace JuanCapi
             Symbol(page,SymbolGraphic.Shape.Clock,375,333,46,Cyan);Label(page,FormatTime(d.swampSeconds),443,332,460,60,40,TextAnchor.MiddleLeft,Gold);
             Icon(page,"crate",370,420,50,50);Label(page,d.collected.FindAll(id=>id.StartsWith("SEC_P")&&id.EndsWith("_GOLD")).Count+" / 3",440,426,160,36,23);
             Icon(page,"record",650,420,50,50);Label(page,d.records.FindAll(id=>id=="REC_P01"||id=="REC_A01").Count+" / 2",720,426,160,36,23);
-            Focus(Button(page,"Seguir explorando",245,575,375,62,Play));Button(page,"Menú principal",660,575,375,62,Game.ToMenu);
+            Focus(Button(page,"Ir a MinerTown",170,575,300,62,()=>Game.Travel("MinerTown","CP_M01","MinerTown · acceso de servicio",new Vector3(3,.08f),true)));
+            Button(page,"Explorar",490,575,300,62,Play);Button(page,"Menú principal",810,575,300,62,Game.ToMenu);
         }
     }
 }

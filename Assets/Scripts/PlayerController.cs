@@ -38,6 +38,16 @@ public class PlayerController : MonoBehaviour
         weapons=list.ToArray();
     }
     private void Start() { ApplyCampaign(); }
+    public void SetAquatic(bool value)
+    {
+        if(aquatic==value)return;
+        aquatic=value;attackUntil=dashUntil=jumpUntil=groundedUntil=0;enSuelo=false;
+        rb.gravityScale=value?0:1.7f;rb.linearDamping=0;
+        var body=GetComponent<CapsuleCollider2D>();body.direction=value?CapsuleDirection2D.Horizontal:CapsuleDirection2D.Vertical;
+        body.size=value?new Vector2(2.7f,1.55f):new Vector2(1.65f,2.5f);
+        if(value&&Game?.Data!=null)Game.Data.equippedWeapon="gun";
+        var driver=GetComponent<PlayerArtDriver>();if(driver!=null)driver.Install(CampaignArt.Current);
+    }
     public void ApplyCampaign()
     {
         if(Combat==null)Combat=GetComponent<WeaponCombat>();
@@ -78,10 +88,12 @@ public class PlayerController : MonoBehaviour
         if(aquatic)
         {
             Vector2 current=SwampLevel.Current!=null?SwampLevel.Current.CurrentAt(transform.position):Vector2.zero;
+            if(MineLevel.Current!=null)current=MineLevel.Current.CurrentAt(transform.position);
             Vector2 desired=Vector2.ClampMagnitude(new Vector2(inputX,inputY),1)*5.3f*movement+current+Vector2.down*.12f;
             rb.linearVelocity=Vector2.MoveTowards(rb.linearVelocity,desired,24*Time.fixedDeltaTime);return;
         }
-        rb.linearVelocity=new Vector2(Time.time<dashUntil?facing*17:inputX*velocidad*movement,rb.linearVelocity.y);
+        float belt=MineLevel.Current!=null&&enSuelo?MineLevel.Current.BeltAt(transform.position):0;
+        rb.linearVelocity=new Vector2(Time.time<dashUntil?facing*17:inputX*velocidad*movement+belt,rb.linearVelocity.y);
     }
     public void Movement()
     {

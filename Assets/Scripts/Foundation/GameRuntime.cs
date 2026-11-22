@@ -77,8 +77,10 @@ namespace JuanCapi
             if(sierra!=null)sierra.Prepare(Data);
             var swamp=FindFirstObjectByType<SwampLevel>();
             if(swamp!=null)swamp.Prepare(Data,IsPractice);
+            var mine=FindFirstObjectByType<MineLevel>();if(mine!=null)mine.Prepare(Data,IsPractice);
             if (Data.hasPosition) Player.transform.position = new Vector3(Data.x, Data.y, Data.z);
             else CaptureSafePosition(Player.transform.position);
+            if(mine!=null)Player.SetAquatic(mine.IsWater(Player.transform.position));
             Player.ApplyCampaign();
             var art=CampaignArt.Current;
             if(art!=null)
@@ -124,7 +126,7 @@ namespace JuanCapi
                 deathHandled = true; Data.deaths++; UI.Death(); return;
             }
             if (!CanPlay) return;
-            if(SierraLevel.Current==null&&SwampLevel.Current==null)WorldInteraction.Tick(this);
+            if(SierraLevel.Current==null&&SwampLevel.Current==null&&MineLevel.Current==null)WorldInteraction.Tick(this);
             if(fireMustRelease&&!GameInput.Held("Atacar"))fireMustRelease=false;
             Data.activeSeconds += Time.unscaledDeltaTime; autoClock += Time.unscaledDeltaTime;
             if (GameInput.Down("Consumible") && Data.Use(Data.assignedConsumable)) NotifyChanged();
@@ -135,7 +137,7 @@ namespace JuanCapi
         {
             #if UNITY_EDITOR || DEVELOPMENT_BUILD
             var arguments=Environment.GetCommandLineArgs();
-            if(arguments.Contains("-juanDataPath")&&(arguments.Contains("-juanSierraValidate")||arguments.Contains("-juanValidate")||arguments.Contains("-juanSwampValidate")))return;
+            if(arguments.Contains("-juanDataPath")&&(arguments.Contains("-juanSierraValidate")||arguments.Contains("-juanValidate")||arguments.Contains("-juanSwampValidate")||arguments.Contains("-juanMineValidate")))return;
             #endif
             if (!focus && (CanPlay || Cinematic && UI.ScreenName=="cinematic")) UI.Pause();
         }
@@ -144,6 +146,7 @@ namespace JuanCapi
             if (Data == null) return;
             if(SierraLevel.Current!=null)position=SierraLevel.Current.SafeSavePosition(position);
             if(SwampLevel.Current!=null)position=SwampLevel.Current.SafeSavePosition(position);
+            if(MineLevel.Current!=null)position=MineLevel.Current.SafeSavePosition(position);
             Data.x = position.x; Data.y = position.y; Data.z = position.z; Data.hasPosition = true;
         }
         public void NotifyChanged() { if (Player != null) Player.ApplyCampaign(); Changed?.Invoke(); }
@@ -152,10 +155,12 @@ namespace JuanCapi
         {
             if(Busy||Data==null||!Application.CanStreamedLevelBeLoaded(scene))return false;
             if(scene=="AmazoniaTerrestre"&&!Data.dash||scene=="AmazoniaAcuatica"&&!Data.gun)return false;
+            if(scene=="MinerTown"&&(!Data.shield||!Data.swampFinished))return false;
             var next=Data.Clone();next.scene=scene;next.checkpoint=checkpoint;next.region=region;
             next.x=spawn.x;next.y=spawn.y;next.z=spawn.z;next.hasPosition=true;next.swampLayout=6;
             if(scene=="AmazoniaTerrestre"&&next.swampStarted<=0)next.swampStarted=next.activeSeconds;
             if(scene=="AmazoniaAcuatica")next.equippedWeapon="gun";
+            if(scene=="MinerTown"){next.mineLayout=7;if(next.mineStarted<=0)next.mineStarted=next.activeSeconds;}
             var snapshot=next.Clone();if(recoverySupply){snapshot.healthQuarters=snapshot.MaximumHealth;snapshot.ammunition=3;snapshot.reloadRemaining=0;}
             if(!IsPractice&&!Store.Save(snapshot,false,"Llegada a "+region,CaptureThumbnail(),out string error)){UI.Message(error);return false;}
             Data=next;LoadScene(scene);return true;
@@ -186,7 +191,7 @@ namespace JuanCapi
             recovered.activeSeconds = Math.Max(recovered.activeSeconds, Data.activeSeconds);
             recovered.deaths = Math.Max(recovered.deaths, Data.deaths);
             recovered.healthQuarters = Math.Min(12, recovered.MaximumHealth);
-            if(recovered.scene=="AmazoniaAcuatica"){recovered.healthQuarters=recovered.MaximumHealth;recovered.ammunition=3;recovered.reloadRemaining=0;}
+            if(recovered.scene=="AmazoniaAcuatica"||recovered.scene=="MinerTown"){recovered.healthQuarters=recovered.MaximumHealth;recovered.ammunition=3;recovered.reloadRemaining=0;recovered.shieldEnergy=recovered.MaximumShield;}
             if (!Store.Save(recovered, false, "Reintento", null, out string error)) { UI.Message(error); return; }
             Data = recovered; LoadScene(Data.scene);
         }

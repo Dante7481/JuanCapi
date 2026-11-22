@@ -167,6 +167,8 @@ namespace JuanCapi
                 "Una prueba de la actividad industrial en la cuenca. Consérvala para reconstruir el origen de los vertidos.";
             if(id=="REC_P01"){title="Condensador de vertidos";content="El puesto extrae energía de los residuos que llegan de MinerTown. La abrazadera obliga al caimán a vigilar la orilla. Mara reconoce el condensador: puede convertirlo en un disparador sellado para seguir el rastro bajo el agua.";}
             if(id=="REC_A01"){title="Plano de mantenimiento";content="Tico encontró una ruta de evacuación dentro de las tuberías. La compuerta se abre al liberar la campana de aire. Más allá del guardián, el conducto asciende hacia las canteras de MinerTown, donde nacen los vertidos.";}
+            if(id=="REC_M01"){title="Libro de descargas";content="El conducto lleva residuos desde las bombas hasta el pantano. Las fechas coinciden con las muestras de Mara. El Director autorizó mantener el bombeo incluso cuando las mediciones superaron los límites internos de la instalación.";}
+            if(id=="REC_M02"){title="Registro de cierre manual";content="Luma conservó una copia del procedimiento. La llave de mantenimiento permite alcanzar la sala de control, pero primero hay que neutralizar el exotraje del Director. Después, la válvula principal puede cerrarse sin cuenta regresiva ni reiniciar las bombas.";}
             Begin("record",title,"",Inventory);Icon(page,"record",100,224,240,240);
             Label(page,content,400,230,745,270,26,TextAnchor.MiddleLeft);
         }

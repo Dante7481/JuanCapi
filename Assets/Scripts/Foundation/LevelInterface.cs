@@ -7,6 +7,7 @@ namespace JuanCapi
     public sealed partial class GameInterface
     {
         private string cinematicCaption;
+        private string cinematicTitle="QUEBRADA DE LA SIERRA";
         private Action cinematicSkip;
         private Text cinematicText;
         private RectTransform bossPanel, lessonPanel;
@@ -14,9 +15,10 @@ namespace JuanCapi
         private Image bossPortrait;
         private Text bossTitle;
         private string lesson;
-        public void CinematicFrame(string caption,Action skip)
+        public void CinematicFrame(string caption,Action skip,string title="QUEBRADA DE LA SIERRA")
         {
-            cinematicCaption=caption;cinematicSkip=skip;
+            if(cinematicTitle!=title&&screen=="cinematic")screen="cinematic-change";
+            cinematicTitle=title;cinematicCaption=caption;cinematicSkip=skip;
             if(screen=="cinematic") { if(cinematicText!=null)cinematicText.text=caption;return; }
             ResumeCinematic();
         }
@@ -26,7 +28,7 @@ namespace JuanCapi
             if(page!=null){page.gameObject.SetActive(false);Destroy(page.gameObject);}
             page=Rect("Introducción",stage,0,0,1280,720);
             Box(page,0,0,1280,64,Ink);Box(page,0,600,1280,120,Ink);
-            Label(page,"QUEBRADA DE LA SIERRA",48,12,900,42,22,TextAnchor.MiddleLeft,Gold);
+            Label(page,cinematicTitle,48,12,900,42,22,TextAnchor.MiddleLeft,Gold);
             cinematicText=Label(page,cinematicCaption,100,610,1080,48,Mathf.RoundToInt(22*Game.Settings.subtitleScale),TextAnchor.MiddleCenter);
             Focus(Button(page,"Omitir",1030,666,170,38,()=>cinematicSkip?.Invoke()));
             Button(page,"Pausa",48,666,170,38,Pause);
@@ -57,7 +59,7 @@ namespace JuanCapi
             else Icon(lessonPanel,icon,12,6,78,78);
             KeyHint(lessonPanel,action,104,32,80);
             if(action=="Dash") {lessonPanel.sizeDelta=new Vector2(196,120);KeyHint(lessonPanel,"Saltar",104,74,80);}
-            if(icon=="swim") {lessonPanel.sizeDelta=new Vector2(196,120);KeyHint(lessonPanel,"Nadar abajo",104,74,80);}
+            if(icon=="swim") {lessonPanel.sizeDelta=new Vector2(196,120);KeyHint(lessonPanel,action=="Nadar abajo"?"Nadar arriba":"Nadar abajo",104,74,80);}
         }
         public void SierraResults()
         {

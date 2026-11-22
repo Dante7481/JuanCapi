@@ -15,7 +15,7 @@ namespace JuanCapi.Editor
         public static void Build()
         {
             art=CampaignArt.Current;BuildScene(false);BuildScene(true);
-            EditorBuildSettings.scenes=new[]{"Menu","LV1","AmazoniaTerrestre","AmazoniaAcuatica","Art/Sierra","Art/Pantano","Art/PantanoAcuatico","Art/MinerTown"}.Select(n=>new EditorBuildSettingsScene("Assets/Scenes/"+n+".unity",true)).ToArray();
+            EditorBuildSettings.scenes=new[]{"Menu","LV1","AmazoniaTerrestre","AmazoniaAcuatica","MinerTown","Art/Sierra","Art/Pantano","Art/PantanoAcuatico","Art/MinerTown"}.Select(n=>"Assets/Scenes/"+n+".unity").Where(System.IO.File.Exists).Select(n=>new EditorBuildSettingsScene(n,true)).ToArray();
             AssetDatabase.SaveAssets();
         }
         private static void BuildScene(bool water)
