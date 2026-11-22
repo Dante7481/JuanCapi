@@ -29,7 +29,7 @@ namespace JuanCapi.Editor
             // The background moves only a fraction of the traversed distance; its entire visible range remains inside the panorama.
             var bg=Picture("Cordillera y quebrada",art.sierra,new Vector3(16,2.2f,4),new Vector2(45,15),-100);
             bg.gameObject.AddComponent<ParallaxArt>().factor=.85f;
-            Platform(-5,13,0);Platform(15,45,0);Platform(49,59,0);Platform(62,104,0);Platform(112.4f,124,0);
+            Platform(-5,13,0);Platform(15,45,0);Platform(49,59,0);Platform(62,104,0);Platform(111.6f,124,0);
             Platform(5.3f,7.6f,.8f,true);Platform(21,24,1,true);
             Platform(49.5f,52,1,true);Platform(53.5f,56,2,true);Platform(57.2f,59.3f,3,true);
             Platform(80,82,.65f,true);Platform(89.8f,91.8f,.65f,true);

@@ -15,7 +15,7 @@ namespace JuanCapi
         public void Arrow(Vector2 origin,Vector2 direction,float length)
         {
             direction.Normalize();Vector2 end=origin+direction*length,side=new Vector2(-direction.y,direction.x)*.4f;
-            line.enabled=true;line.SetPositions(new[]{(Vector3)origin,(Vector3)end,(Vector3)(end-direction*.65f+side),(Vector3)end,(Vector3)(end-direction*.65f-side)});
+            if(!line.enabled)CampaignAudio.Play("warning",false,true);line.enabled=true;line.SetPositions(new[]{(Vector3)origin,(Vector3)end,(Vector3)(end-direction*.65f+side),(Vector3)end,(Vector3)(end-direction*.65f-side)});
         }
         public void Hide(){if(line!=null)line.enabled=false;}
     }

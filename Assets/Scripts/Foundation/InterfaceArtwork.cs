@@ -71,7 +71,7 @@ namespace JuanCapi
         }
         private void RefreshVisualHud(CampaignData d)
         {
-            goldCount.text=d.gold.ToString();scrapCount.text=d.scrap.ToString();clockCount.text=FormatTime(d.activeSeconds);
+            goldCount.text=d.gold.ToString();scrapCount.text=d.scrap.ToString();clockCount.text=FormatTime(d.activeSeconds+(Game.IsTrial?15*d.deaths:0));RefreshTrialHud();
             bool[] unlocked={d.sword,d.gun,d.dash,d.shield};
             for(int i=0;i<4;i++){equipmentHud[i].color=unlocked[i]?Color.white:new Color(.35f,.42f,.43f,.45f);equipmentLocks[i].SetActive(!unlocked[i]);}
             bool firing=d.gun&&d.equippedWeapon=="gun";

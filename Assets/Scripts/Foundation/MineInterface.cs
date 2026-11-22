@@ -36,7 +36,7 @@ namespace JuanCapi
         {
             Begin("credits","JUAN CAPI · GUARDIANES DEL RÍO","",CampaignResults);
             Label(page,"Proyecto universitario",150,170,980,45,28,TextAnchor.MiddleCenter,Gold);
-            Label(page,"Personajes, escenarios y animaciones de los proyectos JuanCapi y CapibaraUnderWaterBoss, con ampliaciones de arte asistidas por IA.\n\nMotor de juego: Unity.\n\nGracias por acompañar a Juan, Mara, Tico y Luma.",220,250,840,270,24,TextAnchor.MiddleCenter);
+            Label(page,"Personajes, escenarios y animaciones de los proyectos JuanCapi y CapibaraUnderWaterBoss, con ampliaciones de arte asistidas por IA.\n\nMúsica y efectos: composición y síntesis originales para Juan Capi.\n\nMotor de juego: Unity.\n\nGracias por acompañar a Juan, Mara, Tico y Luma.",220,250,840,270,24,TextAnchor.MiddleCenter);
         }
     }
 }

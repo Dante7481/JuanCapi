@@ -6,7 +6,7 @@ namespace JuanCapi
     {
         private int lastSwing=-1;
         public void SwordHit(int sequence,Vector2 origin)
-        {if(lastSwing==sequence)return;lastSwing=sequence;Hit(origin);}
+        {if(lastSwing==sequence)return;lastSwing=sequence;Hit(origin);CampaignAudio.Play("impact");}
         protected abstract void Hit(Vector2 origin);
         public virtual void PlasmaHit(Vector2 origin,int damage){Hit(origin);}
     }

@@ -94,7 +94,7 @@ namespace JuanCapi
         public bool CloseDischarge()
         {
             if(!Game.CanPlay||EndingRunning||!Game.Data.defeated.Contains("DIRECTOR")||!Game.Data.maintenanceKey)return false;
-            ClearThreats();StartEnding(false);return true;
+            CampaignAudio.Play("valve");ClearThreats();if(Game.IsTrial){Game.CompleteTrial();return true;}StartEnding(false);return true;
         }
         private void StartEnding(bool completed)
         {EndingRunning=true;endingDone=false;endingClock=completed?2:0;Game.Cinematic=true;Game.Player.GetComponent<Rigidbody2D>().linearVelocity=Vector2.zero;StartCoroutine(Ending());}

@@ -53,6 +53,7 @@ namespace JuanCapi
         }
         public void SwampResults()
         {
+            if(Game.IsTrial){Game.CompleteTrial();return;}
             var d=Game.Data;
             Begin("chapter","PANTANO LIBERADO","Tico encontró el conducto de mantenimiento hacia MinerTown.",Play);
             Symbol(page,SymbolGraphic.Shape.Water,246,190,88,Cyan);Symbol(page,SymbolGraphic.Shape.Check,350,216,46,Cyan);

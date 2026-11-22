@@ -14,6 +14,7 @@ namespace JuanCapi
         private static Material material;
         public static CampaignProjectile Launch(Vector2 origin,Vector2 velocity,bool hostile,bool reflectable,bool gravity,GameObject owner,int damage=1)
         {
+            if(hostile)CampaignAudio.Play("enemyshot");
             var go=new GameObject(hostile?"Proyectil hostil":"Plasma de Juan");go.transform.position=origin;
             var shot=go.AddComponent<CampaignProjectile>();shot.Velocity=velocity;shot.hostile=hostile;shot.reflectable=reflectable;shot.gravity=gravity;shot.owner=owner;shot.damage=damage;
             if(material==null)material=new Material(Shader.Find("Sprites/Default"));
@@ -56,7 +57,7 @@ namespace JuanCapi
             transform.position=start+delta;transform.rotation=Quaternion.Euler(0,0,Mathf.Atan2(Velocity.y,Velocity.x)*Mathf.Rad2Deg);
         }
         private void Tint(){var color=hostile?new Color(1,.57f,.2f):new Color(.25f,1,1);streak.startColor=streak.endColor=color;}
-        private void Impact(Vector2 point){PlasmaEffects.Burst(point,hostile?new Color(1,.6f,.2f):Color.cyan,.35f);Expire();}
+        private void Impact(Vector2 point){CampaignAudio.Play("impact");PlasmaEffects.Burst(point,hostile?new Color(1,.6f,.2f):Color.cyan,.35f);Expire();}
         public void Reflect(Vector2 direction,GameObject newOwner)
         {
             hostile=false;Reflected=true;owner=newOwner;damage=3;gravity=false;Velocity=direction.normalized*16;age=0;

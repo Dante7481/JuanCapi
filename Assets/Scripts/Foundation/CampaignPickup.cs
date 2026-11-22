@@ -16,6 +16,7 @@ namespace JuanCapi
         {
             var game=GameRuntime.Instance;
             if(!other.CompareTag("Player")||game?.CanPlay!=true)return;
+            if(game.IsTrial){gameObject.SetActive(false);return;}
             if(!game.Data.Collect(persistentId,item,amount)){game.UI.Toast("No necesitas este objeto o ya tienes el máximo.");return;}
             game.NotifyChanged();PlasmaEffects.Burst(transform.position,item=="piece"?new Color(1,.3f,.5f):new Color(.3f,.95f,.85f),.6f);
             gameObject.SetActive(false);

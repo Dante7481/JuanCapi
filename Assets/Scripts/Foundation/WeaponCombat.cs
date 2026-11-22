@@ -29,11 +29,12 @@ namespace JuanCapi
             Vector2 direction=(Vector2)(pointer-art.Muzzle);if(direction.sqrMagnitude>.025f)Aim=direction.normalized;
             if(d.gun)
             {
+                if(d.ammunition==0&&d.equippedWeapon=="gun"&&Game.AttackInputAllowed&&GameInput.Down("Atacar"))CampaignAudio.Play("empty");
                 if(d.ammunition==0&&d.reloadRemaining<=0)d.reloadRemaining=ReloadDuration;
                 if(d.reloadRemaining>0)
                 {
                     d.reloadRemaining=Mathf.Max(0,d.reloadRemaining-Time.deltaTime);
-                    if(d.reloadRemaining==0){d.ammunition=3;PlasmaEffects.Burst(art.Muzzle,new Color(.3f,.9f,1),.3f);}
+                    if(d.reloadRemaining==0){d.ammunition=3;CampaignAudio.Play("reload");PlasmaEffects.Burst(art.Muzzle,new Color(.3f,.9f,1),.3f);}
                 }
             }
             bool previous=Blocking;
@@ -41,7 +42,7 @@ namespace JuanCapi
             Blocking=wants&&Time.time>=brokenUntil&&(previous?d.shieldEnergy>0:d.shieldEnergy>=25);
             if(Blocking)
             {
-                if(!previous){raisedAt=Time.time;player.StopAttack();}
+                if(!previous){raisedAt=Time.time;CampaignAudio.Play("shield");player.StopAttack();}
                 d.shieldEnergy=Mathf.Max(0,d.shieldEnergy-20*Time.deltaTime);lastShieldUse=Time.time;
                 if(d.shieldEnergy==0)BreakShield();
             }
@@ -58,7 +59,7 @@ namespace JuanCapi
             var d=Game.Data;if(!d.gun||d.equippedWeapon!="gun"||d.ammunition<=0||d.reloadRemaining>0||Time.time<nextFire)return false;
             art.AimAt(pointer);Vector2 direction=(Vector2)(pointer-art.Muzzle);if(direction.sqrMagnitude>.025f)Aim=direction.normalized;
             Vector2 origin=art.Muzzle;var wall=Physics2D.Linecast(player.Center,origin,1<<3);
-            d.ammunition--;if(d.ammunition==0)d.reloadRemaining=ReloadDuration;
+            CampaignAudio.Play("shot");d.ammunition--;if(d.ammunition==0)d.reloadRemaining=ReloadDuration;
             nextFire=Time.time+.42f;fireUntil=Time.time+.24f;
             if(wall.collider!=null){PlasmaEffects.Burst(wall.point,Color.cyan,.25f);return true;}
             CampaignProjectile.Launch(origin,Aim*16,false,false,false,gameObject,1);
@@ -77,9 +78,10 @@ namespace JuanCapi
             Vector2 toward=source-player.Center;if(toward.sqrMagnitude>.001f&&Vector2.Dot(Aim,toward.normalized)<.5f)return false;
             var d=Game.Data;if(d.shieldEnergy<25){BreakShield();return false;}
             d.shieldEnergy-=25;lastShieldUse=Time.time;precise=reflectable&&Time.time-raisedAt<=.15f;shield.Impact();
+            CampaignAudio.Play(precise?"parry":"block",false,true);
             if(d.shieldEnergy<=0)BreakShield();return true;
         }
         private void BreakShield()
-        {Blocking=false;Game.Data.shieldEnergy=0;brokenUntil=Time.time+1.5f;lastShieldUse=Time.time;PlasmaEffects.Burst(player.Center,new Color(.25f,.7f,1),.9f);}
+        {CampaignAudio.Play("break",false,true);Blocking=false;Game.Data.shieldEnergy=0;brokenUntil=Time.time+1.5f;lastShieldUse=Time.time;PlasmaEffects.Burst(player.Center,new Color(.25f,.7f,1),.9f);}
     }
 }

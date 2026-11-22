@@ -9,6 +9,7 @@ namespace JuanCapi
     [Serializable] public sealed class GameSettings
     {
         public float master = .8f, music = .7f, effects = .8f;
+        public float ambience=.65f;
         public float uiScale = 1, subtitleScale = 1;
         public bool cameraShake = true, reducedFlashes, fullscreen;
         public int width = 1280, height = 720;
@@ -34,6 +35,7 @@ namespace JuanCapi
         }
         public void Normalize()
         {
+            ambience = float.IsNaN(ambience) ? .65f : Mathf.Clamp01(ambience);
             master = float.IsNaN(master) ? .8f : Mathf.Clamp01(master);
             music = float.IsNaN(music) ? .7f : Mathf.Clamp01(music);
             effects = float.IsNaN(effects) ? .8f : Mathf.Clamp01(effects);

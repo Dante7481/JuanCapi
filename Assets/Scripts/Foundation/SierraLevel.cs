@@ -56,7 +56,7 @@ namespace JuanCapi
         }
         private IEnumerator Introduction()
         {
-            IntroRunning=true;Game.Cinematic=true;introClock=0;
+            CampaignAudio.Play("drone",true);IntroRunning=true;Game.Cinematic=true;introClock=0;
             boss.gameObject.SetActive(false);
             view.Cut(new Vector3(34,3.4f,-10));
             while(!introDoneRequested&&introClock<17)

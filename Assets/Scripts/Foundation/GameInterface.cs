@@ -47,7 +47,7 @@ namespace JuanCapi
         private void Update()
         {
             scaler.matchWidthOrHeight=Screen.width/(float)Math.Max(1,Screen.height)<16f/9f?0:1;
-            toastRoot.gameObject.SetActive(screen!="art"&&Time.unscaledTime<toastUntil);
+            toastRoot.gameObject.SetActive(screen!="art"&&screen!="cinematic"&&screen!="trial-result"&&screen!="complete"&&Time.unscaledTime<toastUntil);
             var d=Game.Data;
             if(d!=null)
             {
@@ -112,6 +112,7 @@ namespace JuanCapi
                 "Juan comienza en la sierra con tres corazones. La espada espera en el dron caído.",()=>Game.NewCampaign(true),MainMenu),!Game.Store.IsBlocked);
             Button(page,"Ajustes",68,454,380,56,()=>Settings(MainMenu));
             Button(page,"Salir",68,523,380,56,Quit);
+            Button(page,"Contrarreloj",790,570,340,56,TrialMenu,Game.TrialUnlocked(1));
             Symbol(page,SymbolGraphic.Shape.Mouse,70,642,26,Cyan);Label(page,"/   Flechas + Enter",112,638,370,34,17,TextAnchor.MiddleLeft);
             Focus(first.interactable?first:page.GetComponentsInChildren<Button>().FirstOrDefault(b=>b.interactable));
         }
@@ -133,6 +134,7 @@ namespace JuanCapi
         }
         public void SystemMenu()
         {
+            if(Game.IsTrial){TrialSystem();return;}
             Begin("system","SISTEMA","Un guardado manual y cinco autoguardados de tu campaña.",Pause);
             Focus(Button(page,"Guardar",365,178,550,60,SaveConfirmation,!Game.IsPractice));
             Button(page,"Cargar partida",365,254,550,60,()=>History(SystemMenu),Game.Store.HasRecords);
@@ -193,6 +195,7 @@ namespace JuanCapi
         { Label(page,name,100,y,620,38,25,TextAnchor.MiddleLeft,Gold); Label(page,description,100,y+45,610,65,19); Button(page,actionName,740,y+15,370,52,action??(()=>{}),enabled); }
         public void Bank(string shelter)
         {
+            if(Game.IsTrial){Toast("Equipo fijo: el banco no se utiliza en contrarreloj.");return;}
             var d=Game.Data; Begin("bank","BANCO DEL REFUGIO",$"Oro {d.gold} · Chatarra {d.scrap} · Cada compra se autoguarda.",Play);
             string[] ids={"reload","shield","fruit","cell"}; string[] names={"Recarga rápida · 80 oro + 15 chatarra","Escudo reforzado · 80 oro + 15 chatarra","Fruta · 15 oro","Celda · 20 oro"};
             for(int i=0;i<ids.Length;i++)
@@ -210,7 +213,8 @@ namespace JuanCapi
             Begin("settings","AJUSTES","Los ajustes son del dispositivo y no borran tu campaña.",()=>{PersistSettings();onBack();});
             var s=Game.Settings;
             Slider("Volumen general",s.master,165,v=>{s.master=v;s.Apply();});
-            Slider("Música",s.music,225,v=>s.music=v); Slider("Efectos",s.effects,285,v=>s.effects=v);
+            Slider("Música",s.music,215,v=>s.music=v); Slider("Efectos",s.effects,265,v=>s.effects=v);
+            Slider("Ambiente",s.ambience,315,v=>s.ambience=v);
             Button(page,"Escala de texto: "+(s.uiScale>1?"125 %":"100 %"),66,362,550,50,()=>{s.uiScale=s.uiScale>1?1:1.25f;Settings(onBack);});
             Button(page,"Subtítulos: "+(s.subtitleScale>1?"Grandes":"Normales"),658,362,556,50,()=>{s.subtitleScale=s.subtitleScale>1?1:1.25f;Settings(onBack);});
             Button(page,"Destellos reducidos: "+(s.reducedFlashes?"Sí":"No"),66,426,550,50,()=>{s.reducedFlashes=!s.reducedFlashes;Settings(onBack);});
@@ -269,9 +273,9 @@ namespace JuanCapi
         }
         public void Death()
         {
-            Begin("death","LA AVENTURA CONTINÚA","Has perdido todos los corazones. Puedes cargar un guardado para volver a intentarlo.");
-            Focus(Button(page,"Reintentar último guardado",300,250,680,64,Game.Retry));
-            Button(page,"Elegir otro guardado",300,340,680,64,()=>History(Death),!Game.IsPractice&&Game.Store.HasRecords);
+            Begin("death","LA AVENTURA CONTINÚA",Game.IsTrial?"+15 segundos. Reintentar conserva el reloj y recupera el último checkpoint del reto.":"Has perdido todos los corazones. Puedes cargar un guardado para volver a intentarlo.");
+            Focus(Button(page,Game.IsTrial?"Reintentar checkpoint":"Reintentar último guardado",300,250,680,64,Game.Retry));
+            Button(page,"Elegir otro guardado",300,340,680,64,()=>History(Death),!Game.IsPractice&&!Game.IsTrial&&Game.Store.HasRecords);
             Button(page,"Volver al menú",300,430,680,64,Game.ToMenu);
         }
         public void Loading() { Begin("loading","JUAN CAPI","Cargando la aventura…"); }
@@ -312,7 +316,7 @@ namespace JuanCapi
             var colors=b.colors;colors.normalColor=Color.white;colors.highlightedColor=new Color(.55f,.95f,.87f);colors.selectedColor=new Color(.6f,.95f,.85f);colors.pressedColor=Gold;colors.disabledColor=new Color(.4f,.5f,.5f,.5f);b.colors=colors;
             Label(rt,text,16,0,w-32,h,20,TextAnchor.MiddleCenter,enabled?Color.white:new Color(.48f,.6f,.6f));
             var accent=Box(rt,0,0,4,h,Gold);accent.gameObject.SetActive(false);rt.gameObject.AddComponent<SelectionAccent>().indicator=accent.gameObject;
-            b.onClick.AddListener(()=>action?.Invoke());return b;
+            b.onClick.AddListener(()=>{CampaignAudio.Play(text.Contains("Cancelar")||text.Contains("Volver")?"cancel":"confirm",true);action?.Invoke();});return b;
         }
         private void Slider(string title,float value,float y,Action<float> action)
         {

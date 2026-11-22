@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 namespace JuanCapi
 {
     [DefaultExecutionOrder(-900)]
-    public sealed class GameRuntime : MonoBehaviour
+    public sealed partial class GameRuntime : MonoBehaviour
     {
         public static GameRuntime Instance { get; private set; }
         public CampaignStore Store { get; private set; }
@@ -20,7 +20,7 @@ namespace JuanCapi
         public bool IsPractice { get; private set; }
         public bool Busy { get; private set; }
         public bool Cinematic { get; set; }
-        public bool CanPlay => Data != null && Player != null && !Busy && !Cinematic && UI != null && !UI.IsOpen && Data.healthQuarters > 0;
+        public bool CanPlay => Data != null && Player != null && !Busy && !Cinematic && UI != null && !UI.IsOpen && Data.healthQuarters > 0 && !TrialFinished;
         public event Action Changed;
         private bool deathHandled;
         private float autoClock;
@@ -46,7 +46,9 @@ namespace JuanCapi
             int index = Array.IndexOf(args, "-juanDataPath");
             if (index >= 0 && index + 1 < args.Length) DataDirectory = Path.GetFullPath(args[index + 1]);
             Store = new CampaignStore(DataDirectory); Settings = GameSettings.Load(DataDirectory); Settings.Apply(true);
+            Trials = new TrialRecords(DataDirectory);
             UI = gameObject.AddComponent<GameInterface>();
+            gameObject.AddComponent<CampaignAudio>();
             SceneManager.sceneLoaded += SceneLoaded;
         }
         private void OnDestroy() { SceneManager.sceneLoaded -= SceneLoaded; if (Instance == this) Instance = null; Time.timeScale = 1; }
@@ -76,8 +78,8 @@ namespace JuanCapi
             var sierra=FindFirstObjectByType<SierraLevel>();
             if(sierra!=null)sierra.Prepare(Data);
             var swamp=FindFirstObjectByType<SwampLevel>();
-            if(swamp!=null)swamp.Prepare(Data,IsPractice);
-            var mine=FindFirstObjectByType<MineLevel>();if(mine!=null)mine.Prepare(Data,IsPractice);
+            if(swamp!=null)swamp.Prepare(Data,IsPractice&&!IsTrial);
+            var mine=FindFirstObjectByType<MineLevel>();if(mine!=null)mine.Prepare(Data,IsPractice&&!IsTrial);
             if (Data.hasPosition) Player.transform.position = new Vector3(Data.x, Data.y, Data.z);
             else CaptureSafePosition(Player.transform.position);
             if(mine!=null)Player.SetAquatic(mine.IsWater(Player.transform.position));
@@ -98,13 +100,13 @@ namespace JuanCapi
             if (Busy) return;
             var initial = new CampaignData();
             if (!Store.StartNew(initial, confirmed, out string error)) { UI.Message(error); return; }
-            IsPractice = false; Data = initial; LoadScene("LV1");
+            CancelTrial(); IsPractice = false; Data = initial; LoadScene("LV1");
         }
         public void LoadRecord(SaveRecord record)
         {
             if (Busy || record == null) return;
             if (!Application.CanStreamedLevelBeLoaded(record.data.scene)) { UI.Message("Esta escena todavía no está instalada: " + record.data.scene); return; }
-            Data = record.data.Clone(); IsPractice = false;
+            CancelTrial(); Data = record.data.Clone(); IsPractice = false;
             if (Data.healthQuarters == 0) Data.healthQuarters = Math.Min(12, Data.MaximumHealth);
             LoadScene(Data.scene);
         }
@@ -117,7 +119,7 @@ namespace JuanCapi
             while (!operation.isDone) yield return null;
             Busy = false; ignoreInputFrame = Time.frameCount + 1; Time.timeScale = UI.IsOpen ? 0 : 1;
         }
-        public void ToMenu() { if (!Busy) LoadScene("Menu"); }
+        public void ToMenu() { if (!Busy) { CancelTrial(); LoadScene("Menu"); } }
         private void Update()
         {
             if (Data == null || Player == null || Busy) return;
@@ -137,7 +139,7 @@ namespace JuanCapi
         {
             #if UNITY_EDITOR || DEVELOPMENT_BUILD
             var arguments=Environment.GetCommandLineArgs();
-            if(arguments.Contains("-juanDataPath")&&(arguments.Contains("-juanSierraValidate")||arguments.Contains("-juanValidate")||arguments.Contains("-juanSwampValidate")||arguments.Contains("-juanMineValidate")))return;
+            if(arguments.Contains("-juanDataPath")&&(arguments.Contains("-juanSierraValidate")||arguments.Contains("-juanValidate")||arguments.Contains("-juanSwampValidate")||arguments.Contains("-juanMineValidate")||arguments.Contains("-juanTrialValidate")||arguments.Contains("-juanJourneyValidate")))return;
             #endif
             if (!focus && (CanPlay || Cinematic && UI.ScreenName=="cinematic")) UI.Pause();
         }
@@ -162,15 +164,16 @@ namespace JuanCapi
             if(scene=="AmazoniaAcuatica")next.equippedWeapon="gun";
             if(scene=="MinerTown"){next.mineLayout=7;if(next.mineStarted<=0)next.mineStarted=next.activeSeconds;}
             var snapshot=next.Clone();if(recoverySupply){snapshot.healthQuarters=snapshot.MaximumHealth;snapshot.ammunition=3;snapshot.reloadRemaining=0;}
-            if(!IsPractice&&!Store.Save(snapshot,false,"Llegada a "+region,CaptureThumbnail(),out string error)){UI.Message(error);return false;}
-            Data=next;LoadScene(scene);return true;
+            if(!IsPractice&&!IsTrial&&!Store.Save(snapshot,false,"Llegada a "+region,CaptureThumbnail(),out string error)){UI.Message(error);return false;}
+            TrialCheckpoint(next);Data=next;LoadScene(scene);return true;
         }
         public bool Save(bool manual, string label)
         {
             if (Busy || Data == null || Data.healthQuarters <= 0) return false;
+            if (IsTrial) return false;
             if (IsPractice) { UI.Toast("Sesión de prueba: no modifica la campaña."); return false; }
             if (Store.Save(Data, manual, label, CaptureThumbnail(), out string error))
-            { UI.Toast(manual ? "Partida guardada" : "Autoguardado completado"); return true; }
+            { CampaignAudio.Play("save",true); UI.Toast(manual ? "Partida guardada" : "Autoguardado completado"); return true; }
             UI.Message(error); return false;
         }
         public bool Transaction(Func<CampaignData, bool> mutation, string label)
@@ -178,12 +181,16 @@ namespace JuanCapi
             if (Data == null || Busy) return false;
             var next = Data.Clone();
             if (!mutation(next)) return false;
-            if (!IsPractice && !Store.Save(next, false, label, CaptureThumbnail(), out string error)) { UI.Message(error); return false; }
-            Data = next; NotifyChanged(); UI.Toast(label); return true;
+            NormalizeTrial(next);
+            if (!IsPractice && !IsTrial && !Store.Save(next, false, label, CaptureThumbnail(), out string error)) { UI.Message(error); return false; }
+            bool reward=next.sword!=Data.sword||next.dash!=Data.dash||next.gun!=Data.gun||next.shield!=Data.shield||next.rescues.Count!=Data.rescues.Count;
+            CampaignAudio.Play(next.completed&&!Data.completed?"victory":reward?"reward":label.Contains("Compra")?"purchase":"save",true);
+            TrialCheckpoint(next); Data = next; NotifyChanged(); UI.Toast(label); return true;
         }
         public bool GrantReward(CampaignReward reward) => Transaction(d => d.Grant(reward), "Equipo obtenido: " + reward);
         public void Retry()
         {
+            if(IsTrial){RetryTrial();return;}
             if (IsPractice) { Data.healthQuarters = 12; LoadScene(Data.scene); return; }
             var record = Store.Records().FirstOrDefault(r => r.data.campaignId == Data.campaignId);
             if (record == null) { UI.Message("No hay un guardado disponible."); return; }

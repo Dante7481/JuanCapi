@@ -5,7 +5,7 @@ namespace JuanCapi
 {
     public sealed class SymbolGraphic : MaskableGraphic
     {
-        public enum Shape { Clock,Lock,Check,Arrow,Mouse,Save,Pack,Mountain,Water,Factory,Pause,Reticle }
+        public enum Shape { Clock,Lock,Check,Arrow,Mouse,Save,Pack,Mountain,Water,Factory,Pause,Reticle,Medal }
         public Shape shape;
         public int mouseButton;
         protected override void OnPopulateMesh(VertexHelper vh)
@@ -21,6 +21,11 @@ namespace JuanCapi
             {for(int i=0;i<24;i++){float a=Mathf.Lerp(start,end,i/24f),b=Mathf.Lerp(start,end,(i+1)/24f);line(center+new Vector2(Mathf.Cos(a),Mathf.Sin(a))*radius,center+new Vector2(Mathf.Cos(b),Mathf.Sin(b))*radius,.07f);}};
             switch(shape)
             {
+                case Shape.Medal:
+                    poly(new[]{new Vector2(.22f,.9f),new Vector2(.4f,.9f),new Vector2(.57f,.53f),new Vector2(.39f,.44f)},color);
+                    poly(new[]{new Vector2(.6f,.9f),new Vector2(.78f,.9f),new Vector2(.61f,.44f),new Vector2(.43f,.53f)},color);
+                    arc(new Vector2(.5f,.33f),.25f,0,Mathf.PI*2);
+                    line(new Vector2(.37f,.34f),new Vector2(.46f,.24f),.05f);line(new Vector2(.46f,.24f),new Vector2(.65f,.44f),.05f);break;
                 case Shape.Clock:arc(Vector2.one*.5f,.37f,0,Mathf.PI*2);line(new Vector2(.5f,.5f),new Vector2(.5f,.76f),.07f);line(new Vector2(.5f,.5f),new Vector2(.7f,.4f),.07f);break;
                 case Shape.Lock:box(.18f,.12f,.64f,.45f);arc(new Vector2(.5f,.58f),.22f,0,Mathf.PI);box(.25f,.5f,.07f,.1f);box(.68f,.5f,.07f,.1f);break;
                 case Shape.Check:line(new Vector2(.12f,.47f),new Vector2(.38f,.2f),.13f);line(new Vector2(.38f,.2f),new Vector2(.88f,.82f),.13f);break;

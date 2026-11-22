@@ -17,7 +17,7 @@ namespace JuanCapi
         }
         public void Show(Vector2 center,float width,float height)
         {
-            line.enabled=true;float x=width*.5f,y=height*.5f;
+            if(!line.enabled)CampaignAudio.Play("warning",false,true);line.enabled=true;float x=width*.5f,y=height*.5f;
             line.SetPositions(new[]{new Vector3(center.x-x,center.y-y),new Vector3(center.x+x,center.y-y),new Vector3(center.x+x,center.y+y),new Vector3(center.x-x,center.y+y)});
         }
         public void Hide(){if(line!=null)line.enabled=false;}

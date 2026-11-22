@@ -105,6 +105,7 @@ public class PlayerController : MonoBehaviour
     {
         if(Game==null||!Game.CanPlay||quarters<=0||Time.time<damageUntil||Time.time<dashUntil-.12f)return;
         if(blockable&&Combat!=null&&Combat.BlockMelee(direction))return;
+        CampaignAudio.Play(Game.Data.healthQuarters<=quarters?"death":"hurt",false,true);
         Game.Data.healthQuarters=Mathf.Max(0,Game.Data.healthQuarters-quarters);damageUntil=Time.time+.7f;
         attackUntil=dashUntil=jumpUntil=0;
         rb.linearVelocity=Vector2.zero;

@@ -63,6 +63,7 @@ namespace JuanCapi
         }
         public void SierraResults()
         {
+            if(Game.IsTrial){Game.CompleteTrial();return;}
             var d=Game.Data;
             Begin("chapter","QUEBRADA SUPERADA","El rastro de los cargamentos continúa hacia el pantano.",Play);
             Symbol(page,SymbolGraphic.Shape.Mountain,246,190,88,Gold);Symbol(page,SymbolGraphic.Shape.Check,350,216,46,Cyan);
