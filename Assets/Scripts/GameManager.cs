@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public GameObject GameOverPanel;
     public TextMeshProUGUI gameOverText;
+    public TextMeshProUGUI TCoin;
     public Button restartButton;
     public Button MenuButton;
     public string menuSceneName = "Menu";
@@ -70,6 +71,12 @@ public class GameManager : MonoBehaviour
         if (gameOverText != null)
         {
             gameOverText.text = "Has muerto";
+        }
+
+        if (TCoin != null)
+        {
+            int totalMonedas = ContCoins.Instance != null ? ContCoins.Instance.monedas : 0;
+            TCoin.text = $" {totalMonedas}";
         }
 
         if (GameOverPanel != null)

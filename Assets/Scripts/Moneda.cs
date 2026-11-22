@@ -2,11 +2,17 @@ using UnityEngine;
 
 public class Moneda : MonoBehaviour
 {
+    private bool recogida;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (recogida || collision.GetComponentInParent<PlayerController>() == null)
         {
-            Destroy(gameObject);
+            return;
         }
+
+        recogida = true;
+        ContCoins.Instance?.AgregarMoneda();
+        Destroy(gameObject);
     }
 }
