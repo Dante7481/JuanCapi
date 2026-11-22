@@ -14,7 +14,9 @@ public class PlayerController : MonoBehaviour
     public float longitudRaycast = 0.1f;
     public LayerMask layerSuelo;
     public int health = 5;
+    public int saludMaxima = 5;
     public bool EnSuelo => enSuelo;
+    public Vector3 PosicionCheckpoint => posicionCheckpoint;
 
 
     private bool enSuelo;
@@ -27,12 +29,21 @@ public class PlayerController : MonoBehaviour
     private float dashTimer;
     private float dashCooldownTimer;
     private int saltosDisponibles;
+    private Vector3 posicionCheckpoint;
     public bool isDead;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         if (animator == null) animator = GetComponent<Animator>();
+
+        if (saludMaxima <= 0)
+        {
+            saludMaxima = health;
+        }
+
+        health = Mathf.Clamp(health, 0, saludMaxima);
+        posicionCheckpoint = transform.position;
 
         rb.constraints |= RigidbodyConstraints2D.FreezeRotation;
         saltosDisponibles = saltosMaximos;
@@ -172,7 +183,7 @@ public class PlayerController : MonoBehaviour
     public void RespawnAt(Vector3 posicion)
     {
         CancelInvoke(nameof(StopDamage));
-        health--;
+        health = Mathf.Max(0, health - 1);
         damage = false;
         attack = false;
         isDashing = false;
@@ -189,6 +200,23 @@ public class PlayerController : MonoBehaviour
 
         isDead = false;
         transform.position = posicion;
+    }
+
+    public void ActivarCheckpoint(Vector3 posicion)
+    {
+        posicionCheckpoint = posicion;
+        health = saludMaxima;
+        damage = false;
+        attack = false;
+        isDashing = false;
+        dashTimer = 0f;
+        dashCooldownTimer = 0f;
+        rb.linearVelocity = Vector2.zero;
+    }
+
+    public void RespawnEnCheckpoint()
+    {
+        RespawnAt(posicionCheckpoint);
     }
 
     private void StartDash()
