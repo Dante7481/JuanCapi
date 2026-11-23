@@ -326,13 +326,13 @@ MonoBehaviour:
   - sprite: {fileID: 21300000, guid: 6b22ad3fee74e2340a1ce72b09078c82, type: 2}
     bottom: -0.9909091
   - sprite: {fileID: 21300000, guid: 1a5438db8cfa8ec4aa53fd6e86ba115f, type: 2}
-    bottom: -0.9818182
+    bottom: -0.9909091
   - sprite: {fileID: 21300000, guid: ac724efe22defb04c923c9befc5728f7, type: 2}
     bottom: -0.9909091
   - sprite: {fileID: 21300000, guid: 47dcc35949a795c47b33c5701b27591b, type: 2}
-    bottom: -0.8761905
+    bottom: -0.8857143
   - sprite: {fileID: 21300000, guid: 4f1beb85aac73be47b2eb8ac663e15c2, type: 2}
-    bottom: -0.8666667
+    bottom: -0.85714287
   - sprite: {fileID: 21300000, guid: c05bd7bab66304b46a7ea44cab0f4dd0, type: 2}
     bottom: -0.66842103
   - sprite: {fileID: 21300000, guid: 8c6a33aafb80c124a9efbf2068f0b814, type: 2}
@@ -340,7 +340,7 @@ MonoBehaviour:
   - sprite: {fileID: 21300000, guid: 57145e7fe55ba764ba39714d0f112026, type: 2}
     bottom: -0.6789474
   - sprite: {fileID: 21300000, guid: 52446ef9da147a449babdda34bfc245b, type: 2}
-    bottom: -0.6789474
+    bottom: -0.7526316
   - sprite: {fileID: 21300000, guid: 823605752ebdba94292d2b681e3e9d98, type: 2}
     bottom: -0.66842103
   - sprite: {fileID: 21300000, guid: d9eb44f7a8e2ce44ba2d62cfcef3ff72, type: 2}
@@ -362,7 +362,7 @@ MonoBehaviour:
   - sprite: {fileID: 21300000, guid: 4955922b99519ec4cbd1ce03906c7629, type: 2}
     bottom: -0.9380952
   - sprite: {fileID: 21300000, guid: 8356dc37ff896a04e978ace0911c3af9, type: 2}
-    bottom: -0.947619
+    bottom: -0.9380952
   - sprite: {fileID: 21300000, guid: a28104beb14e1dc4ea64fdd7a07eefea, type: 2}
     bottom: -0.73333335
   - sprite: {fileID: 21300000, guid: 16f902137996837408a1c282e046b144, type: 2}
@@ -402,7 +402,7 @@ MonoBehaviour:
   - sprite: {fileID: 21300000, guid: 2a56847b169ad4742aab26f5d864408a, type: 2}
     bottom: -0.94545454
   - sprite: {fileID: 21300000, guid: fb8d0ba009a6b2e4989eaabb3fa6f662, type: 2}
-    bottom: -0.95454544
+    bottom: -0.94545454
   - sprite: {fileID: 21300000, guid: cffa82f14a35ba845933f97b7a743a35, type: 2}
     bottom: -0.94545454
   - sprite: {fileID: 21300000, guid: 3b736236345ce7140969512d393d758c, type: 2}

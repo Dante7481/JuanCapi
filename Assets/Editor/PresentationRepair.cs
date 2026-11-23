@@ -17,7 +17,6 @@ namespace JuanCapi.Editor
         public static void Repair()
         {
             Directory.CreateDirectory(Output);pixels.Clear();notes.Clear();
-            bool alreadyRepaired=AssetDatabase.LoadAssetAtPath<SpriteFootprints>("Assets/Resources/Campaign/Footprints.asset")!=null;
             var paths=AssetDatabase.FindAssets("t:Sprite",new[]{"Assets/Animations","Assets/Art/Campaign/Sprites"}).Select(AssetDatabase.GUIDToAssetPath).Where(p=>p.EndsWith(".asset")).Distinct().ToArray();
             var sprites=paths.Select(AssetDatabase.LoadAssetAtPath<Sprite>).Where(s=>s!=null).ToArray();
             foreach(var tex in sprites.Select(s=>s.texture).Distinct())
@@ -26,29 +25,13 @@ namespace JuanCapi.Editor
                 importer.isReadable=true;importer.filterMode=FilterMode.Bilinear;importer.textureCompression=TextureImporterCompression.Uncompressed;importer.maxTextureSize=8192;importer.SaveAndReimport();
                 pixels[tex]=tex.GetPixels32();
             }
-            foreach(var s in sprites)
-            {
-                string path=AssetDatabase.GetAssetPath(s);if(alreadyRepaired||!path.StartsWith("Assets/Animations/"))continue;
-                if(!pixels.ContainsKey(s.texture))continue;
-                Rect old=s.rect;int l=(int)old.xMin,r=(int)old.xMax,b=(int)old.yMin,t=(int)old.yMax;
-                var data=pixels[s.texture];int width=s.texture.width,height=s.texture.height;
-                bool Vertical(int x,int lo,int hi)=>Enumerable.Range(Math.Max(0,lo),Math.Max(0,Math.Min(height,hi)-Math.Max(0,lo))).Count(y=>data[y*width+x].a>40)>2;
-                bool Horizontal(int y,int lo,int hi)=>Enumerable.Range(Math.Max(0,lo),Math.Max(0,Math.Min(width,hi)-Math.Max(0,lo))).Count(x=>data[y*width+x].a>40)>2;
-                int mx=Mathf.CeilToInt(old.width*.16f),my=Mathf.CeilToInt(old.height*.22f);
-                // Expand only an occupied edge; retain the original pivot in texture space.
-                for(int i=0;i<mx&&l>0&&Vertical(l,b,t);i++)l--;
-                for(int i=0;i<mx&&r<width&&Vertical(r-1,b,t);i++)r++;
-                for(int i=0;i<my&&b>0&&Horizontal(b,l,r);i++)b--;
-                for(int i=0;i<my&&t<height&&Horizontal(t-1,l,r);i++)t++;
-                if(l==old.x&&r==old.xMax&&b==old.y&&t==old.yMax)continue;
-                var rect=new Rect(l,b,r-l,t-b);var pivot=new Vector2((old.x+s.pivot.x-l)/rect.width,(old.y+s.pivot.y-b)/rect.height);
-                var repaired=Sprite.Create(s.texture,rect,pivot,s.pixelsPerUnit,0,SpriteMeshType.FullRect);repaired.name=s.name;
-                EditorUtility.CopySerialized(repaired,s);UnityEngine.Object.DestroyImmediate(repaired);EditorUtility.SetDirty(s);notes.Add(path+": "+old+" -> "+rect);
-            }
+            // Never expand rectangles into neighbouring poses. Dedicated sprite geometry preserves silhouettes.
             var feet=AssetDatabase.LoadAssetAtPath<SpriteFootprints>("Assets/Resources/Campaign/Footprints.asset");
             if(feet==null){feet=ScriptableObject.CreateInstance<SpriteFootprints>();AssetDatabase.CreateAsset(feet,"Assets/Resources/Campaign/Footprints.asset");}
+            var previousFeet=(feet.entries??Array.Empty<SpriteFootprints.Entry>()).Where(e=>e.sprite!=null).ToDictionary(e=>e.sprite,e=>e.bottom);
             feet.entries=sprites.Where(s=>pixels.ContainsKey(s.texture)).Select(s=>
             {
+                if(s.triangles.Length>6&&previousFeet.TryGetValue(s,out float preciseBottom))return new SpriteFootprints.Entry{sprite=s,bottom=preciseBottom};
                 var rect=s.rect;int bottom=(int)rect.y;bool found=false;var data=pixels[s.texture];
                 for(int y=(int)rect.yMin;y<(int)rect.yMax&&!found;y++)
                 {

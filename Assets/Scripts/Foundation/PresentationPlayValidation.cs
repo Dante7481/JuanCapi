@@ -45,10 +45,38 @@ namespace JuanCapi
                     Check(max>1.1f&&Mathf.Abs(Game.Player.transform.position.y-.8f)<.1f,"Salta a través de cornisa y aterriza encima");yield return Capture("01-cornisa");
                 }
             }
+            yield return CombatSprites();
             Game.UI.Settings(Game.UI.Pause);yield return Capture("05-ajustes");
             Game.Settings.fullscreen=true;Game.Settings.Apply(true);yield return new WaitForSecondsRealtime(1);
             Check(Screen.width==Display.main.systemWidth&&Screen.height==Display.main.systemHeight,"Pantalla completa usa resolución nativa");yield return Capture("06-nativa");
             Finish();
+        }
+        IEnumerator CombatSprites()
+        {
+            var data=new CampaignData{sword=true,dash=true,introSeen=true,scene="AmazoniaTerrestre",hasPosition=true,x=91,y=.08f,maxHearts=5,healthQuarters=20};
+            Game.Store.StartNew(data,true,out _);Game.LoadRecord(Game.Store.Records()[0]);
+            yield return null;while(Game.Busy)yield return null;yield return new WaitForSeconds(1);
+            var boss=FindAnyObjectByType<CaimanEncounter>();
+            Check(boss!=null,"Caimán presente en la revisión visual");if(boss==null)yield break;
+            boss.enabled=false;boss.transform.position=new Vector3(96,0,0);
+            Game.Player.transform.position=new Vector3(91,.08f,0);Game.Player.GetComponent<Rigidbody2D>().linearVelocity=Vector2.zero;
+            yield return new WaitForSeconds(1);
+            var actor=Game.Player.GetComponent<PlayerArtDriver>().actor;
+            foreach(int side in new[]{1,-1})
+            {
+                GameInput.ValidationHeld=a=>a==(side>0?"Derecha":"Izquierda");yield return new WaitForSeconds(.05f);
+                GameInput.ValidationHeld=a=>false;yield return new WaitForSeconds(.1f);
+                boss.actor.Face(-side);boss.actor.Play("Idle",true);
+                GameInput.ValidationDown=a=>a=="Atacar";yield return null;GameInput.ValidationDown=null;
+                yield return new WaitForSeconds(.29f);
+                Check(actor.sprite.sprite.name=="Melee_3"&&actor.sprite.sprite.triangles.Length>6,"Espadazo completo con geometría aislada, dirección "+side);
+                Check(boss.actor.sprite.sprite.name.StartsWith("CaimanTerrestre_Idle")&&boss.actor.sprite.sprite.triangles.Length>6,"Caimán usa silueta completa, dirección "+side);
+                yield return Capture("07-espada-caiman-"+side);
+                yield return new WaitForSeconds(.4f);
+                boss.actor.Play("Claw",true);yield return new WaitForSeconds(.13f);
+                yield return Capture("08-garra-"+side);
+            }
+            GameInput.ValidationHeld=null;
         }
         IEnumerator Capture(string name){yield return new WaitForEndOfFrame();ScreenCapture.CaptureScreenshot(Path.Combine(output,name+".png"));yield return new WaitForSecondsRealtime(.15f);}
         void Log(string s,string trace,LogType t){if(t==LogType.Error||t==LogType.Exception)report.failed.Add(s+trace);}
