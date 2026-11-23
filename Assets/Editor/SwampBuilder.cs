@@ -144,7 +144,7 @@ namespace JuanCapi.Editor
         {
             var go=new GameObject("Caimán · encuentro");go.transform.SetParent(root,false);go.transform.position=position;
             var b=go.AddComponent<CaimanEncounter>();b.aquatic=water;b.health=b.Maximum;level.boss=b;
-            b.actor=Actor("Caimán · original",water?art.caimanWater:art.caimanLand,water?AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Animations/V2/CaimanAcuatico_Idle0.asset"):art.caimanPortrait,new Vector3(0,water?0:1.35f),1.5f,go.transform);
+            b.actor=Actor("Caimán · original",water?art.caimanWater:art.caimanLand,water?AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Animations/V2/CaimanAcuatico_Idle0.asset"):art.caimanPortrait,new Vector3(0,water?0:1.35f),1.5f,go.transform);b.actor.groundFeet=!water;b.actor.groundOffset=water?0:-.9f;
             var c=go.AddComponent<BoxCollider2D>();c.isTrigger=true;c.offset=water?Vector2.zero:Vector2.up*1.2f;c.size=water?new Vector2(3.8f,1.8f):new Vector2(2.5f,2.4f);
             b.entrance=Block("Arena · entrada",new Vector2(water?65.5f:81,water?10:2.7f),new Vector2(.5f,water?20:5.4f),true,6);
             b.exit=Block("Arena · salida",new Vector2(water?91:104,water?10:2.7f),new Vector2(.5f,water?20:5.4f),true,6);

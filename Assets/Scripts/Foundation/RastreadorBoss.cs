@@ -92,7 +92,7 @@ namespace JuanCapi
             health--;PlasmaEffects.Burst(transform.position+Vector3.up,new Color(.35f,1,1),.7f);
             if(health==0)
             {
-                state=6;until=Time.time+1.1f;warning.Hide();actor.Play("Death",true);
+                state=6;until=Time.time+1.1f;warning.Hide();actor.Defeat();
                 transform.position=new Vector3(transform.position.x,0,0);GetComponent<Collider2D>().enabled=false;
                 Game.UI.BossMeter(0,24,false);
             }

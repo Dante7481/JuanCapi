@@ -98,7 +98,7 @@ namespace JuanCapi.Editor
         {
             var go=new GameObject(ledge?"Cornisa":"Suelo de quebrada");go.transform.SetParent(environment,false);go.layer=3;
             float depth=ledge?.42f:5;go.transform.position=new Vector3((left+right)*.5f,top-depth*.5f,0);
-            var col=go.AddComponent<BoxCollider2D>();col.size=new Vector2(right-left,depth);
+            var col=go.AddComponent<BoxCollider2D>();col.size=new Vector2(right-left,depth);if(ledge){col.usedByEffector=true;var e=go.AddComponent<PlatformEffector2D>();e.useOneWay=true;e.useOneWayGrouping=true;e.surfaceArc=165;}
             if(!ledge)
             {
                 var backing=Picture("Roca continua",AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Art/Campaign/Sprites/TerrainBacking.asset"),new Vector3((left+right)*.5f,top-2.65f,0),new Vector2(right-left,5),-2);
@@ -107,7 +107,7 @@ namespace JuanCapi.Editor
                     Picture("Estrato de pizarra",AssetDatabase.LoadAssetAtPath<Sprite>("Assets/Art/Campaign/Sprites/SierraRockFill.asset"),new Vector3(x+Mathf.Min(3.6f,right-x)*.5f,top-1.3f-row*1.5f,0),new Vector2(Mathf.Min(3.6f,right-x)+.03f,1.6f),-1);
             }
             for(float x=left;x<right;x+=3.5f)
-                Picture("Borde de ichu",art.terrain[0],new Vector3(x+Mathf.Min(3.5f,right-x)*.5f,top-.42f,0),new Vector2(Mathf.Min(3.5f,right-x)+.04f,ledge?.85f:1.05f),1);
+                Picture("Borde de ichu · alineado",art.terrain[0],new Vector3(x+Mathf.Min(3.5f,right-x)*.5f,top-.08f,0),new Vector2(Mathf.Min(3.5f,right-x)+.04f,ledge?.85f:1.05f),1);
         }
         private static GameObject Gate(string name,float x,float height,bool visible)
         {

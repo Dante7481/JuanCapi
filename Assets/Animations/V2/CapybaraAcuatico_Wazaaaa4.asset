@@ -10,18 +10,18 @@ Sprite:
   m_Name: CapybaraAcuatico_Wazaaaa4
   m_Rect:
     serializedVersion: 2
-    x: 1152
+    x: 1151
     y: 581
-    width: 294
+    width: 295
     height: 265
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.5, y: 0}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 165
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5016949, y: 0.5}
   m_Extrude: 0
-  m_PackingTag: 
+  m_PackingTag:
   m_RenderDataKey:
-    00000000000000000000000000000000: 0
+    c61d601faeb8c9d4b826208d7e11b117: 21300000
   m_AtlasTags: []
   m_SpriteAtlas: {fileID: 0}
   m_RD:
@@ -40,7 +40,7 @@ Sprite:
       localAABB:
         m_Center: {x: 0, y: 0, z: 0}
         m_Extent: {x: 0, y: 0, z: 0}
-    m_IndexBuffer: 000001000200020001000300
+    m_IndexBuffer: 000001000200020001000300y
     m_VertexData:
       serializedVersion: 3
       m_VertexCount: 4
@@ -102,7 +102,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 9e1264bf65934d3f000000009e12643f65934d3f000000009e1264bf65934dbf000000009e12643f65934dbf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: ce9f65bf65934d3f000000009e12643f65934d3f00000000ce9f65bf65934dbf000000009e12643f65934dbf000000000000000000000000000000000000000000000000000000000000000000000000
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -111,9 +111,9 @@ Sprite:
       fullWeights: []
     textureRect:
       serializedVersion: 2
-      x: 1152
+      x: 1151
       y: 581
-      width: 294
+      width: 295
       height: 265
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
@@ -136,7 +136,7 @@ Sprite:
       localAABB:
         m_Center: {x: 0, y: 0, z: 0}
         m_Extent: {x: 0, y: 0, z: 0}
-    m_IndexBuffer: 000001000200020001000300
+    m_IndexBuffer: 000001000200020001000300y
     m_VertexData:
       serializedVersion: 3
       m_VertexCount: 4
@@ -198,7 +198,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 9e1264bf65934d3f000000009e12643f65934d3f000000009e1264bf65934dbf000000009e12643f65934dbf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: ce9f65bf65934d3f000000009e12643f65934d3f00000000ce9f65bf65934dbf000000009e12643f65934dbf000000000000000000000000000000000000000000000000000000000000000000000000
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -207,9 +207,9 @@ Sprite:
       fullWeights: []
     textureRect:
       serializedVersion: 2
-      x: 1152
+      x: 1151
       y: 581
-      width: 294
+      width: 295
       height: 265
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
@@ -219,4 +219,4 @@ Sprite:
   m_PhysicsShape: []
   m_Bones: []
   m_ScriptableObjects: []
-  m_SpriteID: 
+  m_SpriteID:

@@ -71,7 +71,7 @@ namespace JuanCapi
         {
             AudioListener.volume = master; QualitySettings.vSyncCount = vsync ? 1 : 0;
             Application.targetFrameRate = vsync ? -1 : 60;
-            if (display && !Application.isBatchMode) Screen.SetResolution(width, height, fullscreen ? FullScreenMode.FullScreenWindow : FullScreenMode.Windowed);
+            if (display && !Application.isBatchMode) Screen.SetResolution(fullscreen?Display.main.systemWidth:width, fullscreen?Display.main.systemHeight:height, fullscreen ? FullScreenMode.FullScreenWindow : FullScreenMode.Windowed);
         }
     }
     public static class GameInput

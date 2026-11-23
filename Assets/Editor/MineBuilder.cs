@@ -77,7 +77,7 @@ namespace JuanCapi.Editor
             Picture("Relleno de cantera",Backing,new Vector3((left+right)*.5f,top-2.5f),new Vector2(right-left,5),-3).color=new Color(.34f,.27f,.2f);
             for(float x=left;x<right;x+=3){float w=Mathf.Min(3,right-x);Picture("Muro de contención",art.terrain[9],new Vector3(x+w*.5f,top-1.5f),new Vector2(w+.025f,3.1f),-1);Picture("Pasarela",art.terrain[8],new Vector3(x+w*.5f,top-.22f),new Vector2(w+.03f,.55f),2);}
         }
-        private static void Platform(float left,float right,float top)=>Block("Pasarela elevada",new Vector2((left+right)*.5f,top-.2f),new Vector2(right-left,.4f),8);
+        private static void Platform(float left,float right,float top){var go=Block("Pasarela elevada",new Vector2((left+right)*.5f,top-.2f),new Vector2(right-left,.4f),8);go.GetComponent<BoxCollider2D>().usedByEffector=true;var e=go.AddComponent<PlatformEffector2D>();e.useOneWay=true;e.useOneWayGrouping=true;e.surfaceArc=165;}
         private static GameObject Block(string name,Vector2 position,Vector2 size,int tile)
         {
             var go=new GameObject(name);go.transform.SetParent(root,false);go.transform.position=position;go.layer=3;go.AddComponent<BoxCollider2D>().size=size;

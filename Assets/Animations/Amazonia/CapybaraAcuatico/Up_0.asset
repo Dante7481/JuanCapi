@@ -13,15 +13,15 @@ Sprite:
     x: 2
     y: 562
     width: 196
-    height: 143
-  m_Offset: {x: 13.720001, y: 0}
+    height: 147
+  m_Offset: {x: 13.720001, y: -2}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 75
-  m_Pivot: {x: 0.57, y: 0.5}
+  m_Pivot: {x: 0.57, y: 0.48639455}
   m_Extrude: 0
-  m_PackingTag: 
+  m_PackingTag:
   m_RenderDataKey:
-    00000000000000000000000000000000: 0
+    5399c036654693c45b7c83e0c06c143e: 21300000
   m_AtlasTags: []
   m_SpriteAtlas: {fileID: 0}
   m_RD:
@@ -40,7 +40,7 @@ Sprite:
       localAABB:
         m_Center: {x: 0, y: 0, z: 0}
         m_Extent: {x: 0, y: 0, z: 0}
-    m_IndexBuffer: 000001000200020001000300
+    m_IndexBuffer: 000001000200020001000300y
     m_VertexData:
       serializedVersion: 3
       m_VertexCount: 4
@@ -102,7 +102,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 37abbebfa70d743f000000007ed68f3fa70d743f0000000037abbebfa70d74bf000000007ed68f3fa70d74bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 37abbebf74da803f000000007ed68f3f74da803f0000000037abbebfa70d74bf000000007ed68f3fa70d74bf000000000000000000000000000000000000000000000000000000000000000000000000
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -114,7 +114,7 @@ Sprite:
       x: 2
       y: 562
       width: 196
-      height: 143
+      height: 147
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 3072
@@ -136,7 +136,7 @@ Sprite:
       localAABB:
         m_Center: {x: 0, y: 0, z: 0}
         m_Extent: {x: 0, y: 0, z: 0}
-    m_IndexBuffer: 000001000200020001000300
+    m_IndexBuffer: 000001000200020001000300y
     m_VertexData:
       serializedVersion: 3
       m_VertexCount: 4
@@ -198,7 +198,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 37abbebfa70d743f000000007ed68f3fa70d743f0000000037abbebfa70d74bf000000007ed68f3fa70d74bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 37abbebf74da803f000000007ed68f3f74da803f0000000037abbebfa70d74bf000000007ed68f3fa70d74bf000000000000000000000000000000000000000000000000000000000000000000000000
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -210,7 +210,7 @@ Sprite:
       x: 2
       y: 562
       width: 196
-      height: 143
+      height: 147
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
     settingsRaw: 3072
@@ -219,4 +219,4 @@ Sprite:
   m_PhysicsShape: []
   m_Bones: []
   m_ScriptableObjects: []
-  m_SpriteID: 
+  m_SpriteID:

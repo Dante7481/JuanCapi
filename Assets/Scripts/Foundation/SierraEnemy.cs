@@ -52,8 +52,7 @@ namespace JuanCapi
             PlasmaEffects.Burst(transform.position+Vector3.up*.7f,new Color(1,.68f,.3f),.7f);
             if(Dead)
             {
-                actor.Play("Death",true);GetComponent<Collider2D>().enabled=false;
-                actor.transform.localRotation=Quaternion.Euler(0,0,80);actor.sprite.color=new Color(.6f,.55f,.5f,.6f);
+                actor.Defeat();GetComponent<Collider2D>().enabled=false;
                 if(persistentId=="MARA_GUARD")SierraLevel.Current.GuardDefeated=true;
             }
         }

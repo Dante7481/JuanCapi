@@ -53,8 +53,8 @@ namespace JuanCapi
             string next=action+":"+icon;if(next==lesson)return;lesson=next;
             if(lessonPanel!=null)Destroy(lessonPanel.gameObject);
             if(string.IsNullOrEmpty(action))return;
-            lessonPanel=Rect("Gesto",hud,542,462,196,92);Box(lessonPanel,0,0,196,92,Ink);
-            if(icon=="jump") {var arrow=Symbol(lessonPanel,SymbolGraphic.Shape.Arrow,27,14,47,Cyan);arrow.rectTransform.localRotation=Quaternion.Euler(0,0,90);}
+            lessonPanel=Rect("Gesto",hud,24,150,196,92);Box(lessonPanel,0,0,196,92,Ink);
+            if(icon=="jump") {var arrow=Symbol(lessonPanel,SymbolGraphic.Shape.Arrow,27,14,47,Cyan);arrow.rectTransform.pivot=Vector2.one*.5f;arrow.rectTransform.anchoredPosition=new Vector2(50,-44);arrow.rectTransform.localRotation=Quaternion.Euler(0,0,90);}
             else if(icon=="swim")Symbol(lessonPanel,SymbolGraphic.Shape.Water,20,15,60,Cyan);
             else Icon(lessonPanel,icon,12,6,78,78);
             KeyHint(lessonPanel,action,104,32,80);

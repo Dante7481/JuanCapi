@@ -27,7 +27,7 @@ namespace JuanCapi.Editor
             foreach(string path in Directory.GetFiles(Root+"Generated","*.png"))
             {
                 var imp=(TextureImporter)AssetImporter.GetAtPath(path.Replace('\\','/'));
-                imp.textureType=TextureImporterType.Sprite;imp.spriteImportMode=SpriteImportMode.Single;imp.filterMode=FilterMode.Point;
+                imp.textureType=TextureImporterType.Sprite;imp.spriteImportMode=SpriteImportMode.Single;imp.filterMode=FilterMode.Bilinear;
                 imp.mipmapEnabled=false;imp.npotScale=TextureImporterNPOTScale.None;imp.maxTextureSize=4096;
                 imp.textureCompression=TextureImporterCompression.Uncompressed;imp.alphaIsTransparency=true;imp.isReadable=true;imp.SaveAndReimport();
             }

@@ -114,7 +114,7 @@ namespace JuanCapi
             health=Mathf.Max(0,health-amount);PlasmaEffects.Burst(transform.position+Vector3.up,Color.cyan,.6f);
             if(health==0)
             {
-                state=6;until=Time.time+.8f;warning.Hide();actor.Play("Death",true);GetComponent<Collider2D>().enabled=false;armor.enabled=false;
+                state=6;until=Time.time+.8f;warning.Hide();actor.Defeat();GetComponent<Collider2D>().enabled=false;armor.enabled=false;
                 foreach(var drone in drones)if(drone!=null&&!drone.Dead)drone.Retire();CampaignProjectile.ClearHostile();
             }
         }

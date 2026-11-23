@@ -52,7 +52,7 @@ namespace JuanCapi
         {
             if(Dead||GameRuntime.Instance?.CanPlay!=true)return;health-=amount;stunned=Time.time+.25f;state=0;warning.Hide();
             PlasmaEffects.Burst(transform.position+Vector3.up*(aquatic?0:.6f),Color.cyan,.6f);
-            if(Dead){GetComponent<Collider2D>().enabled=false;actor.Play("Death",true);actor.sprite.color=new Color(.5f,.6f,.6f,.5f);actor.transform.localRotation=Quaternion.Euler(0,0,80);}
+            if(Dead){GetComponent<Collider2D>().enabled=false;actor.Defeat();}
         }
     }
 }

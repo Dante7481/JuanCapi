@@ -139,7 +139,7 @@ namespace JuanCapi
         {
             #if UNITY_EDITOR || DEVELOPMENT_BUILD
             var arguments=Environment.GetCommandLineArgs();
-            if(arguments.Contains("-juanDataPath")&&(arguments.Contains("-juanSierraValidate")||arguments.Contains("-juanValidate")||arguments.Contains("-juanSwampValidate")||arguments.Contains("-juanMineValidate")||arguments.Contains("-juanTrialValidate")||arguments.Contains("-juanJourneyValidate")))return;
+            if(arguments.Contains("-juanDataPath")&&(arguments.Contains("-juanPresentationValidate")||arguments.Contains("-juanSierraValidate")||arguments.Contains("-juanValidate")||arguments.Contains("-juanSwampValidate")||arguments.Contains("-juanMineValidate")||arguments.Contains("-juanTrialValidate")||arguments.Contains("-juanJourneyValidate")))return;
             #endif
             if (!focus && (CanPlay || Cinematic && UI.ScreenName=="cinematic")) UI.Pause();
         }

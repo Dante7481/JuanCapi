@@ -47,6 +47,6 @@ namespace JuanCapi
             health=Mathf.Max(0,health-amount);PlasmaEffects.Burst(transform.position+Vector3.up*(drone?0:1),Color.cyan,.5f);
             if(Dead)Retire();
         }
-        public void Retire(){health=0;if(warning!=null)warning.Hide();GetComponent<Collider2D>().enabled=false;actor.Play("Death",true);actor.sprite.color=new Color(.45f,.52f,.56f,.5f);enabled=false;}
+        public void Retire(){health=0;if(warning!=null)warning.Hide();GetComponent<Collider2D>().enabled=false;actor.Defeat();enabled=false;}
     }
 }

@@ -47,6 +47,7 @@ namespace JuanCapi
             var game=GameRuntime.Instance;var data=game?.Data;
             string state=player.VisualState;
             actor.Play(state);
+            actor.groundFeet=!player.aquatic;actor.groundOffset=-actor.transform.localPosition.y/actor.transform.localScale.y;
             bool armed=data!=null&&data.gun&&data.equippedWeapon=="gun"&&!player.isDead;
             gun.gameObject.SetActive(armed);
             if(armed&&CampaignArt.Current.aimBodies!=null&&CampaignArt.Current.aimBodies.Length>=4)

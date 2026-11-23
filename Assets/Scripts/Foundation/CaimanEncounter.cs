@@ -142,14 +142,14 @@ namespace JuanCapi
         {
             if(Game?.CanPlay!=true||!Fighting||state==1||health<=0)return;
             health=Mathf.Max(0,health-amount);PlasmaEffects.Burst(transform.position+Vector3.up*(aquatic?0:1),Color.cyan,.65f);
-            if(health==0){state=6;until=Time.time+.65f;actor.Play("Hurt",true);warning.Hide();CampaignProjectile.ClearHostile();GetComponent<Collider2D>().enabled=false;}
+            if(health==0){if(!aquatic)CampaignAudio.Play("death",false,true);state=6;until=Time.time+.65f;actor.Play("Hurt",true);warning.Hide();CampaignProjectile.ClearHostile();GetComponent<Collider2D>().enabled=false;}
         }
         private void ConfirmVictory()
         {
             string id=aquatic?"CAIMAN_WATER":"CAIMAN_LAND";
             if(!Game.Transaction(d=>{if(d.defeated.Contains(id))return false;d.defeated.Add(id);d.x=aquatic?92:104;d.y=aquatic?8:.08f;d.z=0;d.hasPosition=true;return true;},aquatic?"La abrazadera se ha desprendido":"El caimán huye hacia el agua"))return;
             Gates(false);Game.UI.EncounterMeter(0,Maximum,false,"",CampaignArt.Current.caimanPortrait);
-            if(aquatic){state=8;actor.Play("Idle");actor.sprite.color=new Color(.7f,.9f,.85f,.75f);GetComponent<Collider2D>().enabled=false;}
+            if(aquatic){state=8;actor.Defeat();GetComponent<Collider2D>().enabled=false;}
             else {state=7;started=Time.time;actor.Play("Escape",true);}
         }
     }

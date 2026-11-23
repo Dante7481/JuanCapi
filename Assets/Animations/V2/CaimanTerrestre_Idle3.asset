@@ -10,18 +10,18 @@ Sprite:
   m_Name: CaimanTerrestre_Idle3
   m_Rect:
     serializedVersion: 2
-    x: 662
+    x: 629
     y: 871
-    width: 201
+    width: 267
     height: 205
   m_Offset: {x: 30.150024, y: 0}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 105
-  m_Pivot: {x: 0.65, y: 0.5}
+  m_Pivot: {x: 0.6129213, y: 0.5}
   m_Extrude: 0
-  m_PackingTag: 
+  m_PackingTag:
   m_RenderDataKey:
-    00000000000000000000000000000000: 0
+    a37f2ae9a27c4844b8fbce4a641d5432: 21300000
   m_AtlasTags: []
   m_SpriteAtlas: {fileID: 0}
   m_RD:
@@ -40,7 +40,7 @@ Sprite:
       localAABB:
         m_Center: {x: 0, y: 0, z: 0}
         m_Extent: {x: 0, y: 0, z: 0}
-    m_IndexBuffer: 000001000200020001000300
+    m_IndexBuffer: 000001000200020001000300y
     m_VertexData:
       serializedVersion: 3
       m_VertexCount: 4
@@ -102,7 +102,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: c3449fbf9ee7793f000000001b852b3f9ee7793f00000000c3449fbf9ee779bf000000001b852b3f9ee779bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 477fc7bf9ee7793f0000000022fa7b3f9ee7793f00000000477fc7bf9ee779bf0000000022fa7b3f9ee779bf000000000000000000000000000000000000000000000000000000000000000000000000
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -111,9 +111,9 @@ Sprite:
       fullWeights: []
     textureRect:
       serializedVersion: 2
-      x: 662
+      x: 629
       y: 871
-      width: 201
+      width: 267
       height: 205
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
@@ -136,7 +136,7 @@ Sprite:
       localAABB:
         m_Center: {x: 0, y: 0, z: 0}
         m_Extent: {x: 0, y: 0, z: 0}
-    m_IndexBuffer: 000001000200020001000300
+    m_IndexBuffer: 000001000200020001000300y
     m_VertexData:
       serializedVersion: 3
       m_VertexCount: 4
@@ -198,7 +198,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: c3449fbf9ee7793f000000001b852b3f9ee7793f00000000c3449fbf9ee779bf000000001b852b3f9ee779bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 477fc7bf9ee7793f0000000022fa7b3f9ee7793f00000000477fc7bf9ee779bf0000000022fa7b3f9ee779bf000000000000000000000000000000000000000000000000000000000000000000000000
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -207,9 +207,9 @@ Sprite:
       fullWeights: []
     textureRect:
       serializedVersion: 2
-      x: 662
+      x: 629
       y: 871
-      width: 201
+      width: 267
       height: 205
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
@@ -219,4 +219,4 @@ Sprite:
   m_PhysicsShape: []
   m_Bones: []
   m_ScriptableObjects: []
-  m_SpriteID: 
+  m_SpriteID:

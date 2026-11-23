@@ -10,7 +10,7 @@ namespace JuanCapi
     public sealed partial class GameInterface : MonoBehaviour
     {
         private static readonly Color Ink = new Color(.035f,.09f,.11f,.97f);
-        private static readonly Color Panel = new Color(.07f,.16f,.18f,.98f);
+        private static readonly Color Panel = new Color(.065f,.135f,.13f,.98f);
         private static readonly Color Gold = new Color(.91f,.76f,.43f);
         private static readonly Color Cyan = new Color(.39f,.9f,.84f);
         private GameRuntime Game => GameRuntime.Instance;
@@ -237,11 +237,11 @@ namespace JuanCapi
         }
         private void DisplaySettings()
         {
-            Begin("display","PANTALLA","Los cambios de resolución se revierten si no los confirmas en 15 segundos.",()=>Settings(returnSettings));
+            Begin("display","PANTALLA","Pantalla completa usa la resolución nativa. Los tamaños de abajo se aplican al modo ventana.",()=>Settings(returnSettings));
             var s=Game.Settings;
             Focus(Button(page,s.fullscreen?"Cambiar a ventana":"Cambiar a pantalla completa",190,180,900,60,()=>TryDisplay(s.width,s.height,!s.fullscreen)));
             var resolutions=new[]{new Vector2Int(1280,720),new Vector2Int(1600,900),new Vector2Int(1920,1080)};
-            for(int i=0;i<resolutions.Length;i++) { var r=resolutions[i];Button(page,r.x+" × "+r.y,190,265+i*70,900,54,()=>TryDisplay(r.x,r.y,s.fullscreen),r.x<=Display.main.systemWidth&&r.y<=Display.main.systemHeight); }
+            for(int i=0;i<resolutions.Length;i++) { var r=resolutions[i];Button(page,r.x+" × "+r.y,190,265+i*70,900,54,()=>TryDisplay(r.x,r.y,false),r.x<=Display.main.systemWidth&&r.y<=Display.main.systemHeight); }
             Button(page,"Sincronización vertical: "+(s.vsync?"Sí":"No"),190,500,900,54,()=>{s.vsync=!s.vsync;s.Apply();PersistSettings();DisplaySettings();});
         }
         private void TryDisplay(int width,int height,bool full)
@@ -302,7 +302,7 @@ namespace JuanCapi
             rt.anchorMin=rt.anchorMax=new Vector2(0,1);rt.pivot=new Vector2(0,1);rt.anchoredPosition=new Vector2(x,-y);rt.sizeDelta=new Vector2(width,height);return rt;
         }
         private Image Box(Transform parent,float x,float y,float w,float h,Color color)
-        {var image=Rect("Panel",parent,x,y,w,h).gameObject.AddComponent<Image>();image.color=color;image.raycastTarget=false;return image;}
+        {var image=Rect("Panel",parent,x,y,w,h).gameObject.AddComponent<Image>();image.color=color;image.raycastTarget=false;if(w>=100&&h>=45&&w<1280)AdventureFrame.Add(image.rectTransform);return image;}
         private Text Label(Transform parent,string value,float x,float y,float w,float h,int size,TextAnchor alignment=TextAnchor.UpperLeft,Color? color=null)
         {
             var text=Rect("Texto",parent,x,y,w,h).gameObject.AddComponent<Text>();text.font=font;text.text=value;
@@ -311,7 +311,7 @@ namespace JuanCapi
         }
         private Button Button(Transform parent,string text,float x,float y,float w,float h,Action action,bool enabled=true)
         {
-            var rt=Rect(text.Length>0?text:"Registro",parent,x,y,w,h);var image=rt.gameObject.AddComponent<Image>();image.color=Panel;
+            var rt=Rect(text.Length>0?text:"Registro",parent,x,y,w,h);var image=rt.gameObject.AddComponent<Image>();image.color=Panel;AdventureFrame.Add(rt);
             var b=rt.gameObject.AddComponent<Button>();b.targetGraphic=image;b.interactable=enabled;
             var colors=b.colors;colors.normalColor=Color.white;colors.highlightedColor=new Color(.55f,.95f,.87f);colors.selectedColor=new Color(.6f,.95f,.85f);colors.pressedColor=Gold;colors.disabledColor=new Color(.4f,.5f,.5f,.5f);b.colors=colors;
             Label(rt,text,16,0,w-32,h,20,TextAnchor.MiddleCenter,enabled?Color.white:new Color(.48f,.6f,.6f));
