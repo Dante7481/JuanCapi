@@ -27,7 +27,7 @@ namespace JuanCapi
         public KeyCode Key(string action) => bindings.Find(b => b.action == action)?.key ?? KeyCode.None;
         public bool Rebind(string action, KeyCode key)
         {
-            if (key == KeyCode.None || key == KeyCode.Escape || key == KeyCode.Tab || key == KeyCode.Return || !Enum.IsDefined(typeof(KeyCode), key)) return false;
+            if (key == KeyCode.None || key == KeyCode.Escape || key == KeyCode.Tab || key == KeyCode.T || key == KeyCode.Return || !Enum.IsDefined(typeof(KeyCode), key)) return false;
             var binding = bindings.Find(b => b.action == action); if (binding == null) return false;
             var duplicate = bindings.Find(b => b.key == key && b != binding);
             if (duplicate != null) duplicate.key = binding.key;

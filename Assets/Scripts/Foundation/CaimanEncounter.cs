@@ -17,7 +17,7 @@ namespace JuanCapi
         public Vector2 ChargeDirection { get; private set; }
         private int state,pattern,cycle,charges;
         private float until,started,facing=-1;
-        private bool hit,thrown;
+        private bool hit,thrown,diving;
         private Vector2 lockedTarget;
         private AttackTelegraph warning;
         private GameRuntime Game=>GameRuntime.Instance;
@@ -31,15 +31,25 @@ namespace JuanCapi
         private void Gates(bool active){entrance.SetActive(active);exit.SetActive(active);}
         private void Update()
         {
-            if(Game?.CanPlay!=true)return;
+            if(Game==null||Game.Busy||Game.UI.IsOpen||!Game.CanPlay&&state!=7)return;
             Game.UI.EncounterMeter(health,Maximum,Fighting,aquatic?"CAIMÁN · AGUAS PROFUNDAS":"CAIMÁN · GUARDIÁN DEL PANTANO",CampaignArt.Current.caimanPortrait);
             if(state==8)return;
             if(state==6){if(Time.time>=until)ConfirmVictory();return;}
             if(state==7)
             {
-                float t=Time.time-started;actor.Face(1);actor.Play(t<2.8f?"Escape":"Death");
-                transform.position=Vector3.MoveTowards(transform.position,new Vector3(109,t<2.8f?0:-3,0),7*Time.deltaTime);
-                if(t>=4){state=8;gameObject.SetActive(false);}return;
+                actor.Face(1);
+                if(!diving)
+                {
+                    actor.Play("Escape");transform.position=Vector3.MoveTowards(transform.position,new Vector3(SwampLevel.ShoreX-.1f,0,0),7*Time.deltaTime);
+                    if(transform.position.x>=SwampLevel.ShoreX-.11f){diving=true;started=Time.time;actor.Play("Death",true);PlasmaEffects.Burst(new Vector3(SwampLevel.ShoreX+.2f,-.15f),new Color(.4f,.8f,.75f),1.3f);CampaignAudio.Play("swim");}
+                }
+                else
+                {
+                    float t=Time.time-started;transform.position+=new Vector3(1.5f,-2,0)*Time.deltaTime;
+                    actor.sprite.color=new Color(1,1,1,1-Mathf.Clamp01((t-.45f)/.4f));
+                    if(t>=.85f){state=8;gameObject.SetActive(false);}
+                }
+                return;
             }
             Vector2 player=Game.Player.Center,position=transform.position,delta=player-position;
             if(state==0)
@@ -142,7 +152,7 @@ namespace JuanCapi
         {
             if(Game?.CanPlay!=true||!Fighting||state==1||health<=0)return;
             health=Mathf.Max(0,health-amount);PlasmaEffects.Burst(transform.position+Vector3.up*(aquatic?0:1),Color.cyan,.65f);
-            if(health==0){if(!aquatic)CampaignAudio.Play("death",false,true);state=6;until=Time.time+.65f;actor.Play("Hurt",true);warning.Hide();CampaignProjectile.ClearHostile();GetComponent<Collider2D>().enabled=false;}
+            if(health==0){if(!aquatic)CampaignAudio.Play("hit",false,true);state=6;until=Time.time+.65f;actor.Play("Hurt",true);warning.Hide();CampaignProjectile.ClearHostile();GetComponent<Collider2D>().enabled=false;}
         }
         private void ConfirmVictory()
         {

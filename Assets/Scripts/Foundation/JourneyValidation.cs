@@ -27,7 +27,7 @@ namespace JuanCapi
             Finish();
         }
         private void Click(string name){var b=FindObjectsByType<Button>().FirstOrDefault(x=>x.name==name&&x.interactable);Check(b!=null,"Transición disponible: "+name);b?.onClick.Invoke();}
-        private IEnumerator WaitScene(){yield return null;float end=Time.realtimeSinceStartup+20;while(Game.Busy&&Time.realtimeSinceStartup<end)yield return null;yield return null;}
+        private IEnumerator WaitScene(){yield return null;float end=Time.realtimeSinceStartup+20;while((Game.Busy||SwampLevel.Current?.Diving==true)&&Time.realtimeSinceStartup<end)yield return null;yield return null;}
         private IEnumerator Capture(string name){yield return new WaitForEndOfFrame();ScreenCapture.CaptureScreenshot(Path.Combine(output,name+".png"));yield return new WaitForSecondsRealtime(.1f);}
         private void Log(string m,string stack,LogType type){if(type==LogType.Error||type==LogType.Exception)report.failed.Add(m+"\n"+stack);}
         private void Update()
@@ -183,6 +183,14 @@ namespace JuanCapi
             held.Clear();
 
             if(!Game.CanPlay||!Game.Data.defeated.Contains("CAIMAN_LAND")){Finish();yield break;}
+
+            step="huida hacia la orilla";float escapeEnd=Time.realtimeSinceStartup+12;bool capturedShore=false;
+            while(!SwampLevel.Current.boss.Resolved&&Time.realtimeSinceStartup<escapeEnd)
+            {
+                if(!capturedShore&&SwampLevel.Current.boss.transform.position.x>124.7f){capturedShore=true;yield return Capture("caiman-entra-al-agua");}
+                yield return null;
+            }
+            Check(SwampLevel.Current.boss.Resolved&&SwampLevel.Current.boss.transform.position.x>124.7f,"Caimán llega a la orilla antes de desaparecer");
 
             yield return R2Walk(105);Pulse("Interactuar");yield return new WaitForSeconds(.3f);
 

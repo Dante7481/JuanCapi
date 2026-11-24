@@ -16,7 +16,7 @@ namespace JuanCapi.Editor
     // overlapping bounding rectangles, so a rectangular sprite cannot isolate them.
     public static class PreciseSpriteGeometry
     {
-        static string Output => Path.GetFullPath(Path.Combine(Application.dataPath, "../../Entregas/RecortesPrecisos"));
+        static string Output => Path.GetFullPath(Path.Combine(Application.dataPath, "../../Entregas/RevisionIntegral"));
         sealed class Island
         {
             public readonly List<int> pixels = new List<int>();
@@ -29,13 +29,15 @@ namespace JuanCapi.Editor
             public readonly Color32[] pixels;
             public readonly int[] core, owner;
             public readonly List<Island> islands = new List<Island> { null };
-            public int Width => texture.width;
-            public int Height => texture.height;
+            public readonly int Width, Height;
+            readonly string sheetName;
+            static readonly int[] seams = {192,394,602,770,914};
 
             public Sheet(Texture2D texture)
             {
-                this.texture = texture;
+                this.texture = texture; Width=texture.width; Height=texture.height; sheetName=texture.name;
                 pixels = texture.GetPixels32();
+                if(sheetName=="Enemies")for(int i=0;i<pixels.Length;i++)if(pixels[i].r>220&&pixels[i].g>220&&pixels[i].b>220)pixels[i].a=0;
                 core = new int[pixels.Length];
                 var queue = new Queue<int>();
                 for (int start = 0; start < pixels.Length; start++)
@@ -64,7 +66,7 @@ namespace JuanCapi.Editor
                 for (int id = 1; id < islands.Count; id++)
                     if (islands[id].pixels.Count >= 1500)
                         foreach (int p in islands[id].pixels) { owner[p] = id; queue.Enqueue(p); }
-                if (texture.name == "CapybaraTerrestre")
+                if (sheetName == "CapybaraTerrestre")
                 {
                     // Detached tip of the following (unused) overhead swing.
                     // It is closer to the preceding trail than to its own body.
@@ -90,23 +92,29 @@ namespace JuanCapi.Editor
             int Band(int p)
             {
                 int topY = Height - 1 - p / Width, x = p % Width;
-                if (texture.name == "CapybaraTerrestre")
+                if(sheetName=="Caiman_Movimiento_Ataque_Rapido_v2")return x<1070?0:1;
+                if(sheetName=="Capybara_Sumerge")return topY<350?0:topY<660?(x<955?1:x<1180?2:3):4;
+                if (sheetName == "CapybaraTerrestre")
                     return topY < (x < 320 ? 380 : 350) ? 0 : topY < 508 ? 1 : 2;
-                if (texture.name == "Caiman_Aparicion")
+                if (sheetName == "Caiman_Aparicion")
                 {
                     if (topY >= 345) return 2;
                     float seam = Mathf.Lerp(1214, 1148, Mathf.InverseLerp(235, 285, topY));
                     return x < seam ? 0 : 1;
                 }
-                if (texture.name != "Caiman_Derrotado_Escape") return 0;
+                if (sheetName != "Caiman_Derrotado_Escape") return 0;
                 // Dust bridges the run row and the jump row in the source atlas.
                 int band = 0;
-                foreach (int seam in new[] { 192, 394, 602, 770, 914 }) if (topY >= seam) band++;
+                foreach (int seam in seams) if (topY >= seam) band++;
                 return band;
             }
 
             public int Pose(Sprite sprite)
             {
+                if(sprite.name.EndsWith("_ChargeAlt3"))return core[(Height-1-355)*Width+980];
+                if(sprite.name.EndsWith("_ChargeAlt4"))return core[(Height-1-355)*Width+1250];
+                if(sheetName=="Capybara_Sumerge"&&sprite.name.EndsWith("_Dive4"))return core[(Height-1-530)*Width+880];
+                if(sheetName=="Capybara_Sumerge"&&sprite.name.EndsWith("_Dive5"))return core[(Height-1-550)*Width+1100];
                 if (sprite.name == "CaimanTerrestre_Appear5") return core[(Height - 1 - 200) * Width + 1320];
                 var counts = new int[islands.Count]; var r = sprite.rect;
                 for (int y = (int)r.yMin; y < r.yMax; y++)
@@ -120,7 +128,14 @@ namespace JuanCapi.Editor
         }
 
         static bool Target(string path) =>
-            path.StartsWith("Assets/Animations/Amazonia/CapybaraTerrestre/Melee_") ||
+            path.StartsWith("Assets/Art/Campaign/Sprites/Enemies_") ||
+            path.StartsWith("Assets/Art/Campaign/Sprites/Allies_") ||
+            path.StartsWith("Assets/Art/Campaign/Sprites/Rastreador_") ||
+            path.StartsWith("Assets/Art/Campaign/Sprites/Director_") ||
+            path.StartsWith("Assets/Art/Campaign/Sprites/AimBodies_") ||
+            path.StartsWith("Assets/Animations/Amazonia/") ||
+            path.StartsWith("Assets/Animations/V2/Capybara") ||
+            path.StartsWith("Assets/Animations/V2/CaimanAcuatico_") ||
             (path.StartsWith("Assets/Animations/V2/CaimanTerrestre_") &&
              (!path.Contains("_Appear") || path.EndsWith("_Appear5.asset")));
 
@@ -128,7 +143,7 @@ namespace JuanCapi.Editor
         public static void Bake()
         {
             Directory.CreateDirectory(Output);
-            var paths = AssetDatabase.FindAssets("t:Sprite", new[] { "Assets/Animations" })
+            var paths = AssetDatabase.FindAssets("t:Sprite", new[] { "Assets/Animations", "Assets/Art/Campaign/Sprites" })
                 .Select(AssetDatabase.GUIDToAssetPath).Where(p => p.EndsWith(".asset") && Target(p)).OrderBy(p => p).ToArray();
             var footprints = AssetDatabase.LoadAssetAtPath<SpriteFootprints>("Assets/Resources/Campaign/Footprints.asset");
             var notes = new List<string>();
@@ -143,10 +158,10 @@ namespace JuanCapi.Editor
                     sheet = new Sheet(sprite.texture); cache.Add(sprite.texture, sheet);
                 }
                 int id = sheet.Pose(sprite);
-                if (id == 0) throw new InvalidOperationException("No silhouette: " + path);
+                if (id == 0) { notes.Add("REVIEW no silhouette: " + path); continue; }
                 var island = sheet.islands[id];
                 if (island.Rect.width > sprite.rect.width * 1.8f || island.Rect.height > sprite.rect.height * 1.8f)
-                    throw new InvalidOperationException("Connected poses require explicit separation: " + path + " " + island.Rect);
+                    { notes.Add("REVIEW " + path + " " + island.Rect); continue; }
                 var accepted = new HashSet<int> { id };
                 // The lifted boulder is intentionally detached from the hand.
                 if (sprite.name == "CaimanTerrestre_Rock2")
@@ -156,12 +171,19 @@ namespace JuanCapi.Editor
                         if (other != id && part.pixels.Count >= 1500 && part.pixels.Count < island.pixels.Count * .6f && sprite.rect.Contains(part.Rect.center))
                             accepted.Add(other);
                     }
+                // Tico's takeoff cloud belongs to the same pose despite being detached.
+                if(sprite.name=="Allies_07")
+                    for(int other=1;other<sheet.islands.Count;other++)
+                    {
+                        var part=sheet.islands[other];float topY=sheet.Height-part.Rect.center.y;
+                        if(part.pixels.Count>=1500&&part.Rect.center.x>1100&&topY>630&&topY<700)accepted.Add(other);
+                    }
                 var old = sprite.rect;
                 var anchor = old.position + sprite.pivot;
                 int left = sheet.Width, bottom = sheet.Height, right = 0, top = 0;
                 for (int p = 0; p < sheet.pixels.Length; p++)
                 {
-                    if (sheet.pixels[p].a == 0 || !accepted.Contains(sheet.owner[p])) continue;
+                    if (sheet.pixels[p].a <= 5 || !accepted.Contains(sheet.owner[p])) continue;
                     int x = p % sheet.Width, y = p / sheet.Width;
                     left = Math.Min(left, x); right = Math.Max(right, x + 1);
                     bottom = Math.Min(bottom, y); top = Math.Max(top, y + 1);
@@ -222,7 +244,7 @@ namespace JuanCapi.Editor
                             for (int x = left; x < right; x++)
                             {
                                 int p = y * sheet.Width + x; var c = sheet.pixels[p];
-                                if (accepted.Contains(sheet.owner[p]) && c.a > 180 && Math.Min(c.r, Math.Min(c.g, c.b)) < 220 && c.r > c.g * .8f && c.b < c.r * 1.1f) count++;
+                                if (accepted.Contains(sheet.owner[p]) && c.a > 200 && c.r < 180 && c.r > c.g * .8f && c.b < c.r * 1.1f) count++;
                             }
                             if (count >= Math.Max(4, rect.width * .035f)) { sole = y; break; }
                         }
@@ -251,7 +273,7 @@ namespace JuanCapi.Editor
         public static void Preview()
         {
             Directory.CreateDirectory(Output);
-            var paths = AssetDatabase.FindAssets("t:Sprite", new[] { "Assets/Animations" })
+            var paths = AssetDatabase.FindAssets("t:Sprite", new[] { "Assets/Animations", "Assets/Art/Campaign/Sprites" })
                 .Select(AssetDatabase.GUIDToAssetPath).Where(p => p.EndsWith(".asset") && Target(p)).OrderBy(p => p).ToArray();
             var scene = EditorSceneManager.NewScene(NewSceneSetup.EmptyScene, NewSceneMode.Single);
             var camera = new GameObject("Sprite review").AddComponent<Camera>();
@@ -297,10 +319,12 @@ namespace JuanCapi.Editor
 
         public static void Build()
         {
-            bool release = Environment.GetCommandLineArgs().Contains("-juanRelease");
+            var args=Environment.GetCommandLineArgs();bool release=args.Contains("-juanRelease");
+            int custom=Array.IndexOf(args,"-juanBuildPath");
+            string destination=custom>=0&&custom+1<args.Length?Path.GetFullPath(args[custom+1]):Path.Combine(Output,release?"Juego/Windows/JuanCapi.exe":"Pruebas/Windows/JuanCapi.exe");
             var report = BuildPipeline.BuildPlayer(new BuildPlayerOptions {
                 scenes = EditorBuildSettings.scenes.Where(s => s.enabled).Select(s => s.path).ToArray(),
-                locationPathName = Path.Combine(Output, release ? "Juego/Windows/JuanCapi.exe" : "Pruebas/Windows/JuanCapi.exe"),
+                locationPathName = destination,
                 target = BuildTarget.StandaloneWindows64, options = release ? BuildOptions.None : BuildOptions.Development
             });
             if (report.summary.result != BuildResult.Succeeded) throw new Exception("Sprite validation build failed");

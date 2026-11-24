@@ -38,7 +38,7 @@ namespace JuanCapi.Editor
                 Object.DestroyImmediate(original.transform.Find("Suelo").gameObject);
                 Relocate(original,"Tronco inicial",8,.65f);Relocate(original,"Raíz elevada",12,1.5f);
                 Relocate(original,"Plataforma de combate A",86,.8f);Relocate(original,"Plataforma de combate B",99,.8f);Relocate(original,"Muelle",122,-.15f);
-                Ground(0,21,0,false);Ground(28.6f,47,0,false);Ground(54.6f,128,0,false);
+                Ground(0,128,0,false);
                 Block("Cobertura de raíz",new Vector2(62,.55f),new Vector2(2,1.1f),true,6);
                 Prop("Mara · banco portátil",SwampPropKind.Bench,"MARA","bench",8,.5f,1.8f,1.1f);
                 Actor("Mara",art.allyControllers[0],art.allies[0],new Vector3(6,0),1);
@@ -86,6 +86,7 @@ namespace JuanCapi.Editor
             Block("Límite este",new Vector2(water?110.5f:128.5f,10),new Vector2(1,30),false,0);
             if(water)Block("Superficie",new Vector2(55,20.5f),new Vector2(112,1),false,0);
             CreatePlayer(water);level.props=props.ToArray();
+            if(!water)WorldPresentationRepair.Pantano();
             EditorSceneManager.SaveScene(scene,"Assets/Scenes/"+(water?"AmazoniaAcuatica":"AmazoniaTerrestre")+".unity");
         }
         private static void Relocate(GameObject original,string name,float x,float y)

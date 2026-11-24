@@ -63,6 +63,7 @@ namespace JuanCapi
             provisionCount=Label(hud,"0",85,614,32,36,20,TextAnchor.MiddleCenter);KeyHint(hud,"Consumible",40,658,72);
             Symbol(hud,SymbolGraphic.Shape.Pack,154,642,28,Cyan);Label(hud,"Tab",188,640,65,30,17,TextAnchor.MiddleLeft);
             Symbol(hud,SymbolGraphic.Shape.Pause,262,644,24,Cyan);Label(hud,"Esc",292,640,60,30,17,TextAnchor.MiddleLeft);
+            Button(hud,"T  Emotes",355,638,132,34,Emotes);
             interactionHint=Rect("Interacción",hud,24,282,138,74);Box(interactionHint,0,0,138,74,Ink);
             interactionImage=Icon(interactionHint,"drone",6,7,60,60);interactionKey=Label(interactionHint,"E",76,10,50,54,25,TextAnchor.MiddleCenter,Gold);
             interactionHint.gameObject.SetActive(false);

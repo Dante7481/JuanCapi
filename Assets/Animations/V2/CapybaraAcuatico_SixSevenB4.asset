@@ -10,18 +10,18 @@ Sprite:
   m_Name: CapybaraAcuatico_SixSevenB4
   m_Rect:
     serializedVersion: 2
-    x: 1322
-    y: 48
-    width: 326
-    height: 280
-  m_Offset: {x: 0, y: 0}
+    x: 1351
+    y: 50
+    width: 250
+    height: 270
+  m_Offset: {x: 9, y: 3.0000153}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 180
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.536, y: 0.51111114}
   m_Extrude: 0
-  m_PackingTag: 
+  m_PackingTag:
   m_RenderDataKey:
-    00000000000000000000000000000000: 0
+    74d5832d337fef64a9dc929ffe0a5186: 21300000
   m_AtlasTags: []
   m_SpriteAtlas: {fileID: 0}
   m_RD:
@@ -40,7 +40,7 @@ Sprite:
       localAABB:
         m_Center: {x: 0, y: 0, z: 0}
         m_Extent: {x: 0, y: 0, z: 0}
-    m_IndexBuffer: 000001000200020001000300
+    m_IndexBuffer: 000001000200000002000300y
     m_VertexData:
       serializedVersion: 3
       m_VertexCount: 4
@@ -102,7 +102,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 7dd267bf721c473f000000007dd2673f721c473f000000007dd267bf721c47bf000000007dd2673f721c47bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: e9933ebf464444bf0000000050fa243f464444bf0000000050fa243fbabb3b3f00000000e9933ebfbabb3b3f0000000016692e3f4021813d50af4e3f4021813d50af4e3f9a9bce3e16692e3f9a9bce3e
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -111,14 +111,14 @@ Sprite:
       fullWeights: []
     textureRect:
       serializedVersion: 2
-      x: 1322
-      y: 48
-      width: 326
-      height: 280
+      x: 1351
+      y: 50
+      width: 250
+      height: 270
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 3072
-    uvTransform: {x: 180, y: 1485, z: 180, w: 188}
+    settingsRaw: 3264
+    uvTransform: {x: 180, y: 1485, z: 180, w: 188.00002}
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 4
@@ -136,7 +136,7 @@ Sprite:
       localAABB:
         m_Center: {x: 0, y: 0, z: 0}
         m_Extent: {x: 0, y: 0, z: 0}
-    m_IndexBuffer: 000001000200020001000300
+    m_IndexBuffer: 000001000200000002000300y
     m_VertexData:
       serializedVersion: 3
       m_VertexCount: 4
@@ -198,7 +198,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 7dd267bf721c473f000000007dd2673f721c473f000000007dd267bf721c47bf000000007dd2673f721c47bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: e9933ebf464444bf0000000050fa243f464444bf0000000050fa243fbabb3b3f00000000e9933ebfbabb3b3f0000000016692e3f4021813d50af4e3f4021813d50af4e3f9a9bce3e16692e3f9a9bce3e
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -207,16 +207,16 @@ Sprite:
       fullWeights: []
     textureRect:
       serializedVersion: 2
-      x: 1322
-      y: 48
-      width: 326
-      height: 280
+      x: 1351
+      y: 50
+      width: 250
+      height: 270
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 3072
-    uvTransform: {x: 180, y: 1485, z: 180, w: 188}
+    settingsRaw: 3264
+    uvTransform: {x: 180, y: 1485, z: 180, w: 188.00002}
     downscaleMultiplier: 1
   m_PhysicsShape: []
   m_Bones: []
   m_ScriptableObjects: []
-  m_SpriteID: 
+  m_SpriteID:

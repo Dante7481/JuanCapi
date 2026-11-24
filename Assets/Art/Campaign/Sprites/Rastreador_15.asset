@@ -10,18 +10,18 @@ Sprite:
   m_Name: Rastreador_15
   m_Rect:
     serializedVersion: 2
-    x: 939
-    y: 2
-    width: 313
-    height: 313
-  m_Offset: {x: 0, y: -143.98}
+    x: 957
+    y: 19
+    width: 259
+    height: 184
+  m_Offset: {x: 9, y: -96.48}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 116.11111
-  m_Pivot: {x: 0.5, y: 0.04}
+  m_Pivot: {x: 0.53474903, y: -0.024347829}
   m_Extrude: 0
-  m_PackingTag: 
+  m_PackingTag:
   m_RenderDataKey:
-    00000000000000000000000000000000: 0
+    57c79696bc318bb40bacbec210bdb6a7: 21300000
   m_AtlasTags: []
   m_SpriteAtlas: {fileID: 0}
   m_RD:
@@ -32,18 +32,18 @@ Sprite:
     m_SubMeshes:
     - serializedVersion: 2
       firstByte: 0
-      indexCount: 6
+      indexCount: 12
       topology: 0
       baseVertex: 0
       firstVertex: 0
-      vertexCount: 4
+      vertexCount: 8
       localAABB:
         m_Center: {x: 0, y: 0, z: 0}
         m_Extent: {x: 0, y: 0, z: 0}
-    m_IndexBuffer: 000001000200020001000300y
+    m_IndexBuffer: 000001000200000002000300040005000600040006000700y
     m_VertexData:
       serializedVersion: 3
-      m_VertexCount: 4
+      m_VertexCount: 8
       m_Channels:
       - stream: 0
         offset: 0
@@ -101,8 +101,8 @@ Sprite:
         offset: 0
         format: 0
         dimension: 0
-      m_DataSize: 80
-      _typelessdata: 4086acbf999f2540000000004086ac3f999f2540000000004086acbfd1d4dcbd000000004086ac3fd1d4dcbd000000000000000000000000000000000000000000000000000000000000000000000000
+      m_DataSize: 160
+      _typelessdata: 6dae98bffb091e3d000000009ad6843ffb091e3d000000009ad6843f30adce3f000000006dae98bf30adce3f00000000369497bf30adce3f000000009ad6843f30adce3f000000009ad6843f67c7cf3f00000000369497bf67c7cf3f00000000515e433f103e783c103e783f103e783c103e783f58f3243e515e433f58f3243e9492433f58f3243e103e783f58f3243e103e783f64c4253e9492433f64c4253e
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -111,14 +111,14 @@ Sprite:
       fullWeights: []
     textureRect:
       serializedVersion: 2
-      x: 939
-      y: 2
-      width: 313
-      height: 313
+      x: 957
+      y: 19
+      width: 259
+      height: 184
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 3072
-    uvTransform: {x: 116.11111, y: 1095.5, z: 116.11111, w: 14.520004}
+    settingsRaw: 3264
+    uvTransform: {x: 116.11111, y: 1095.5, z: 116.11111, w: 14.519997}
     downscaleMultiplier: 1
   m_AtlasRD:
     serializedVersion: 4
@@ -128,18 +128,18 @@ Sprite:
     m_SubMeshes:
     - serializedVersion: 2
       firstByte: 0
-      indexCount: 6
+      indexCount: 12
       topology: 0
       baseVertex: 0
       firstVertex: 0
-      vertexCount: 4
+      vertexCount: 8
       localAABB:
         m_Center: {x: 0, y: 0, z: 0}
         m_Extent: {x: 0, y: 0, z: 0}
-    m_IndexBuffer: 000001000200020001000300y
+    m_IndexBuffer: 000001000200000002000300040005000600040006000700y
     m_VertexData:
       serializedVersion: 3
-      m_VertexCount: 4
+      m_VertexCount: 8
       m_Channels:
       - stream: 0
         offset: 0
@@ -197,8 +197,8 @@ Sprite:
         offset: 0
         format: 0
         dimension: 0
-      m_DataSize: 80
-      _typelessdata: 4086acbf999f2540000000004086ac3f999f2540000000004086acbfd1d4dcbd000000004086ac3fd1d4dcbd000000000000000000000000000000000000000000000000000000000000000000000000
+      m_DataSize: 160
+      _typelessdata: 6dae98bffb091e3d000000009ad6843ffb091e3d000000009ad6843f30adce3f000000006dae98bf30adce3f00000000369497bf30adce3f000000009ad6843f30adce3f000000009ad6843f67c7cf3f00000000369497bf67c7cf3f00000000515e433f103e783c103e783f103e783c103e783f58f3243e515e433f58f3243e9492433f58f3243e103e783f58f3243e103e783f64c4253e9492433f64c4253e
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -207,16 +207,16 @@ Sprite:
       fullWeights: []
     textureRect:
       serializedVersion: 2
-      x: 939
-      y: 2
-      width: 313
-      height: 313
+      x: 957
+      y: 19
+      width: 259
+      height: 184
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 3072
-    uvTransform: {x: 116.11111, y: 1095.5, z: 116.11111, w: 14.520004}
+    settingsRaw: 3264
+    uvTransform: {x: 116.11111, y: 1095.5, z: 116.11111, w: 14.519997}
     downscaleMultiplier: 1
   m_PhysicsShape: []
   m_Bones: []
   m_ScriptableObjects: []
-  m_SpriteID: 
+  m_SpriteID:

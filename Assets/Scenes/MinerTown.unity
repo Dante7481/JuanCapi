@@ -1415,7 +1415,7 @@ GameObject:
   - component: {fileID: 108214891}
   - component: {fileID: 108214892}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1430,7 +1430,7 @@ Transform:
   m_GameObject: {fileID: 108214890}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 136.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 136.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3274,7 +3274,7 @@ GameObject:
   - component: {fileID: 223071291}
   - component: {fileID: 223071292}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3289,7 +3289,7 @@ Transform:
   m_GameObject: {fileID: 223071290}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 24.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.305638, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3366,7 +3366,7 @@ GameObject:
   - component: {fileID: 224494556}
   - component: {fileID: 224494557}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3381,7 +3381,7 @@ Transform:
   m_GameObject: {fileID: 224494555}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 109.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 109.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3458,7 +3458,7 @@ GameObject:
   - component: {fileID: 227685249}
   - component: {fileID: 227685250}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3473,7 +3473,7 @@ Transform:
   m_GameObject: {fileID: 227685248}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 53.5, y: -7.22, z: 0}
+  m_LocalPosition: {x: 53.5, y: -7.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3550,7 +3550,7 @@ GameObject:
   - component: {fileID: 238658252}
   - component: {fileID: 238658253}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3565,7 +3565,7 @@ Transform:
   m_GameObject: {fileID: 238658251}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 85.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 85.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4983,7 +4983,7 @@ GameObject:
   - component: {fileID: 385299200}
   - component: {fileID: 385299201}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4998,7 +4998,7 @@ Transform:
   m_GameObject: {fileID: 385299199}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 50.5, y: -7.22, z: 0}
+  m_LocalPosition: {x: 50.5, y: -7.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5450,7 +5450,7 @@ GameObject:
   - component: {fileID: 424794428}
   - component: {fileID: 424794429}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5465,7 +5465,7 @@ Transform:
   m_GameObject: {fileID: 424794427}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 100.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 100.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6000,7 +6000,7 @@ Transform:
   m_GameObject: {fileID: 484935699}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59, y: 0.7, z: 0}
+  m_LocalPosition: {x: 59, y: -0.3, z: 0}
   m_LocalScale: {x: 26, y: 0.05, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6169,7 +6169,7 @@ GameObject:
   - component: {fileID: 489290166}
   - component: {fileID: 489290167}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6184,7 +6184,7 @@ Transform:
   m_GameObject: {fileID: 489290165}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 121.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 121.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6580,7 +6580,7 @@ GameObject:
   - component: {fileID: 510873701}
   - component: {fileID: 510873702}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6595,7 +6595,7 @@ Transform:
   m_GameObject: {fileID: 510873700}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 163.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 163.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7132,7 +7132,7 @@ GameObject:
   - component: {fileID: 542797349}
   - component: {fileID: 542797350}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7147,7 +7147,7 @@ Transform:
   m_GameObject: {fileID: 542797348}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 160.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 160.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7224,7 +7224,7 @@ GameObject:
   - component: {fileID: 544058483}
   - component: {fileID: 544058484}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7239,7 +7239,7 @@ Transform:
   m_GameObject: {fileID: 544058482}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59.5, y: -7.22, z: 0}
+  m_LocalPosition: {x: 59.5, y: -7.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8892,7 +8892,7 @@ GameObject:
   - component: {fileID: 647361542}
   - component: {fileID: 647361543}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8907,7 +8907,7 @@ Transform:
   m_GameObject: {fileID: 647361541}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 1.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9352,7 +9352,7 @@ GameObject:
   - component: {fileID: 662489421}
   - component: {fileID: 662489422}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9367,7 +9367,7 @@ Transform:
   m_GameObject: {fileID: 662489420}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 43.1, y: -0.22, z: 0}
+  m_LocalPosition: {x: 43.1, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9585,7 +9585,7 @@ GameObject:
   - component: {fileID: 676682680}
   - component: {fileID: 676682681}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9600,7 +9600,7 @@ Transform:
   m_GameObject: {fileID: 676682679}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 91.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 91.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9957,7 +9957,7 @@ GameObject:
   - component: {fileID: 692422396}
   - component: {fileID: 692422397}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9972,7 +9972,7 @@ Transform:
   m_GameObject: {fileID: 692422395}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 4.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10121,7 +10121,7 @@ GameObject:
   - component: {fileID: 697150165}
   - component: {fileID: 697150166}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10136,7 +10136,7 @@ Transform:
   m_GameObject: {fileID: 697150164}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 56.5, y: -7.22, z: 0}
+  m_LocalPosition: {x: 56.5, y: -7.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10291,7 +10291,7 @@ GameObject:
   - component: {fileID: 708577165}
   - component: {fileID: 708577166}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10306,7 +10306,7 @@ Transform:
   m_GameObject: {fileID: 708577164}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 79.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 79.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11003,7 +11003,7 @@ GameObject:
   - component: {fileID: 756827645}
   - component: {fileID: 756827646}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11018,7 +11018,7 @@ Transform:
   m_GameObject: {fileID: 756827644}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 22.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11765,7 +11765,7 @@ GameObject:
   - component: {fileID: 808282900}
   - component: {fileID: 808282901}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11780,7 +11780,7 @@ Transform:
   m_GameObject: {fileID: 808282899}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 127.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 127.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12213,8 +12213,8 @@ Transform:
   m_GameObject: {fileID: 820952787}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 59, y: -3.2, z: 0}
-  m_LocalScale: {x: 26, y: 7.8, z: 1}
+  m_LocalPosition: {x: 59, y: -3.65, z: 0}
+  m_LocalScale: {x: 26, y: 6.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1334508217}
@@ -12290,7 +12290,7 @@ GameObject:
   - component: {fileID: 825731845}
   - component: {fileID: 825731846}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12305,7 +12305,7 @@ Transform:
   m_GameObject: {fileID: 825731844}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 19.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12382,7 +12382,7 @@ GameObject:
   - component: {fileID: 841231635}
   - component: {fileID: 841231636}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12397,7 +12397,7 @@ Transform:
   m_GameObject: {fileID: 841231634}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: -1.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13030,7 +13030,7 @@ GameObject:
   - component: {fileID: 923945205}
   - component: {fileID: 923945206}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13045,7 +13045,7 @@ Transform:
   m_GameObject: {fileID: 923945204}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.1, y: -0.22, z: 0}
+  m_LocalPosition: {x: 37.1, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13122,7 +13122,7 @@ GameObject:
   - component: {fileID: 926988542}
   - component: {fileID: 926988543}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13137,7 +13137,7 @@ Transform:
   m_GameObject: {fileID: 926988541}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 34.1, y: -0.22, z: 0}
+  m_LocalPosition: {x: 34.1, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13306,7 +13306,7 @@ GameObject:
   - component: {fileID: 935646151}
   - component: {fileID: 935646152}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13321,7 +13321,7 @@ Transform:
   m_GameObject: {fileID: 935646150}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 133.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 133.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13654,7 +13654,7 @@ GameObject:
   - component: {fileID: 975937306}
   - component: {fileID: 975937307}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13669,7 +13669,7 @@ Transform:
   m_GameObject: {fileID: 975937305}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 139.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 139.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -14787,7 +14787,7 @@ Transform:
   m_GameObject: {fileID: 1024660522}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.014386737, z: 0}
+  m_LocalPosition: {x: 0, y: 0.014386626, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15360,8 +15360,8 @@ Transform:
   m_GameObject: {fileID: 1073613928}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 39.3, y: -2.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 38.7, y: -2.5, z: 0}
+  m_LocalScale: {x: 1.0895522, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1334508217}
@@ -15423,7 +15423,7 @@ GameObject:
   - component: {fileID: 1078864775}
   - component: {fileID: 1078864776}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15438,7 +15438,7 @@ Transform:
   m_GameObject: {fileID: 1078864774}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 154.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 154.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15607,7 +15607,7 @@ GameObject:
   - component: {fileID: 1080364230}
   - component: {fileID: 1080364231}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15622,7 +15622,7 @@ Transform:
   m_GameObject: {fileID: 1080364229}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 145.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 145.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15791,7 +15791,7 @@ GameObject:
   - component: {fileID: 1087461783}
   - component: {fileID: 1087461784}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15806,7 +15806,7 @@ Transform:
   m_GameObject: {fileID: 1087461782}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 94.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 94.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16024,7 +16024,7 @@ GameObject:
   - component: {fileID: 1111357992}
   - component: {fileID: 1111357993}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16039,7 +16039,7 @@ Transform:
   m_GameObject: {fileID: 1111357991}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 65.5, y: -7.22, z: 0}
+  m_LocalPosition: {x: 65.5, y: -7.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16208,7 +16208,7 @@ GameObject:
   - component: {fileID: 1119002668}
   - component: {fileID: 1119002669}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16223,7 +16223,7 @@ Transform:
   m_GameObject: {fileID: 1119002667}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 47.5, y: -7.22, z: 0}
+  m_LocalPosition: {x: 47.5, y: -7.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16576,7 +16576,7 @@ GameObject:
   - component: {fileID: 1127171529}
   - component: {fileID: 1127171530}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16591,7 +16591,7 @@ Transform:
   m_GameObject: {fileID: 1127171528}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 88.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 88.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17430,7 +17430,7 @@ GameObject:
   - component: {fileID: 1215867785}
   - component: {fileID: 1215867786}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17445,7 +17445,7 @@ Transform:
   m_GameObject: {fileID: 1215867784}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 16.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19629,7 +19629,7 @@ GameObject:
   - component: {fileID: 1350820933}
   - component: {fileID: 1350820934}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19644,7 +19644,7 @@ Transform:
   m_GameObject: {fileID: 1350820932}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 148.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 148.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19885,7 +19885,7 @@ GameObject:
   - component: {fileID: 1371974962}
   - component: {fileID: 1371974963}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19900,7 +19900,7 @@ Transform:
   m_GameObject: {fileID: 1371974961}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 124.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 124.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20161,7 +20161,7 @@ GameObject:
   - component: {fileID: 1376878999}
   - component: {fileID: 1376879000}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20176,7 +20176,7 @@ Transform:
   m_GameObject: {fileID: 1376878998}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.1, y: -0.22, z: 0}
+  m_LocalPosition: {x: 40.1, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20253,7 +20253,7 @@ GameObject:
   - component: {fileID: 1378165492}
   - component: {fileID: 1378165493}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20268,7 +20268,7 @@ Transform:
   m_GameObject: {fileID: 1378165491}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 115.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 115.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20621,7 +20621,7 @@ GameObject:
   - component: {fileID: 1388888560}
   - component: {fileID: 1388888561}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20636,7 +20636,7 @@ Transform:
   m_GameObject: {fileID: 1388888559}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 13.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20805,7 +20805,7 @@ GameObject:
   - component: {fileID: 1402549780}
   - component: {fileID: 1402549781}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20820,7 +20820,7 @@ Transform:
   m_GameObject: {fileID: 1402549779}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 76.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 76.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22198,7 +22198,7 @@ GameObject:
   - component: {fileID: 1539686946}
   - component: {fileID: 1539686947}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22213,7 +22213,7 @@ Transform:
   m_GameObject: {fileID: 1539686945}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 71, y: -7.22, z: 0}
+  m_LocalPosition: {x: 71, y: -7.14, z: 0}
   m_LocalScale: {x: 0.6023739, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22388,7 +22388,7 @@ GameObject:
   - component: {fileID: 1559840527}
   - component: {fileID: 1559840528}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22403,7 +22403,7 @@ Transform:
   m_GameObject: {fileID: 1559840526}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 106.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 106.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22591,7 +22591,7 @@ Transform:
   m_GameObject: {fileID: 1566349958}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.20025413, z: 0}
+  m_LocalPosition: {x: 0, y: -0.20025407, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22668,7 +22668,7 @@ GameObject:
   - component: {fileID: 1567690682}
   - component: {fileID: 1567690683}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22683,7 +22683,7 @@ Transform:
   m_GameObject: {fileID: 1567690681}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 62.5, y: -7.22, z: 0}
+  m_LocalPosition: {x: 62.5, y: -7.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22760,7 +22760,7 @@ GameObject:
   - component: {fileID: 1570102592}
   - component: {fileID: 1570102593}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22775,7 +22775,7 @@ Transform:
   m_GameObject: {fileID: 1570102591}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 68.5, y: -7.22, z: 0}
+  m_LocalPosition: {x: 68.5, y: -7.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23410,7 +23410,7 @@ GameObject:
   - component: {fileID: 1618188118}
   - component: {fileID: 1618188119}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -23425,7 +23425,7 @@ Transform:
   m_GameObject: {fileID: 1618188117}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 151.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 151.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25015,7 +25015,7 @@ Transform:
   m_GameObject: {fileID: 1711680825}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.09467305, z: 0}
+  m_LocalPosition: {x: 0, y: -0.09467283, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25597,7 +25597,7 @@ GameObject:
   - component: {fileID: 1765950457}
   - component: {fileID: 1765950458}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25612,7 +25612,7 @@ Transform:
   m_GameObject: {fileID: 1765950456}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 142.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 142.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25781,7 +25781,7 @@ GameObject:
   - component: {fileID: 1771112618}
   - component: {fileID: 1771112619}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -25796,7 +25796,7 @@ Transform:
   m_GameObject: {fileID: 1771112617}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 97.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 97.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26070,7 +26070,7 @@ GameObject:
   - component: {fileID: 1780544736}
   - component: {fileID: 1780544737}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26085,7 +26085,7 @@ Transform:
   m_GameObject: {fileID: 1780544735}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 7.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26335,7 +26335,7 @@ GameObject:
   - component: {fileID: 1788841151}
   - component: {fileID: 1788841152}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26350,7 +26350,7 @@ Transform:
   m_GameObject: {fileID: 1788841150}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 112.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 112.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26710,7 +26710,7 @@ GameObject:
   - component: {fileID: 1806949027}
   - component: {fileID: 1806949028}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26725,7 +26725,7 @@ Transform:
   m_GameObject: {fileID: 1806949026}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 103.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 103.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26986,7 +26986,7 @@ GameObject:
   - component: {fileID: 1844800289}
   - component: {fileID: 1844800290}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27001,7 +27001,7 @@ Transform:
   m_GameObject: {fileID: 1844800288}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 157.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 157.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28317,7 +28317,7 @@ GameObject:
   - component: {fileID: 1969686142}
   - component: {fileID: 1969686143}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28332,7 +28332,7 @@ Transform:
   m_GameObject: {fileID: 1969686141}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 45.3, y: -0.22, z: 0}
+  m_LocalPosition: {x: 45.3, y: -0.14, z: 0}
   m_LocalScale: {x: 0.4243328, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28597,7 +28597,7 @@ GameObject:
   - component: {fileID: 1980794849}
   - component: {fileID: 1980794850}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28612,7 +28612,7 @@ Transform:
   m_GameObject: {fileID: 1980794848}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 73.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 73.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29241,7 +29241,7 @@ GameObject:
   - component: {fileID: 2041205458}
   - component: {fileID: 2041205459}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29256,7 +29256,7 @@ Transform:
   m_GameObject: {fileID: 2041205457}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 10.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29425,7 +29425,7 @@ GameObject:
   - component: {fileID: 2057418886}
   - component: {fileID: 2057418887}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29440,7 +29440,7 @@ Transform:
   m_GameObject: {fileID: 2057418885}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 130.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 130.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29701,7 +29701,7 @@ GameObject:
   - component: {fileID: 2066821993}
   - component: {fileID: 2066821994}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29716,7 +29716,7 @@ Transform:
   m_GameObject: {fileID: 2066821992}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 82.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 82.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30869,7 +30869,7 @@ GameObject:
   - component: {fileID: 2111143030}
   - component: {fileID: 2111143031}
   m_Layer: 0
-  m_Name: Pasarela
+  m_Name: "Pasarela \xB7 superficie alineada"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30884,7 +30884,7 @@ Transform:
   m_GameObject: {fileID: 2111143029}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 118.5, y: -0.22, z: 0}
+  m_LocalPosition: {x: 118.5, y: -0.14, z: 0}
   m_LocalScale: {x: 0.89910984, y: 0.37414965, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

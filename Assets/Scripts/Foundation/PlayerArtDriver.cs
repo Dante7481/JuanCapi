@@ -10,13 +10,15 @@ namespace JuanCapi
         private string previous;
         private SpriteRenderer gun;
         private Transform shoulder;
-        private float nextGhost;
+        public string DirectedState {get;set;}
+
         public Vector2 AimDirection { get; private set; } = Vector2.right;
         public Vector3 Muzzle => shoulder!=null?shoulder.TransformPoint(new Vector3(.72f,0,0)):transform.position;
         public Vector3 Shoulder => shoulder!=null?shoulder.position:transform.position+Vector3.up*.78f;
         private void Awake(){player=GetComponent<PlayerController>();}
         public void Install(CampaignArt art)
         {
+            if(GetComponent<PlayerEmotes>()==null)gameObject.AddComponent<PlayerEmotes>();
             if(actor!=null)
             {
                 shoulder=actor.transform.Find("Hombro · apuntado libre");
@@ -45,10 +47,11 @@ namespace JuanCapi
         {
             if(actor==null||player==null)return;
             var game=GameRuntime.Instance;var data=game?.Data;
-            string state=player.VisualState;
+            var emotes=GetComponent<PlayerEmotes>();
+            string state=DirectedState??(emotes!=null&&emotes.Active?emotes.State:player.VisualState);
             actor.Play(state);
             actor.groundFeet=!player.aquatic;actor.groundOffset=-actor.transform.localPosition.y/actor.transform.localScale.y;
-            bool armed=data!=null&&data.gun&&data.equippedWeapon=="gun"&&!player.isDead;
+            bool armed=DirectedState==null&&data!=null&&data.gun&&data.equippedWeapon=="gun"&&!player.isDead&&emotes?.Active!=true;
             gun.gameObject.SetActive(armed);
             if(armed&&CampaignArt.Current.aimBodies!=null&&CampaignArt.Current.aimBodies.Length>=4)
             {
@@ -61,12 +64,12 @@ namespace JuanCapi
             }
             if(state!=previous)
             {
+                if(state=="Dash")PlasmaEffects.Burst(transform.position,new Color(.4f,1,1),.45f);
                 if(state=="Hurt")PlasmaEffects.Burst(actor.sprite.bounds.center,new Color(1,.65f,.32f),.7f);
                 if(state=="Land")PlasmaEffects.Burst(transform.position,new Color(.84f,.74f,.5f,.5f),.45f);
                 previous=state;
             }
-            if(state=="Dash"&&Time.time>=nextGhost)
-            {nextGhost=Time.time+.045f;PlasmaEffects.Ghost(actor.sprite);}
+
             actor.sprite.color=player.IsInvulnerable?new Color(1,.8f,.65f,game!=null&&game.Settings.reducedFlashes?.85f:.75f+.25f*Mathf.Sin(Time.time*28)):Color.white;
         }
         public void AimAt(Vector3 worldPoint)

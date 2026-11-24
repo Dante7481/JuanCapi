@@ -15,7 +15,7 @@ namespace JuanCapi
         private GameRuntime Game=>GameRuntime.Instance;
         private void Awake(){Current=this;}
         private void OnDestroy(){if(Game!=null)Game.Changed-=Refresh;if(Current==this)Current=null;}
-        public bool IsWater(Vector3 p)=>p.x>46&&p.x<72&&p.y<.85f;
+        public bool IsWater(Vector3 p)=>p.x>46&&p.x<72&&p.y<-.3f;
         public Vector2 CurrentAt(Vector3 p)=>IsWater(p)&&p.y<-2?Vector2.right*.45f:Vector2.zero;
         public float BeltAt(Vector3 p)=>p.x>33&&p.x<40&&p.y<.3f?1.8f:0;
         public void ReflectedShot(){Reflections++;}

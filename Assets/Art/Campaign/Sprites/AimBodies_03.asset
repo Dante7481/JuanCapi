@@ -10,18 +10,18 @@ Sprite:
   m_Name: AimBodies_03
   m_Rect:
     serializedVersion: 2
-    x: 1382
-    y: 516
-    width: 308
-    height: 294
-  m_Offset: {x: 0, y: 0}
+    x: 1379
+    y: 513
+    width: 313
+    height: 299
+  m_Offset: {x: 0.5, y: 0.5}
   m_Border: {x: 0, y: 0, z: 0, w: 0}
   m_PixelsToUnits: 204.01001
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.50159746, y: 0.50167227}
   m_Extrude: 0
-  m_PackingTag: 
+  m_PackingTag:
   m_RenderDataKey:
-    00000000000000000000000000000000: 0
+    710f3dd2185a67a439b1251da0c3004f: 21300000
   m_AtlasTags: []
   m_SpriteAtlas: {fileID: 0}
   m_RD:
@@ -40,7 +40,7 @@ Sprite:
       localAABB:
         m_Center: {x: 0, y: 0, z: 0}
         m_Extent: {x: 0, y: 0, z: 0}
-    m_IndexBuffer: 000001000200020001000300y
+    m_IndexBuffer: 000001000200000002000300y
     m_VertexData:
       serializedVersion: 3
       m_VertexCount: 4
@@ -102,7 +102,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: d43e41bf2776383f00000000d43e413f2776383f00000000d43e41bf277638bf00000000d43e413f277638bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 8b0245bfe0393cbf000000004ec1433fe0393cbf000000004ec1433fa0f83a3f000000008b0245bfa0f83a3f00000000b6ff463f020f143fb72a743f020f143fb72a743fa05a6a3fb6ff463fa05a6a3f
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -111,13 +111,13 @@ Sprite:
       fullWeights: []
     textureRect:
       serializedVersion: 2
-      x: 1382
-      y: 516
-      width: 308
-      height: 294
+      x: 1379
+      y: 513
+      width: 313
+      height: 299
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 3072
+    settingsRaw: 3264
     uvTransform: {x: 204.01001, y: 1536, z: 204.01001, w: 663}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -136,7 +136,7 @@ Sprite:
       localAABB:
         m_Center: {x: 0, y: 0, z: 0}
         m_Extent: {x: 0, y: 0, z: 0}
-    m_IndexBuffer: 000001000200020001000300y
+    m_IndexBuffer: 000001000200000002000300y
     m_VertexData:
       serializedVersion: 3
       m_VertexCount: 4
@@ -198,7 +198,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: d43e41bf2776383f00000000d43e413f2776383f00000000d43e41bf277638bf00000000d43e413f277638bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 8b0245bfe0393cbf000000004ec1433fe0393cbf000000004ec1433fa0f83a3f000000008b0245bfa0f83a3f00000000b6ff463f020f143fb72a743f020f143fb72a743fa05a6a3fb6ff463fa05a6a3f
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -207,16 +207,16 @@ Sprite:
       fullWeights: []
     textureRect:
       serializedVersion: 2
-      x: 1382
-      y: 516
-      width: 308
-      height: 294
+      x: 1379
+      y: 513
+      width: 313
+      height: 299
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 3072
+    settingsRaw: 3264
     uvTransform: {x: 204.01001, y: 1536, z: 204.01001, w: 663}
     downscaleMultiplier: 1
   m_PhysicsShape: []
   m_Bones: []
   m_ScriptableObjects: []
-  m_SpriteID: 
+  m_SpriteID:

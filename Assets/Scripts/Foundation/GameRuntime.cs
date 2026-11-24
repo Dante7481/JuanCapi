@@ -20,7 +20,7 @@ namespace JuanCapi
         public bool IsPractice { get; private set; }
         public bool Busy { get; private set; }
         public bool Cinematic { get; set; }
-        public bool CanPlay => Data != null && Player != null && !Busy && !Cinematic && UI != null && !UI.IsOpen && Data.healthQuarters > 0 && !TrialFinished;
+        public bool CanPlay => Data != null && Player != null && !Busy && !Cinematic && SwampLevel.Current?.Diving!=true && UI != null && !UI.IsOpen && Data.healthQuarters > 0 && !TrialFinished;
         public event Action Changed;
         private bool deathHandled;
         private float autoClock;

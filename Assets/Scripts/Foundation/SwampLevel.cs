@@ -8,11 +8,13 @@ namespace JuanCapi
     {
         public static SwampLevel Current { get; private set; }
         public bool aquatic;
+        public const float ShoreX=125;
         public CaimanEncounter boss;
         public SwampProp[] props;
         public GameObject rescueGate;
         public AnimatedActor tico;
         public int Reflections { get; private set; }
+        public bool Diving {get;private set;}
         private bool arenaSaved;
         private Vector3 fallAnchor;
         private GameRuntime Game=>GameRuntime.Instance;
@@ -64,6 +66,7 @@ namespace JuanCapi
         private void Update()
         {
             if(Game?.CanPlay!=true)return;var d=Game.Data;var p=Game.Player.transform.position;
+            if(!aquatic&&p.x>=ShoreX-.35f&&d.gun&&(boss.Resolved||boss.StateName=="Retreat")){Dive();return;}
             if(!aquatic&&p.y<-5){Game.Player.RespawnAt(fallAnchor);return;}
             if(!aquatic&&Game.Player.EnSuelo&&!Game.Player.InDanger)
             {
@@ -95,7 +98,7 @@ namespace JuanCapi
             {
                 if(!d.collected.Contains("P03_CABLE")){icon="sword";return new Vector3(75,1);}
                 if(!d.gun){icon=d.defeated.Contains("CAIMAN_LAND")?"gun":"caiman";return new Vector3(d.defeated.Contains("CAIMAN_LAND")?105:94,1);}
-                icon=TargetsComplete(d)?"valve":"gun";return new Vector3(TargetsComplete(d)?125:116,2);
+                bool shore=TargetsComplete(d)||Game.Player.transform.position.x>120;icon=shore?"valve":"gun";return new Vector3(shore?ShoreX-1:116,2);
             }
             if(!d.rescues.Contains("TICO")){icon="cage";return new Vector3(34,14);}
             if(!d.shield){icon=d.defeated.Contains("CAIMAN_WATER")?"shield":"caiman";return new Vector3(d.defeated.Contains("CAIMAN_WATER")?93:80,9);}
@@ -103,8 +106,26 @@ namespace JuanCapi
         }
         public bool Dive()
         {
-            if(aquatic||!Game.CanPlay||!Game.Data.gun||!TargetsComplete(Game.Data))return false;
-            return Game.Travel("AmazoniaAcuatica","CP_A01","Pantano · aguas profundas",new Vector3(3,9,0),true);
+            if(aquatic||!Game.CanPlay||!Game.Data.gun||boss!=null&&!boss.Resolved&&boss.StateName!="Retreat")return false;
+            StartCoroutine(DiveSequence());return true;
+        }
+        private IEnumerator DiveSequence()
+        {
+            Diving=true;var player=Game.Player;var driver=player.GetComponent<PlayerArtDriver>();var body=player.GetComponent<Rigidbody2D>();var start=player.transform.position;
+            player.GetComponent<PlayerEmotes>()?.Cancel();body.linearVelocity=Vector2.zero;body.simulated=false;
+            var scale=player.transform.localScale;scale.x=Mathf.Abs(scale.x);player.transform.localScale=scale;
+            driver.DirectedState="Idle";while(boss!=null&&!boss.Resolved)yield return null;
+            Game.UI.Lesson(null,null);Game.UI.PromptIcon(null);driver.DirectedState="DivePrepare";
+            yield return new WaitForSeconds(.8f);
+            driver.DirectedState="Dive";bool splashed=false;
+            for(float t=0;t<1.05f;t+=Time.deltaTime)
+            {
+                float k=t/1.05f;player.transform.position=Vector3.Lerp(start,new Vector3(ShoreX+2.1f,-1.8f,0),k)+Vector3.up*Mathf.Sin(k*Mathf.PI)*1.1f;
+                if(!splashed&&k>.65f){splashed=true;PlasmaEffects.Burst(new Vector3(125.9f,-.15f),new Color(.4f,.8f,.75f),1.1f);CampaignAudio.Play("swim",true,true);}
+                yield return null;
+            }
+            driver.DirectedState=null;body.simulated=true;Diving=false;
+            if(!Game.Travel("AmazoniaAcuatica","CP_A01","Pantano · aguas profundas",new Vector3(3,9,0),true))player.transform.position=start;
         }
         public void ReflectedShot(){Reflections++;}
         public bool FinishLevel()

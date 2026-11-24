@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
         var ground=Physics2D.BoxCast(transform.position+Vector3.up*.1f,new Vector2(.7f,.05f),0,Vector2.down,longitudRaycast+.05f,layerSuelo);
         enSuelo=!aquatic&&ground.collider!=null&&ground.normal.y>.5f&&rb.linearVelocity.y<=.1f;
         if(enSuelo)groundedUntil=Time.time+.1f;
-        bool allowed=Game!=null&&Game.InputAllowed&&!isDead;
+        bool allowed=Game!=null&&Game.InputAllowed&&!isDead&&GetComponent<PlayerEmotes>()?.Active!=true;
         inputX=allowed&&Time.time>=damageUntil?(GameInput.Held("Derecha")?1:0)-(GameInput.Held("Izquierda")?1:0):0;
         inputY=allowed&&aquatic&&Time.time>=damageUntil?(GameInput.Held("Nadar arriba")?1:0)-(GameInput.Held("Nadar abajo")?1:0):0;
         if(allowed)
@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
             {rb.linearVelocity=new Vector2(rb.linearVelocity.x,fuerzaSalto);jumpUntil=groundedUntil=0;enSuelo=false;}
             if(Game.AttackInputAllowed&&(GameInput.Down("Atacar")||GameInput.Held("Atacar"))&&Game.Data.sword&&Game.Data.equippedWeapon=="sword")Attack();
             if(!aquatic&&GameInput.Down("Dash")&&Game.Data.dash&&dashFromGround&&Time.time>=dashReady&&Combat?.Blocking!=true)
-            {dashUntil=Time.time+.24f;dashReady=Time.time+1.1f;}
+            {dashUntil=Time.time+.18f;dashReady=Time.time+1.1f;}
         }
         bool attacking=allowed&&Time.time<attackUntil;
         foreach(var weapon in weapons)if(weapon!=null)weapon.enabled=attacking&&attackUntil-Time.time<.34f&&attackUntil-Time.time>.14f;
@@ -93,7 +93,7 @@ public class PlayerController : MonoBehaviour
             rb.linearVelocity=Vector2.MoveTowards(rb.linearVelocity,desired,24*Time.fixedDeltaTime);return;
         }
         float belt=MineLevel.Current!=null&&enSuelo?MineLevel.Current.BeltAt(transform.position):0;
-        rb.linearVelocity=new Vector2(Time.time<dashUntil?facing*17:inputX*velocidad*movement+belt,rb.linearVelocity.y);
+        rb.linearVelocity=new Vector2(Time.time<dashUntil?facing*15:inputX*velocidad*movement+belt,rb.linearVelocity.y);
     }
     public void Movement()
     {

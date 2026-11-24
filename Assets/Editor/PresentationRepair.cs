@@ -61,6 +61,7 @@ namespace JuanCapi.Editor
         }
         static void RepairSwamp(bool water)
         {
+            if(!water){WorldPresentationRepair.Pantano();return;}
             var all=UnityEngine.Object.FindObjectsByType<Transform>();
             foreach(var t in all)
             {

@@ -47,11 +47,11 @@ namespace JuanCapi
         private void Update()
         {
             scaler.matchWidthOrHeight=Screen.width/(float)Math.Max(1,Screen.height)<16f/9f?0:1;
-            toastRoot.gameObject.SetActive(screen!="art"&&screen!="cinematic"&&screen!="trial-result"&&screen!="complete"&&Time.unscaledTime<toastUntil);
+            toastRoot.gameObject.SetActive(SwampLevel.Current?.Diving!=true&&screen!="art"&&screen!="cinematic"&&screen!="trial-result"&&screen!="complete"&&Time.unscaledTime<toastUntil);
             var d=Game.Data;
             if(d!=null)
             {
-                hud.gameObject.SetActive(!IsOpen);
+                hud.gameObject.SetActive(!IsOpen&&SwampLevel.Current?.Diving!=true);
                 for(int i=0;i<20;i++) { hearts[i].gameObject.SetActive(i<d.maxHearts); hearts[i].SetQuarters(Mathf.Clamp(d.healthQuarters-i*4,0,4)); }
                 RefreshVisualHud(d);
                 if(d.healthQuarters<=4 && !Game.Settings.reducedFlashes)
@@ -60,6 +60,12 @@ namespace JuanCapi
             }
             else hud.gameObject.SetActive(false);
             if (Game.Busy) return;
+            if(d!=null&&screen=="game"&&Input.GetKeyDown(KeyCode.T)){Emotes();return;}
+            if(screen=="emotes")
+            {
+                if(Input.GetKeyDown(KeyCode.T)){Play();return;}
+                for(int i=0;i<3;i++)if(Input.GetKeyDown((KeyCode)((int)KeyCode.Alpha1+i))){StartEmote(i);return;}
+            }
             if(oldDisplay!=null)
             {
                 if(displayTimer!=null) displayTimer.text=$"Confirma el cambio en {Mathf.CeilToInt(displayUntil-Time.unscaledTime)} s.";
@@ -75,6 +81,8 @@ namespace JuanCapi
             }
             if(Input.GetKeyDown(KeyCode.Escape))
             {
+                var emote=Game.Player!=null?Game.Player.GetComponent<PlayerEmotes>():null;
+                if(screen=="game"&&emote!=null&&emote.Active){emote.Cancel();return;}
                 if(screen=="game") Pause(); else back?.Invoke();
                 return;
             }

@@ -16,6 +16,8 @@ namespace JuanCapi
         private void Awake()
         {
             Current=this;foreach(var c in Resources.LoadAll<AudioClip>("Audio"))clips[c.name]=c;
+            foreach(var c in Resources.LoadAll<AudioClip>("Audio/Music"))clips[c.name]=c;
+            foreach(var c in Resources.LoadAll<AudioClip>("Audio/Effects"))clips[c.name]=c;
             music=new[]{Source("Música A",true),Source("Música B",true)};ambient=Source("Ambiente",true);ui=Source("Interfaz",false);voices=new AudioSource[8];for(int i=0;i<voices.Length;i++)voices[i]=Source("Efecto "+i,false);
         }
         private void OnDestroy(){if(Current==this)Current=null;}
@@ -33,7 +35,7 @@ namespace JuanCapi
             bool boss=SierraLevel.Current?.boss.Fighting==true||SwampLevel.Current?.boss.Fighting==true||MineLevel.Current?.boss.Fighting==true;
             string desired=Game.Data==null?"menu":Game.Data.completed&&Game.Cinematic?"epilogue":boss?"boss":Game.Data.scene=="LV1"?"sierra":Game.Data.scene=="MinerTown"?"mine":Game.Player?.aquatic==true?"water":"swamp";
             if(track!=desired&&clips.TryGetValue(desired,out var clip)){track=desired;active=1-active;music[active].clip=clip;music[active].Play();blend=0;}
-            blend=Mathf.MoveTowards(blend,1,Time.unscaledDeltaTime*.6f);float gain=Game.Settings.music*(Game.UI.ScreenName=="cinematic"?.24f:Game.UI.IsOpen&&Game.Data!=null?.15f:.25f);
+            blend=Mathf.MoveTowards(blend,1,Time.unscaledDeltaTime*.6f);float gain=Game.Settings.music*(Game.UI.ScreenName=="cinematic"?.42f:Game.UI.IsOpen&&Game.Data!=null?.25f:.48f);
             music[active].volume=gain*blend;music[1-active].volume=gain*(1-blend);if(blend==1&&music[1-active].isPlaying)music[1-active].Stop();
             string env=Game.Data==null?"wind":Game.Player?.aquatic==true?"underwater":Game.Data.scene=="MinerTown"?"factory":Game.Data.scene=="LV1"?"wind":"wetland";
             if(environment!=env&&clips.TryGetValue(env,out var ac)){environment=env;ambient.clip=ac;ambient.Play();}

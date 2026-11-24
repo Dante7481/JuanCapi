@@ -19,7 +19,7 @@ namespace JuanCapi
                     case SwampPropKind.Supply:return !d.collected.Contains(persistentId);
                     case SwampPropKind.Gun:return !d.gun&&d.defeated.Contains("CAIMAN_LAND");
                     case SwampPropKind.Tico:return !d.rescues.Contains("TICO")&&d.collected.Contains("A03_LATCH_1")&&d.collected.Contains("A03_LATCH_2");
-                    case SwampPropKind.Dive:return d.gun&&SwampLevel.TargetsComplete(d);
+                    case SwampPropKind.Dive:return d.gun&&(SwampLevel.Current.boss.Resolved||SwampLevel.Current.boss.StateName=="Retreat");
                     case SwampPropKind.Shield:return !d.shield&&d.defeated.Contains("CAIMAN_WATER");
                     case SwampPropKind.Exit:return d.shield&&d.collected.Contains("A06_REFLECTED");
                     default:return false;

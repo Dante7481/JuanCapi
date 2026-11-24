@@ -16,7 +16,7 @@ namespace JuanCapi.Editor
             var cam=new GameObject("Main Camera",typeof(Camera),typeof(AudioListener),typeof(MineCamera));cam.tag="MainCamera";cam.transform.position=new Vector3(10,3.1f,-10);
             var camera=cam.GetComponent<Camera>();camera.orthographic=true;camera.orthographicSize=5.6f;camera.clearFlags=CameraClearFlags.SolidColor;camera.backgroundColor=new Color(.63f,.54f,.43f);level.view=cam.GetComponent<MineCamera>();
             Picture("Cantera a cielo abierto",art.mine,new Vector3(27,3.6f,5),new Vector2(66,22),-100).gameObject.AddComponent<ParallaxArt>().factor=.82f;
-            Ground(-3,25,0);Ground(32.6f,46,0);Ground(46,72,-7);Ground(72,165,0);
+            Ground(-3,25,0);Ground(31.4f,46,0);Ground(46,72,-7);Ground(72,165,0);
             Platform(42,45,1.2f);Platform(100,105,.8f);Platform(105,110,1.6f);Platform(110,116,2.4f);Platform(116,121,1.6f);Platform(121,125,2.4f);
             Platform(133.5f,136,.65f);Platform(149,151.5f,.65f);
             Wall("Límite oeste",-3.5f,0,30);Wall("Límite este",165.5f,0,30);
@@ -65,6 +65,7 @@ namespace JuanCapi.Editor
             var valve=Prop("Válvula principal",MinePropKind.FinalValve,"M06_VALVE","valve",161,1.05f,1.7f,2.1f);level.valve=valve.GetComponentInChildren<SpriteRenderer>().transform;
             var lights=new List<SpriteRenderer>();foreach(float x in new[]{18f,41,72,94,128,156})lights.Add(Picture("Baliza de descarga",art.terrain[11],new Vector3(x,3),new Vector2(.65f,1.5f),5));level.dischargeLights=lights.ToArray();
             Epilogue(level);CreatePlayer();level.props=props.ToArray();
+            WorldPresentationRepair.Mina();
             EditorSceneManager.SaveScene(scene,"Assets/Scenes/MinerTown.unity");
             EditorBuildSettings.scenes=new[]{"Menu","LV1","AmazoniaTerrestre","AmazoniaAcuatica","MinerTown","Art/Sierra","Art/Pantano","Art/PantanoAcuatico","Art/MinerTown"}.Select(n=>new EditorBuildSettingsScene("Assets/Scenes/"+n+".unity",true)).ToArray();AssetDatabase.SaveAssets();
         }
