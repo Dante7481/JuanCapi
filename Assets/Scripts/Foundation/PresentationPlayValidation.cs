@@ -18,6 +18,7 @@ namespace JuanCapi
         {
             deadline=Time.realtimeSinceStartup+180;Application.runInBackground=true;Directory.CreateDirectory(output);Application.logMessageReceived+=Log;
             yield return new WaitForSecondsRealtime(1);yield return Capture("00-menu");
+            if(Environment.GetCommandLineArgs().Contains("-juanEnvironmentTour")){yield return EnvironmentTour();Finish();yield break;}
             foreach(string scene in new[]{"LV1","AmazoniaTerrestre","AmazoniaAcuatica","MinerTown"})
             {
                 var d=new CampaignData{sword=scene!="LV1",dash=scene!="LV1",gun=scene!="LV1",shield=scene!="LV1",introSeen=true,sierraLayout=5,swampLayout=6,scene=scene,hasPosition=true,x=scene=="LV1"?2:3,y=scene=="AmazoniaAcuatica"?9:.08f,maxHearts=5,healthQuarters=20};
@@ -100,6 +101,26 @@ namespace JuanCapi
             Game.Settings.fullscreen=true;Game.Settings.Apply(true);yield return new WaitForSecondsRealtime(1);
             Check(Screen.width==Display.main.systemWidth&&Screen.height==Display.main.systemHeight,"Pantalla completa usa resolución nativa");yield return Capture("06-nativa");
             Finish();
+        }
+        IEnumerator EnvironmentTour()
+        {
+            foreach(string scene in new[]{"LV1","AmazoniaTerrestre","AmazoniaAcuatica","MinerTown"})
+            {
+                var d=new CampaignData{sword=true,dash=true,gun=true,shield=true,introSeen=true,sierraLayout=5,swampLayout=6,scene=scene,hasPosition=true,x=3,y=scene=="AmazoniaAcuatica"?9:.08f,maxHearts=5,healthQuarters=20};
+                Game.Store.StartNew(d,true,out _);Game.LoadRecord(Game.Store.Records()[0]);yield return null;while(Game.Busy)yield return null;yield return new WaitForSeconds(.6f);
+                Check(GameObject.Find("Colección de entornos V2")!=null,"Colección integrada: "+scene);
+                var pieces=FindObjectsByType<SpriteRenderer>().Where(r=>r.enabled&&r.sharedMaterial!=null&&r.sharedMaterial.shader.name=="JuanCapi/EnvironmentCutout").ToArray();
+                Check(pieces.Length>0&&pieces.All(r=>r.sprite!=null),"Piezas visibles y referencias válidas: "+scene);
+                Vector2[] stops=scene=="LV1"?new[]{new Vector2(7,.08f),new Vector2(33,.08f),new Vector2(67,.08f)}:
+                    scene=="AmazoniaTerrestre"?new[]{new Vector2(14,.08f),new Vector2(61,.08f)}:
+                    scene=="AmazoniaAcuatica"?new[]{new Vector2(34,14.4f),new Vector2(61,7)}:
+                    new[]{new Vector2(7,.08f),new Vector2(27,.08f),new Vector2(39,.08f),new Vector2(46,.08f),new Vector2(60,-4),new Vector2(87,.08f),new Vector2(112,.08f),new Vector2(143,.08f)};
+                foreach(var point in stops)
+                {
+                    Game.Player.transform.position=point;Game.Player.GetComponent<Rigidbody2D>().linearVelocity=Vector2.zero;
+                    yield return new WaitForSeconds(.8f);yield return Capture(scene+"-entorno-"+point.x);
+                }
+            }
         }
         IEnumerator CombatSprites()
         {
